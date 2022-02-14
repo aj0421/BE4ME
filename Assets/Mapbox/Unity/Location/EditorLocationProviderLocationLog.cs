@@ -35,7 +35,7 @@
 		{
 			base.Awake();
 			_logReader = new LocationLogReader(_locationLogFile.bytes);
-			_locationEnumerator = _logReader.GetLocations();
+           // _locationEnumerator =  /*_logReader.GetLocations();*/
 		}
 #endif
 
