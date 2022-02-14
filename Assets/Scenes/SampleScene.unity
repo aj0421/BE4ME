@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8214229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,6 +1151,7 @@ GameObject:
   - component: {fileID: 1212898470}
   - component: {fileID: 1212898472}
   - component: {fileID: 1212898471}
+  - component: {fileID: 1212898473}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -1381,6 +1382,25 @@ MonoBehaviour:
   _tileProvider: {fileID: 0}
   _previewOptions:
     isPreviewEnabled: 0
+--- !u!114 &1212898473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212898469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf32ea2cc0514b569329f6b6b68f9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _map: {fileID: 1212898472}
+  _locationStrings:
+  - 55.4724272910985, 13.0323832400616
+  - 55.47255391790686, 13.03237546955034
+  _spawnScale: 10
+  _markerPrefab: {fileID: 8835102943749012656, guid: 1aa8ff9895486964f92b7a007fa03acd,
+    type: 3}
 --- !u!1 &1417983207
 GameObject:
   m_ObjectHideFlags: 0
