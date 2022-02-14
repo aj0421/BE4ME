@@ -3,81 +3,57 @@
     "m_SelectedPackage": {
         "deviceId": "0e0f6d44",
         "name": "com.DefaultCompany.Be4ME2",
-        "processId": 32455,
+        "processId": 22356,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 26102,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.unity3d.mobileremote",
-            "processId": 22598,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 15575,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 15577,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "net.oneplus.launcher",
-            "processId": 22894,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME2",
-            "processId": 22148,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME2",
-            "processId": 22150,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
             "processId": 12678,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
             "processId": 12679,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
             "processId": 12683,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
             "processId": 32453,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
             "processId": 32455,
+            "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.unity3d.mobileremote",
+            "processId": 17996,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME2",
+            "processId": 18015,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME2",
+            "processId": 22356,
             "exited": false
         }
     ],
