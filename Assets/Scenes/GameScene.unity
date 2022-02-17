@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 403366569}
   - component: {fileID: 403366568}
   - component: {fileID: 403366567}
+  - component: {fileID: 403366570}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -298,7 +299,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 403366568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 403366570}
+        m_TargetAssemblyTypeName: SwapScene, Assembly-CSharp
+        m_MethodName: Swap
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &403366568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +350,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403366565}
   m_CullTransparentMesh: 1
+--- !u!114 &403366570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403366565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b4dfff01991b94981601bed960373d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &545963132
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +374,6 @@ GameObject:
   - component: {fileID: 545963135}
   - component: {fileID: 545963134}
   - component: {fileID: 545963133}
-  - component: {fileID: 545963137}
   m_Layer: 5
   m_Name: gui
   m_TagString: Untagged
@@ -438,21 +462,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &545963137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545963132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b4dfff01991b94981601bed960373d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swap: {fileID: 403366567}
-  test:
-  - {fileID: 8835102943749012656, guid: 1aa8ff9895486964f92b7a007fa03acd, type: 3}
 --- !u!1 &704924630
 GameObject:
   m_ObjectHideFlags: 0
