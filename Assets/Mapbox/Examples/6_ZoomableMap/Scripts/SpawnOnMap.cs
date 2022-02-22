@@ -31,9 +31,9 @@
 			_spawnedObjects = new List<GameObject>();
 			for (int i = 0; i < _locationStrings.Length; i++)
 			{
-				var locationString = _locationStrings[i];
+				string locationString = _locationStrings[i];
 				_locations[i] = Conversions.StringToLatLon(locationString);
-				var instance = Instantiate(_markerPrefab);
+				GameObject instance = Instantiate(_markerPrefab);
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 				_spawnedObjects.Add(instance);
@@ -45,11 +45,21 @@
 			int count = _spawnedObjects.Count;
 			for (int i = 0; i < count; i++)
 			{
-				var spawnedObject = _spawnedObjects[i];
-				var location = _locations[i];
+				GameObject spawnedObject = _spawnedObjects[i];
+				Vector2d location = _locations[i];
 				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
 				spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 			}
 		}
-	}
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = new Color(1, 0, 0, 0.5f);
+            for (int i = 0; i < _spawnedObjects.Count; i++)
+            {
+                Gizmos.DrawSphere(_spawnedObjects[i].transform.position, _spawnedObjects[i].GetComponent<SphereCollider>().radius * 10);
+
+            }
+        }
+    }
 }
