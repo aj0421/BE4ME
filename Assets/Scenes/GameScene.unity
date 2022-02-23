@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 403366567}
   - component: {fileID: 403366570}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Switch_To_Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Switch
+  m_Text: 'Go to map
 
 '
 --- !u!222 &879516481
