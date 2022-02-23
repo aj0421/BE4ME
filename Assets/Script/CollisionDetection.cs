@@ -5,42 +5,23 @@ using UnityEngine;
 public class CollisionDetection : MonoBehaviour
 {
     #region Variable
-
     #endregion
 
     #region Method
-    private void Start()
+    private void OnTriggerEnter(Collider other)
     {
-
-    }
-
-    private void FixedUpdate()
-    {
-        CheckCollision(transform.GetComponent<SphereCollider>().center, transform.GetComponent<SphereCollider>().radius);
-        //if (gameObject.CompareTag("Character"))
-        //{
-        //    Debug.Log("AAJ");
-
-        //}
-    }
-
-    private void CheckCollision(Vector3 center, float radius)
-    {
-        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
-        foreach (Collider hit in hitColliders)
+        if (other.gameObject.CompareTag("Character"))
         {
-          
-            if (hit.gameObject.CompareTag("Character"))
-            {
-                hit.gameObject.SetActive(false);
-                Debug.Log("AJ");
-            }
-           
+            other.GetComponent<MeshRenderer>().material.color = Color.red;
         }
-
-
     }
 
-
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Character"))
+        {
+            other.GetComponent<MeshRenderer>().material.color = Color.blue;
+        }
+    }
     #endregion
 }
