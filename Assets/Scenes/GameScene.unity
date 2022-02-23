@@ -619,7 +619,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2087204421}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2087204422}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
@@ -852,5 +852,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3636355977830778861, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
+        type: 3}
+      propertyPath: m_DetectionMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ee2a2e8ed5e15d45a565d0c51961f92, type: 3}
+--- !u!1 &2087204422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3636355977830778848, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
+    type: 3}
+  m_PrefabInstance: {fileID: 2087204421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &2087204423 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3636355977454439549, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
+    type: 3}
+  m_PrefabInstance: {fileID: 2087204421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2087204424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3636355977830778861, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
+    type: 3}
+  m_PrefabInstance: {fileID: 2087204421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087204422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2087204425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087204422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896584e6e88568c42b14ea81620e74ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placedPrefab: {fileID: 7414126791596113512, guid: fe573e7abb8af466791f07600c0785e3,
+    type: 3}
+  arCamera: {fileID: 2087204423}
+  ARPlaneManager: {fileID: 2087204424}
