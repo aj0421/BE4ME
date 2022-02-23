@@ -12,6 +12,5 @@ public class CharacterManager : MonoBehaviour
 
     #region Method
 
-
     #endregion
 }
