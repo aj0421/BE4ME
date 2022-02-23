@@ -52,14 +52,5 @@
 			}
 		}
 
-        //private void OnDrawGizmos()
-        //{
-        //    Gizmos.color = new Color(1, 0, 0, 0.5f);
-        //    for (int i = 0; i < _spawnedObjects.Count; i++)
-        //    {
-        //        Gizmos.DrawSphere(_spawnedObjects[i].transform.position, _spawnedObjects[i].GetComponent<SphereCollider>().radius * 10);
-
-        //    }
-        //}
     }
 }

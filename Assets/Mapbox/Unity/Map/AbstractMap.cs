@@ -1044,7 +1044,6 @@ namespace Mapbox.Unity.Map
 				tileScale = 1f;
 				return 0f;
 			}
-
 		}
 
 		/// <summary>
