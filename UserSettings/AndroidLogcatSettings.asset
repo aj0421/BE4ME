@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "0e0f6d44",
     "m_SelectedPackage": {
-        "deviceId": "0e0f6d44",
-        "name": "com.DefaultCompany.Be4ME2",
-        "processId": 10323,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,86 +11,32 @@
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
-            "processId": 12678,
+            "processId": 14071,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
-            "processId": 12679,
+            "processId": 658,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
-            "processId": 12683,
+            "processId": 18951,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
-            "processId": 32453,
+            "processId": 18954,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
-            "processId": 32455,
+            "processId": 28280,
             "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.unity3d.mobileremote",
-            "processId": 17996,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME2",
-            "processId": 18015,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME2",
-            "processId": 22356,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME2",
-            "processId": 27049,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME2",
-            "processId": 27050,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME2",
-            "processId": 9256,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME2",
-            "processId": 24021,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME2",
-            "processId": 1221,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME2",
-            "processId": 10323,
-            "exited": false
         }
     ],
     "m_Tags": {

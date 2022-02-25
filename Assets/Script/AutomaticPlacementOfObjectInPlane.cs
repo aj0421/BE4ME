@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 
 [RequireComponent(typeof(ARPlaneManager))]
@@ -17,6 +18,9 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     [SerializeField]
     private ARPlaneManager ARPlaneManager;
 
+    [SerializeField]
+    private Button button;
+
     private void Awake()
     {
         ARPlaneManager = GetComponent<ARPlaneManager>();
@@ -29,6 +33,8 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
         {
             ARPlane arPlane = args.added[0];
             placedObject = Instantiate(placedPrefab, arPlane.transform.position, Quaternion.identity);
+            button.gameObject.SetActive(true);
+            
         }
     }
 
