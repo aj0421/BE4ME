@@ -395,17 +395,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
-          type: 3}
+      - m_Target: {fileID: 874107315}
         m_TargetAssemblyTypeName: AudioHandler, Assembly-CSharp
         m_MethodName: Play
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: frenchWoman
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &292374228
@@ -995,10 +994,22 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2087204421}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087204422}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &874107315 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1770115956}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e36549baefb3804bb97de0509badecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &879516478
@@ -1224,15 +1235,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
         type: 3}
-      propertyPath: audioList.Array.size
-      value: 1
+      propertyPath: audioList.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 06227e55adab8eb47a32081b38085239, type: 3}
+    - target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
+        type: 3}
+      propertyPath: audioList.Array.data[0].name
+      value: frenchWoman
       objectReference: {fileID: 0}
     - target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
         type: 3}
-      propertyPath: audioList.Array.data[0]
-      value: 
-      objectReference: {fileID: 212956790405754536, guid: fe573e7abb8af466791f07600c0785e3,
-        type: 3}
+      propertyPath: audioList.Array.data[0].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1124105612505341729, guid: 208904d5d17706649a5aaf789d076faf,
         type: 3}
       propertyPath: m_RootOrder
@@ -1452,16 +1467,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3636355977454439538, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3636355977454439538, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
-        type: 3}
-      propertyPath: m_TagString
-      value: MainCamera
-      objectReference: {fileID: 0}
+    - target: {fileID: 2087204425, guid: 2ee2a2e8ed5e15d45a565d0c51961f92, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 292374227}
     - target: {fileID: 3636355977830778848, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
         type: 3}
       propertyPath: m_Name
@@ -1522,54 +1531,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3636355977830778861, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
-        type: 3}
-      propertyPath: m_DetectionMode
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ee2a2e8ed5e15d45a565d0c51961f92, type: 3}
---- !u!1 &2087204422 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3636355977830778848, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
-    type: 3}
-  m_PrefabInstance: {fileID: 2087204421}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &2087204423 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3636355977454439549, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
-    type: 3}
-  m_PrefabInstance: {fileID: 2087204421}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2087204424 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3636355977830778861, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
-    type: 3}
-  m_PrefabInstance: {fileID: 2087204421}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087204422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2087204425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087204422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896584e6e88568c42b14ea81620e74ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placedPrefab: {fileID: 7414126791596113512, guid: fe573e7abb8af466791f07600c0785e3,
-    type: 3}
-  arCamera: {fileID: 2087204423}
-  ARPlaneManager: {fileID: 2087204424}
-  button: {fileID: 0}
 --- !u!1 &2089461185
 GameObject:
   m_ObjectHideFlags: 0

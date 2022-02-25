@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,50 +8,47 @@ public class AudioHandler : MonoBehaviour
 {
     #region Variable
     [SerializeField]
-    private AudioSource[] audioList;
-
-    private int numberofAudio;
-    private bool play;
-    private bool toggleChange;
+    private Audio[] audioList;
 
     #endregion
 
     #region Method
     private void Start()
     {
-        numberofAudio = audioList.Length;
-        audioList[numberofAudio] = GetComponent<AudioSource>();
-
-       //audioSource = GetComponent<AudioSource>();
-        play = true;
-    }
-
-    public void Play()
-    {
-        if (play == true && toggleChange == true)
+        foreach (Audio a in audioList)
         {
-            audioList[0].Play();
-            toggleChange = false;
+            a.source = gameObject.AddComponent<AudioSource>();
+            a.source.clip = a.clip;
+
+            a.source.volume = a.volume;
         }
+        //audioSource = GetComponent<AudioSource>();
+       
     }
-    
-    public void Pause()
-    {
-        if (play == false && toggleChange == false)
-        {
-            audioList[0].Stop();
 
-            toggleChange = false;
+    public void Play(string name)
+    {
+        Audio audio = Array.Find(audioList, a => a.name == name);
+        if(audio == null)
+        {
+            Debug.Log("did not find array");
+            return;
         }
         else
         {
-            audioList[0].UnPause();
+            audio.source.Play();
         }
+    }
+
+    public void Pause()
+    {
+       
+
     }
 
     public void Repeat()
     {
-    
+
     }
 
     #endregion
