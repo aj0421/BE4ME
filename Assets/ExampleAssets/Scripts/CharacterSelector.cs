@@ -41,7 +41,7 @@ public class CharacterSelector : MonoBehaviour
 
         if(currentCharacter < 0)
         {
-            currentCharacter = characters.Length;
+            currentCharacter += characters.Length;
         }
         characters[currentCharacter].SetActive(true);
     }
