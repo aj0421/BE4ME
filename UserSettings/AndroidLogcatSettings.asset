@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "0e0f6d44",
         "name": "com.DefaultCompany.Be4ME2",
-        "processId": 27050,
+        "processId": 8701,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -66,6 +66,12 @@
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
             "processId": 27050,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME2",
+            "processId": 8701,
             "exited": false
         }
     ],
