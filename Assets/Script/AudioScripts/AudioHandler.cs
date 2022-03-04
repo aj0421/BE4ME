@@ -10,6 +10,7 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private Audio[] audioList;
 
+    private bool isPlaying = false;
     #endregion
 
     #region Method
@@ -22,8 +23,6 @@ public class AudioHandler : MonoBehaviour
 
             a.source.volume = a.volume;
         }
-        //audioSource = GetComponent<AudioSource>();
-       
     }
 
     public void Play(string name)
@@ -34,7 +33,7 @@ public class AudioHandler : MonoBehaviour
             Debug.Log("did not find array");
             return;
         }
-        else
+        else 
         {
             audio.source.Play();
         }
@@ -42,8 +41,14 @@ public class AudioHandler : MonoBehaviour
 
     public void Pause()
     {
-       
-
+        foreach (Audio a in audioList)
+        {
+            a.source = gameObject.GetComponent<AudioSource>();
+            if (a.source.isPlaying)
+            {
+                a.source.Pause();
+            }
+        }
     }
 
     public void Repeat()
