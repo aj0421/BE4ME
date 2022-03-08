@@ -414,7 +414,7 @@ MonoBehaviour:
       - m_Target: {fileID: 874107315}
         m_TargetAssemblyTypeName: AudioHandler, Assembly-CSharp
         m_MethodName: Play
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1297,6 +1297,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
+        type: 3}
+      propertyPath: characters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
+        type: 3}
+      propertyPath: characters.Array.data[0]
+      value: 
+      objectReference: {fileID: 7414126791596113512, guid: fe573e7abb8af466791f07600c0785e3,
+        type: 3}
     - target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
         type: 3}
       propertyPath: audioList.Array.data[0].clip

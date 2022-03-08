@@ -10,7 +10,9 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private Audio[] audioList;
 
-    private bool isPlaying = false;
+    public List<GameObject> characters;
+
+    private int index = 0;
     #endregion
 
     #region Method
@@ -20,21 +22,27 @@ public class AudioHandler : MonoBehaviour
         {
             a.source = gameObject.AddComponent<AudioSource>();
             a.source.clip = a.clip;
-
             a.source.volume = a.volume;
         }
     }
 
-    public void Play(string name)
+    public void Play(/*string name*/)
     {
-        Audio audio = Array.Find(audioList, a => a.name == name);
-        if(audio == null)
+        //Audio audio = Array.Find(audioList, a => a.name == name);
+        //if(audio == null)
+        //{
+        //    Debug.Log("did not find array");
+        //    return;
+        //}
+        //else 
+        //{
+        //    audio.source.Play();
+        //}
+
+        for (int i = 0; i < audioList.Length; i++)
         {
-            Debug.Log("did not find array");
-            return;
-        }
-        else 
-        {
+            Audio audio = audioList[i];
+            index = i;
             audio.source.Play();
         }
     }
