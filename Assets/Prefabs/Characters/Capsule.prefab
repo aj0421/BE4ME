@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1750681942444815267}
   - component: {fileID: 5150402911274534010}
   - component: {fileID: 7473296347948155873}
+  - component: {fileID: 3840659130197084891}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Character
@@ -110,3 +111,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.16
   m_Center: {x: 0, y: 3.76, z: 0}
+--- !u!114 &3840659130197084891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835102943749012656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f35b7fe34722f4eb807d1463f8253c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 1
+  characterName: Smalis
