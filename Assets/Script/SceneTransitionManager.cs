@@ -6,7 +6,6 @@ using UnityEngine.Assertions;
 
 public class SceneTransitionManager : MonoBehaviour
 {
-
     static SceneTransitionManager mInstance;
 
     public static SceneTransitionManager Instance

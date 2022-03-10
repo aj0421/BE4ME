@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "0e0f6d44",
     "m_SelectedPackage": {
         "deviceId": "0e0f6d44",
-        "name": "com.DefaultCompany.Be4ME2",
-        "processId": 32582,
+        "name": "com.DefaultCompany.Be4ME1",
+        "processId": 8116,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,55 +11,91 @@
         {
             "deviceId": "0e0f6d44",
             "name": "net.oneplus.launcher",
-            "processId": 25319,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.google.android.apps.messaging",
-            "processId": 19615,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 29486,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 29487,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 13725,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "net.oneplus.launcher",
             "processId": 2184,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
             "processId": 18159,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
             "processId": 18162,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME2",
             "processId": 32582,
+            "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "net.oneplus.launcher",
+            "processId": 9315,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 9596,
+            "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 9602,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 9601,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 28939,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 28940,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 31477,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 31480,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 8112,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 8115,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 8116,
             "exited": false
         }
     ],

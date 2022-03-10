@@ -215,6 +215,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd961b1c9541a4cee99686069ecce852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &225398838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 396640908106304436, guid: 81a8beb84a4af4147b1f4db90b3eb1b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 521164983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!21 &302988618
 Material:
   serializedVersion: 6
@@ -415,6 +427,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5155074888978102633, guid: 81a8beb84a4af4147b1f4db90b3eb1b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7431945643645821238, guid: 81a8beb84a4af4147b1f4db90b3eb1b6,
         type: 3}
       propertyPath: m_Name
@@ -607,6 +624,11 @@ PrefabInstance:
       propertyPath: _map
       value: 
       objectReference: {fileID: 1212898472}
+    - target: {fileID: 1950256615605274257, guid: 18593aeac18474b49bebac9e072ef2ab,
+        type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 225398838}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18593aeac18474b49bebac9e072ef2ab, type: 3}
 --- !u!4 &679935176 stripped
@@ -768,7 +790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _options:
     locationOptions:
-      latitudeLongitude: 55.4725679804793, 13.0322728752002
+      latitudeLongitude: 55.53764034902253, 13.106393239577802
       zoom: 17.6
     extentOptions:
       extentType: 2
@@ -964,8 +986,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 1212898472}
   _locationStrings:
-  - 55.47256417978401, 13.032240688691456
-  - 55.47253947525571, 13.032271534095662
+  - 55.53764034902253, 13.106393239577802
+  - 55.53764566120804, 13.106369770249813
   _spawnScale: 10
   _markerPrefab:
   - {fileID: 8835102943749012656, guid: 1aa8ff9895486964f92b7a007fa03acd, type: 3}

@@ -13,7 +13,6 @@ public class WorldPositionButton : MonoBehaviour
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-      
     }
 
     private void Update()
@@ -26,8 +25,6 @@ public class WorldPositionButton : MonoBehaviour
             Vector3 viewportPoint = Camera.main.WorldToViewportPoint(target.position);
             float distanceCenter = Vector2.Distance(viewportPoint, Vector2.one * 0.5f);
         }
-        
-       
 
     }
 }

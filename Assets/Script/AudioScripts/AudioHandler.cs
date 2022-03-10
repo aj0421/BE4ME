@@ -12,7 +12,9 @@ public class AudioHandler : MonoBehaviour
 
     public List<GameObject> characters;
 
-    private int index = 0;
+    private int index;
+
+    private bool paused;
     #endregion
 
     #region Method
@@ -26,43 +28,35 @@ public class AudioHandler : MonoBehaviour
         }
     }
 
-    public void Play(/*string name*/)
+    public void Play()
     {
-        //Audio audio = Array.Find(audioList, a => a.name == name);
-        //if(audio == null)
-        //{
-        //    Debug.Log("did not find array");
-        //    return;
-        //}
-        //else 
-        //{
-        //    audio.source.Play();
-        //}
-
         for (int i = 0; i < audioList.Length; i++)
         {
-            Audio audio = audioList[i];
             index = i;
+            Audio audio = audioList[index];
+
             audio.source.Play();
+            paused = false;
         }
+        Debug.Log("index" + index);
     }
 
     public void Pause()
     {
-        foreach (Audio a in audioList)
+        Audio audio = audioList[index];
+        if (audio.source.isPlaying)
         {
-            a.source = gameObject.GetComponent<AudioSource>();
-            if (a.source.isPlaying)
-            {
-                a.source.Pause();
-            }
+            audio.source.Pause();
+            Debug.Log("WE HAVE PAUSED");
         }
+
     }
 
     public void Repeat()
     {
-
+        Audio audio = audioList[index];
+        audio.source.time = 0;
+        audio.source.Play();
     }
-
     #endregion
 }
