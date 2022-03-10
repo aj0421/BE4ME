@@ -18,6 +18,8 @@ public class AnswerClass : MonoBehaviour
     {
         for (int i = 0; i < characterManager.characterArray.Length; i++)
         {
+            //TODO: Check characer by id, to make sure exacly which character is the current one from the list.
+            //Something like: id == 0 then potision in array is also 0, if id == 1 then position in array is 1 etc. And then set the currentCharacter.
             currentCharacter = characterManager.characterArray[i];
         }
         Debug.Log("current c: " + currentCharacter.GetComponent<Character>().characterName);
@@ -28,12 +30,14 @@ public class AnswerClass : MonoBehaviour
         if (isCorrect)
         {
             Debug.Log("Correct Answer");
-            quizManager.Correct();
+            currentCharacter.GetComponent<QuizManager>().Correct();
+            //quizManager.Correct();
         }
         else
         {
             Debug.Log("Wrong Answer");
-            quizManager.Correct();
+            currentCharacter.GetComponent<QuizManager>().Correct();
+            //quizManager.Correct();
         }
     }
 

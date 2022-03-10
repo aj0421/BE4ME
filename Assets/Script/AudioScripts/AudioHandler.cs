@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class AudioHandler : MonoBehaviour
 {
     #region Variable
+
     [SerializeField]
     private Audio[] audioList;
 
     public List<GameObject> characters;
 
     private int index;
-
     private bool paused;
     #endregion
 
@@ -35,8 +35,11 @@ public class AudioHandler : MonoBehaviour
             index = i;
             Audio audio = audioList[index];
 
-            audio.source.Play();
-            paused = false;
+            if(audio.source != null)
+            {
+                audio.source.Play();
+                paused = false;
+            }
         }
         Debug.Log("index" + index);
     }
@@ -49,7 +52,6 @@ public class AudioHandler : MonoBehaviour
             audio.source.Pause();
             Debug.Log("WE HAVE PAUSED");
         }
-
     }
 
     public void Repeat()
