@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-    #region Varibles
+    #region Variables
     public GameObject[] characterArray;
 
-    private int ID;
+    private int ID = 0;
     #endregion
 
     #region Method
+    private void Start()
+    {
+        for (int i = 0; i < characterArray.Length; i++)
+        {
 
-
+        }
+       
+    }
     #endregion
 }

@@ -82,12 +82,5 @@ namespace Mapbox.Examples
 		{
 			transform.localPosition = Vector3.Lerp(transform.localPosition, _targetPosition, Time.deltaTime * _positionFollowFactor);
 		}
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = new Color(1, 0, 0, 0.5f);
-
-            Gizmos.DrawSphere(transform.GetComponent<SphereCollider>().center, transform.GetComponent<SphereCollider>().radius   );
-        }
-
     }
 }

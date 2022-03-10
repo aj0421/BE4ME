@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 3636355977454439548}
   m_Layer: 0
   m_Name: AR Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3636355977454439545
 Transform:
   m_ObjectHideFlags: 0
@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 3636355977830778863}
   - component: {fileID: 3636355977830778860}
   - component: {fileID: 3636355977830778862}
+  - component: {fileID: 2087204425}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -189,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 4776765576899091622, guid: 3738bd65ede154463b2c35064b9e5fdb,
     type: 3}
-  m_DetectionMode: -1
+  m_DetectionMode: 1
 --- !u!114 &3636355977830778863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,3 +230,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AnchorPrefab: {fileID: 0}
+--- !u!114 &2087204425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3636355977830778848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896584e6e88568c42b14ea81620e74ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placedPrefab: {fileID: 7414126791596113512, guid: fe573e7abb8af466791f07600c0785e3,
+    type: 3}
+  arCamera: {fileID: 3636355977454439549}
+  ARPlaneManager: {fileID: 3636355977830778861}
+  button: {fileID: 0}

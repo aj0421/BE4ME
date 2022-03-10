@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CollisionDetection : MonoBehaviour
 {
     #region Variable
+    [SerializeField]
     private Button button;
     #endregion
 
@@ -26,7 +27,7 @@ public class CollisionDetection : MonoBehaviour
         if (other.gameObject.CompareTag("Character"))
         {
             other.GetComponent<MeshRenderer>().material.color = Color.red;
-            button.enabled = true;
+            button.gameObject.SetActive(true);
         }
     }
 
@@ -35,7 +36,7 @@ public class CollisionDetection : MonoBehaviour
         if (other.gameObject.CompareTag("Character"))
         {
             other.GetComponent<MeshRenderer>().material.color = Color.blue;
-            button.enabled = false;
+            button.gameObject.SetActive(false);
         }
     }
     #endregion

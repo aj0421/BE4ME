@@ -21,7 +21,7 @@
 		float _spawnScale = 100f;
 
 		[SerializeField]
-		GameObject _markerPrefab;
+		GameObject[] _markerPrefab;
 
 		List<GameObject> _spawnedObjects;
 
@@ -33,10 +33,10 @@
 			{
 				string locationString = _locationStrings[i];
 				_locations[i] = Conversions.StringToLatLon(locationString);
-				GameObject instance = Instantiate(_markerPrefab);
+				GameObject instance = Instantiate(_markerPrefab[i]);
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-				_spawnedObjects.Add(instance);
+                _spawnedObjects.Add(instance);
 			}
 		}
 
@@ -52,14 +52,5 @@
 			}
 		}
 
-        //private void OnDrawGizmos()
-        //{
-        //    Gizmos.color = new Color(1, 0, 0, 0.5f);
-        //    for (int i = 0; i < _spawnedObjects.Count; i++)
-        //    {
-        //        Gizmos.DrawSphere(_spawnedObjects[i].transform.position, _spawnedObjects[i].GetComponent<SphereCollider>().radius * 10);
-
-        //    }
-        //}
     }
 }
