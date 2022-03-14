@@ -15,6 +15,7 @@ public class AudioHandler : MonoBehaviour
 
     private int index;
     private bool paused;
+    private Audio audio;
     #endregion
 
     #region Method
@@ -33,7 +34,7 @@ public class AudioHandler : MonoBehaviour
         for (int i = 0; i < audioList.Length; i++)
         {
             index = i;
-            Audio audio = audioList[index];
+            audio = audioList[index];
 
             if(audio.source != null)
             {
@@ -46,11 +47,15 @@ public class AudioHandler : MonoBehaviour
 
     public void Pause()
     {
-        Audio audio = audioList[index];
-        if (audio.source.isPlaying)
+        audio = audioList[index];
+        if (audio.source.isPlaying && audio.source != null)
         {
             audio.source.Pause();
             Debug.Log("WE HAVE PAUSED");
+        }
+        else
+        {
+            Debug.Log("audio null");
         }
     }
 
