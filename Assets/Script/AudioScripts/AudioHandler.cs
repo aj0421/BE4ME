@@ -61,7 +61,7 @@ public class AudioHandler : MonoBehaviour
 
     public void Repeat()
     {
-        Audio audio = audioList[index];
+        audio = audioList[index];
         audio.source.time = 0;
         audio.source.Play();
     }

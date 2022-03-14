@@ -19,7 +19,16 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     private ARPlaneManager ARPlaneManager;
 
     [SerializeField]
-    private Button button;
+    private Button play;
+
+    [SerializeField]
+    private Button pause;
+
+    [SerializeField]
+    private Button repeat;
+
+    [SerializeField]
+    private Text instruction;
 
     private void Awake()
     {
@@ -33,7 +42,10 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
         {
             ARPlane arPlane = args.added[0];
             placedObject = Instantiate(placedPrefab, arPlane.transform.position, Quaternion.identity);
-            button.gameObject.SetActive(true);
+            play.gameObject.SetActive(true);
+            pause.gameObject.SetActive(true);
+            repeat.gameObject.SetActive(true);
+            instruction.gameObject.SetActive(false);
             
         }
     }

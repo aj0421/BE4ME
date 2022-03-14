@@ -2,36 +2,12 @@
     "m_SelectedDeviceId": "0e0f6d44",
     "m_SelectedPackage": {
         "deviceId": "0e0f6d44",
-        "name": "com.DefaultCompany.Be4ME3",
-        "processId": 8090,
+        "name": "com.DefaultCompany.Be4ME",
+        "processId": 322,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 31477,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 31480,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 8112,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 8115,
-            "exited": true
-        },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
@@ -42,24 +18,60 @@
             "deviceId": "0e0f6d44",
             "name": "net.oneplus.launcher",
             "processId": 31846,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.google.android.calendar",
             "processId": 28102,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME3",
             "processId": 28099,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME3",
             "processId": 8090,
+            "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.snapchat.android",
+            "processId": 27564,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "net.oneplus.launcher",
+            "processId": 16633,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME",
+            "processId": 17132,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME",
+            "processId": 17133,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME",
+            "processId": 317,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME",
+            "processId": 322,
             "exited": false
         }
     ],
