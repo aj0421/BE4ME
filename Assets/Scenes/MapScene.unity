@@ -226,6 +226,52 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _WindowColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+--- !u!1 &155538734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 155538736}
+  - component: {fileID: 155538735}
+  m_Layer: 0
+  m_Name: TouchController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &155538735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155538734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e245255901a02445bd1d3f29e86dbfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 679935177}
+  rotationSpeed: 0.3
+  rotationDirection: -1
+--- !u!4 &155538736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155538734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &223974226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -734,6 +780,12 @@ PrefabInstance:
 --- !u!4 &679935176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4895895357916372, guid: 18593aeac18474b49bebac9e072ef2ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 679935175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &679935177 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 646837236, guid: 18593aeac18474b49bebac9e072ef2ab,
     type: 3}
   m_PrefabInstance: {fileID: 679935175}
   m_PrefabAsset: {fileID: 0}
