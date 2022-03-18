@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwipeRotateCamera : MonoBehaviour
 {
     #region variables
-
     public Camera camera;
-    public float rotationSpeed = 0.3f;
+    public float rotationSpeed = 0.0000000000000000000001f;
     public float rotationDirection = -1;  //Negative direction
 
     private Touch first_touch = new Touch();
@@ -15,19 +15,24 @@ public class SwipeRotateCamera : MonoBehaviour
     private float rotationY = 0f;
     private Vector3 originRotation;
 
+    public Text CamXText;
+    public Text CamYText;
+
     #endregion
 
     #region Methods
 
     void Start()
     {
-        originRotation = camera.transform.eulerAngles;
+        originRotation = camera.transform.localEulerAngles;
         rotationX = originRotation.x;
         rotationY = originRotation.y;
     }
 
     void FixedUpdate()
     {
+        CamYText.text = rotationY.ToString() + " Y";
+        CamXText.text = rotationX.ToString() + " X";
         foreach (Touch touch in Input.touches)
         {
             if (touch.phase == TouchPhase.Began)        //First touch we do on the screen
@@ -43,9 +48,9 @@ public class SwipeRotateCamera : MonoBehaviour
                 rotationX -= deltaY * Time.deltaTime * rotationSpeed * rotationDirection;
                 rotationY += deltaX * Time.deltaTime * rotationSpeed * rotationDirection;
 
-
-                rotationX = Mathf.Clamp(rotationX, -30f, 30f);  //THIS IS WERE WE CONTROL HOW MUCH THE USER CAN ROTATE THE CAMERA - TRY OUT DIFFERENT VALUES
-                camera.transform.eulerAngles = new Vector3(rotationX, rotationY, 0f);
+                rotationX = Mathf.Clamp(rotationX, 50f, 70f);  //THIS IS WERE WE CONTROL HOW MUCH THE USER CAN ROTATE THE CAMERA - TRY OUT DIFFERENT VALUES
+                //rotationY = Mathf.Clamp(rotationY, 20f, -20f);
+                camera.transform.localEulerAngles = new Vector3(rotationX, rotationY, 0f);
             }
             else if (touch.phase == TouchPhase.Ended)
             {
