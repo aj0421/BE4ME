@@ -8,15 +8,30 @@ public class QuizManager : MonoBehaviour
     #region Variable
     public List<QandA> questions_Answers;
     public GameObject[] options;
-    public int currentQuestion;
+    public int currentQuestion = 0;
 
     public Text questionText;
+    private bool isSpawned;
+    private bool questionsExist; 
     #endregion
 
     #region Method 
     public void Start()
     {
-        GenerateQuestion();        
+        isSpawned = false;
+        questionsExist = false;
+    }
+
+    public void Update()
+    {
+        if (this.gameObject.activeInHierarchy && !isSpawned)
+        {
+            isSpawned = true;
+        }
+        if (isSpawned && !questionsExist)
+        {
+            GenerateQuestion();
+        }
     }
 
     private void SetAnswers()
@@ -26,10 +41,9 @@ public class QuizManager : MonoBehaviour
             options[i].GetComponent<AnswerClass>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<Text>().text = questions_Answers[currentQuestion].answers[i];
 
-            if(questions_Answers[currentQuestion].correctAnswers == i+1)
+            if (questions_Answers[currentQuestion].correctAnswers == i + 1)
             {
                 options[i].GetComponent<AnswerClass>().isCorrect = true;
-
             }
         }
     }
@@ -40,13 +54,12 @@ public class QuizManager : MonoBehaviour
         //if (questions_Answers.Count < 0)
         //{
         questions_Answers.RemoveAt(currentQuestion);
-            GenerateQuestion();
+        GenerateQuestion();
         //}
         //else
         //{
         //    Debug.Log("No more questions");
         //}
-        
     }
 
     private void GenerateQuestion()
@@ -54,12 +67,17 @@ public class QuizManager : MonoBehaviour
         // Uncomment when we read the QnA from the class instead
         //if(questions_Answers.Count < 0)
         //{
-            //Not really random tho
-            currentQuestion = Random.RandomRange(0, questions_Answers.Count);
+        //Not really random tho
 
-            questionText.text = questions_Answers[currentQuestion].question;
-            SetAnswers();
+        if (questions_Answers.Count < 0)
+        {
+            return;
+        }
+        currentQuestion = Random.RandomRange(0, questions_Answers.Count);
 
+        questionText.text = questions_Answers[currentQuestion].question;
+        SetAnswers();
+        questionsExist = true;
         //}
         //else
         //{

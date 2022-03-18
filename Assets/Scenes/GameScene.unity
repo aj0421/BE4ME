@@ -1819,6 +1819,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1576940563}
     - target: {fileID: 2087204425, guid: 2ee2a2e8ed5e15d45a565d0c51961f92, type: 3}
+      propertyPath: quizPrefab
+      value: 
+      objectReference: {fileID: 6450920672471986955}
+    - target: {fileID: 2087204425, guid: 2ee2a2e8ed5e15d45a565d0c51961f92, type: 3}
       propertyPath: instruction
       value: 
       objectReference: {fileID: 1471958912}

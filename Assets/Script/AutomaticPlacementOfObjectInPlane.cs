@@ -10,6 +10,9 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     [SerializeField]
     private GameObject placedPrefab;
 
+    [SerializeField]
+    private GameObject quizPrefab;
+
     private GameObject placedObject;
 
     [SerializeField]
@@ -45,6 +48,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
             play.gameObject.SetActive(true);
             pause.gameObject.SetActive(true);
             repeat.gameObject.SetActive(true);
+            quizPrefab.gameObject.SetActive(true);
             instruction.gameObject.SetActive(false);
             
         }

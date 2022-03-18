@@ -16,19 +16,32 @@ public class AnswerClass : MonoBehaviour
 
     private void Awake()
     {
+     
+    }
+    public void Update()
+    {
+        //Been in Awake before
         for (int i = 0; i < characterManager.characterArray.Length; i++)
         {
-            //TODO: Check characer by id, to make sure exacly which character is the current one from the list.
-            //Something like: id == 0 then potision in array is also 0, if id == 1 then position in array is 1 etc. And then set the currentCharacter.
-            //currentCharacter = characterManager.characterArray[i];
-            if (characterManager.characterArray[i].GetComponent<Character>().ID == 0)
+            if (characterManager.characterArray[0].activeInHierarchy)
             {
                 currentCharacter = characterManager.characterArray[0];
             }
-            else if (characterManager.characterArray[i].GetComponent<Character>().ID == 1)
+            else if (characterManager.characterArray[1].activeInHierarchy)
             {
                 currentCharacter = characterManager.characterArray[1];
             }
+            //TODO: Check characer by id, to make sure exacly which character is the current one from the list.
+            //Something like: id == 0 then potision in array is also 0, if id == 1 then position in array is 1 etc. And then set the currentCharacter.
+            //currentCharacter = characterManager.characterArray[i];
+            //if (characterManager.characterArray[i].GetComponent<Character>().ID == 0)
+            //{
+            //    currentCharacter = characterManager.characterArray[0];
+            //}
+            //else if (characterManager.characterArray[i].GetComponent<Character>().ID == 1)
+            //{
+            //    currentCharacter = characterManager.characterArray[1];
+            //}
             else
             {
                 currentCharacter = currentCharacter = characterManager.characterArray[0]; //Default always the first character as a safety for now.
@@ -36,7 +49,6 @@ public class AnswerClass : MonoBehaviour
         }
         Debug.Log("current c: " + currentCharacter.GetComponent<Character>().characterName);
     }
-
     public void Answer()
     {
         if (isCorrect)
