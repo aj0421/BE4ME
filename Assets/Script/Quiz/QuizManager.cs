@@ -34,6 +34,7 @@ public class QuizManager : MonoBehaviour
     {
         if (!questionExist)
         {
+            Debug.Log("Manager Updater");
             for (int i = 0; i < CharacterManager.characterArray.Length; i++)
             {
                 if (CharacterManager.characterArray.Length == 0)
@@ -44,24 +45,28 @@ public class QuizManager : MonoBehaviour
                 {
                     foreach (GameObject character in CharacterManager.characterArray)
                     {
-                        if (character.activeInHierarchy)
+                        Debug.Log(CharacterManager.characterArray.Length + " COUNT" + character.name);
+                        if (/*character.activeInHierarchy*/ character.name == "CubeObject")
                         {
+                            Debug.Log("Is active in hiera");
                             characterHasSpawned = true;
                             currentCharacter = character;
                             currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;
+                            Debug.Log("CurrentcCgarater count in update: " + currentCharacterQandA.Count);
                         }
                         else
                         {
                             Debug.Log("waiting for character to spawn.");
                         }
+                        if (characterHasSpawned && currentCharacterQandA.Count != 0)
+                        {
+                            GenerateQuestion();
+                        }
                     }
                 }
             }
 
-            if (characterHasSpawned)
-            {
-                GenerateQuestion();
-            }
+           
         }
     }
 
@@ -76,6 +81,7 @@ public class QuizManager : MonoBehaviour
             {
                 options[i].GetComponent<AnswerClass>().isCorrect = true;
             }
+            Debug.Log("Setting answer" + options[i]);
         }
     }
 
@@ -104,11 +110,17 @@ public class QuizManager : MonoBehaviour
 
         if (currentCharacterQandA.Count < 0)
         {
+            Debug.Log("HEEEJ");
             return;
         }
+        else
+        {
+            Debug.Log(currentCharacterQandA.Count +" Amount of current answre");
+        }
         currentQuestion = Random.RandomRange(0, currentCharacterQandA.Count);
-
+        Debug.Log("Current " + currentCharacterQandA.Count);
         questionText.text = currentCharacterQandA[currentQuestion].question;
+
         SetAnswers();
         questionExist = true;
         //}

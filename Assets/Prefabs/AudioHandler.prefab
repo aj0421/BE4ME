@@ -44,4 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioList:
-  - {fileID: 212956790405754536, guid: fe573e7abb8af466791f07600c0785e3, type: 3}
+  - name: frenchWoman
+    clip: {fileID: 8300000, guid: 06227e55adab8eb47a32081b38085239, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  characters:
+  - {fileID: 2358315148890924452, guid: fe573e7abb8af466791f07600c0785e3, type: 3}

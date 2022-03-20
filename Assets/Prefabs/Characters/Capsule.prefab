@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8835102943749012656
+--- !u!1 &1897978018001099412
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7899592284162702322}
-  - component: {fileID: 132576094634881719}
-  - component: {fileID: 1750681942444815267}
-  - component: {fileID: 5150402911274534010}
-  - component: {fileID: 7473296347948155873}
-  - component: {fileID: 3840659130197084891}
+  - component: {fileID: 1292004136253985310}
+  - component: {fileID: 647945729463774340}
+  - component: {fileID: 6850886450841355507}
+  - component: {fileID: 1534744253721657509}
+  - component: {fileID: 3896860627885534261}
+  - component: {fileID: 5287586989145885243}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Character
@@ -21,13 +21,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7899592284162702322
+--- !u!4 &1292004136253985310
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835102943749012656}
+  m_GameObject: {fileID: 1897978018001099412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -52.4, y: 29.5, z: 0}
   m_LocalScale: {x: 17.729, y: 17.729, z: 17.729}
@@ -35,21 +35,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &132576094634881719
+--- !u!33 &647945729463774340
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835102943749012656}
+  m_GameObject: {fileID: 1897978018001099412}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1750681942444815267
+--- !u!23 &6850886450841355507
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835102943749012656}
+  m_GameObject: {fileID: 1897978018001099412}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,13 +84,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5150402911274534010
+--- !u!136 &1534744253721657509
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835102943749012656}
+  m_GameObject: {fileID: 1897978018001099412}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -98,26 +98,26 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &7473296347948155873
+--- !u!135 &3896860627885534261
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835102943749012656}
+  m_GameObject: {fileID: 1897978018001099412}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 4.16
   m_Center: {x: 0, y: 3.76, z: 0}
---- !u!114 &3840659130197084891
+--- !u!114 &5287586989145885243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835102943749012656}
+  m_GameObject: {fileID: 1897978018001099412}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02f35b7fe34722f4eb807d1463f8253c, type: 3}
@@ -125,6 +125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   characterName: Smalis
-  QuizManager: {fileID: 6727862984738435130, guid: ecccac22ce32b614fa725e42078a42de,
+  quizManager: {fileID: 3378652361288148198, guid: ecccac22ce32b614fa725e42078a42de,
     type: 3}
   questionsAndAnswers: []
+  quizPrefab: {fileID: 8882960352362773959, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+    type: 3}

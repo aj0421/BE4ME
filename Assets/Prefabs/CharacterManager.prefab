@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterArray:
-  - {fileID: 2358315148890924452, guid: fe573e7abb8af466791f07600c0785e3, type: 3}
-  - {fileID: 8835102943749012656, guid: 1aa8ff9895486964f92b7a007fa03acd, type: 3}
+  - {fileID: 7719881071216956650, guid: fe573e7abb8af466791f07600c0785e3, type: 3}
+  - {fileID: 1897978018001099412, guid: 1aa8ff9895486964f92b7a007fa03acd, type: 3}

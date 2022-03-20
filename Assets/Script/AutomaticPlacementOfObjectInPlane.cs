@@ -52,9 +52,4 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
             instruction.gameObject.SetActive(false);
         }
     }
-
-    private void Update()
-    {
-        
-    }
 }

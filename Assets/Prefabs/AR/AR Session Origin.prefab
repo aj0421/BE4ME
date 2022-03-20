@@ -242,8 +242,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896584e6e88568c42b14ea81620e74ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedPrefab: {fileID: 7414126791596113512, guid: fe573e7abb8af466791f07600c0785e3,
+  placedPrefab: {fileID: 7719881071216956650, guid: fe573e7abb8af466791f07600c0785e3,
     type: 3}
+  quizPrefab: {fileID: 0}
   arCamera: {fileID: 3636355977454439549}
   ARPlaneManager: {fileID: 3636355977830778861}
-  button: {fileID: 0}
+  play: {fileID: 0}
+  pause: {fileID: 0}
+  repeat: {fileID: 0}
+  instruction: {fileID: 0}

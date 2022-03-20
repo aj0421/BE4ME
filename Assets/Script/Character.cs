@@ -8,32 +8,36 @@ public class Character : MonoBehaviour
     public int ID;
 
     public string characterName;
-  
+
     public GameObject quizManager;
 
     public List<QandA> questionsAndAnswers;
 
     private bool isActiveInHierarchy;
     private bool questionHasBeenAdded;
+
+    public GameObject quizPrefab;
     #endregion
 
     #region Method
     public void Start()
     {
+        AddQuestionsAndAnswersToCharactersList();     
         quizManager.SetActive(true);
+        quizPrefab.SetActive(true);
     }
 
     public void Update()
     {
-        if (this.gameObject.activeInHierarchy)
-        {
-            isActiveInHierarchy = true;
-        }
+        //if (this.gameObject.activeInHierarchy)
+        //{
+        //    isActiveInHierarchy = true;
+        //}
 
-        if (isActiveInHierarchy)
-        {
-            AddQuestionsAndAnswersToCharactersList();  
-        }
+        //if (isActiveInHierarchy)
+        //{
+        //    AddQuestionsAndAnswersToCharactersList();  
+        //}
     }
 
     private void AddQuestionsAndAnswersToCharactersList()
@@ -44,6 +48,7 @@ public class Character : MonoBehaviour
             {
                 questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[0]);
                 questionHasBeenAdded = true;
+                Debug.Log("ID 0 Count; " + questionsAndAnswers.Count);
             }
             else if (ID == 1 && !questionHasBeenAdded)
             {
