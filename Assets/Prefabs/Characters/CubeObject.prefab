@@ -194,6 +194,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   characterName: Tjockis
+  QuizManager: {fileID: 2347922033697945333, guid: ecccac22ce32b614fa725e42078a42de,
+    type: 3}
+  questionsAndAnswers: []
 --- !u!114 &3319806389187534114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +204,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2358315148890924452}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09a326b7a218a8d4287441a07dd0cea9, type: 3}
   m_Name: 
@@ -223,10 +226,6 @@ MonoBehaviour:
   currentCharacterText: {fileID: 621434493669442026, guid: ea6783edbd535be41ab36a8365fe5b73,
     type: 3}
   thisGameObjectText: {fileID: 4044422106448961983, guid: e57fd9c7a70a6da45b11400e444daad6,
-    type: 3}
-  isSpawnedText: {fileID: 1462688634177601406, guid: 608487ad31d35314f9079c6dc9c3d308,
-    type: 3}
-  questionexistText: {fileID: 720964843027765877, guid: 24068c9db78c3974cadfaf46d1f6737b,
     type: 3}
   questionText: {fileID: 463910062372653416, guid: dfa7a3e6bc972054194d434e88f0c50f,
     type: 3}

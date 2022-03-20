@@ -20,50 +20,53 @@ public class AnswerClass : MonoBehaviour
     {
      
     }
+
     public void Update()
     {
-        //Been in Awake before
-        for (int i = 0; i < characterManager.characterArray.Length; i++)
+        //for (int i = 0; i < characterManager.characterArray.Length; i++)
+        //{
+        //    if (characterManager.characterArray[0].activeInHierarchy)
+        //    {
+        //        currentCharacter = characterManager.characterArray[0];
+        //        Debug.Log("Active: " + currentCharacter.name);
+        //    }
+        //    else if (characterManager.characterArray[1].activeInHierarchy)
+        //    {
+        //        currentCharacter = characterManager.characterArray[1];
+        //        Debug.Log("Active: " + currentCharacter.name);
+        //    }
+        //    else
+        //    {
+        //        currentCharacter = currentCharacter = characterManager.characterArray[0]; //Default always the first character as a safety for now.
+        //        Debug.Log("DEFAULT, no active character yet. The default is: " + currentCharacter.GetComponent<Character>().characterName);
+        //    }
+        //}
+        foreach (GameObject character in characterManager.characterArray)
         {
-            if (characterManager.characterArray[0].activeInHierarchy)
+            if (character.activeInHierarchy)
             {
-                currentCharacter = characterManager.characterArray[0];
+                currentCharacter = character;
             }
-            else if (characterManager.characterArray[1].activeInHierarchy)
-            {
-                currentCharacter = characterManager.characterArray[1];
-            }
-            //TODO: Check characer by id, to make sure exacly which character is the current one from the list.
-            //Something like: id == 0 then potision in array is also 0, if id == 1 then position in array is 1 etc. And then set the currentCharacter.
-            //currentCharacter = characterManager.characterArray[i];
-            //if (characterManager.characterArray[i].GetComponent<Character>().ID == 0)
-            //{
-            //    currentCharacter = characterManager.characterArray[0];
-            //}
-            //else if (characterManager.characterArray[i].GetComponent<Character>().ID == 1)
-            //{
-            //    currentCharacter = characterManager.characterArray[1];
-            //}
             else
             {
-                currentCharacter = currentCharacter = characterManager.characterArray[0]; //Default always the first character as a safety for now.
+                Debug.Log("Waiting for character to Spawn... (Log from AnswerClass)");
             }
         }
-        Debug.Log("current c: " + currentCharacter.GetComponent<Character>().characterName);
     }
+
     public void Answer()
     {
         if (isCorrect)
         {
             Debug.Log("Correct Answer");
-            currentCharacter.GetComponent<QuizManager>().Correct();
-            //quizManager.Correct();
+            //currentCharacter.GetComponent<QuizManager>().Correct();
+            quizManager.Correct();
         }
         else
         {
             Debug.Log("Wrong Answer");
-            currentCharacter.GetComponent<QuizManager>().Correct();
-            //quizManager.Correct();
+            //currentCharacter.GetComponent<QuizManager>().Correct();
+            quizManager.Correct();
         }
     }
 

@@ -9,25 +9,54 @@ public class QuizManager : MonoBehaviour
     public List<QandA> questions_Answers;
     public GameObject[] options;
     public int currentQuestion = 0;
+    public CharacterManager CharacterManager;
 
     public Text currentCharacterText;
     public Text thisGameObjectText;
     public Text questionText;
+
+    private bool characterHasSpawned;
+    private bool questionExist;
     #endregion
 
     #region Method 
     public void Start()
     {
-        thisGameObjectText.text = "bajs";
-        GenerateQuestion();
+        characterHasSpawned = false;
+        questionExist = false;
+        Debug.Log("QuizManager is active");
     }
 
-    public void Update()
+    private void Update()
     {
-        thisGameObjectText.text = this.gameObject.name + " thisGameObject";
-        for (int i = 0; i < options.Length; i++)
+        if (!questionExist)
         {
-            currentCharacterText.text = options[i].GetComponent<AnswerClass>().currentCharacter.name + " CurrenC";
+            for (int i = 0; i < CharacterManager.characterArray.Length; i++)
+            {
+                if (CharacterManager.characterArray.Length == 0)
+                {
+                    Debug.LogError("CharacterArray in CharacterManager is empty, you need to add the prefabs in the editor!");
+                }
+                else
+                {
+                    foreach (GameObject character in CharacterManager.characterArray)
+                    {
+                        if (character.activeInHierarchy)
+                        {
+                            characterHasSpawned = true;
+                        }
+                        else
+                        {
+                            Debug.Log("waiting for character to spawn.");
+                        }
+                    }
+                }
+            }
+
+            if (characterHasSpawned)
+            {
+                GenerateQuestion();
+            }
         }
     }
 
@@ -74,6 +103,7 @@ public class QuizManager : MonoBehaviour
 
         questionText.text = questions_Answers[currentQuestion].question;
         SetAnswers();
+        questionExist = true;
         //}
         //else
         //{

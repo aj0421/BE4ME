@@ -50,7 +50,6 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
             repeat.gameObject.SetActive(true);
             quizPrefab.gameObject.SetActive(true);
             instruction.gameObject.SetActive(false);
-            
         }
     }
 
