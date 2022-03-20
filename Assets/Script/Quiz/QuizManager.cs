@@ -12,30 +12,22 @@ public class QuizManager : MonoBehaviour
 
     public Text currentCharacterText;
     public Text thisGameObjectText;
-    public Text isSpawnedText;
-    public Text questionexistText;
-
     public Text questionText;
-    private bool isSpawned;
-    private bool questionsExist;
     #endregion
 
     #region Method 
     public void Start()
     {
-        isSpawned = false;
-        questionsExist = false;
+        thisGameObjectText.text = "bajs";
+        GenerateQuestion();
     }
 
     public void Update()
     {
-        if (this.gameObject.activeInHierarchy && !isSpawned)
+        thisGameObjectText.text = this.gameObject.name + " thisGameObject";
+        for (int i = 0; i < options.Length; i++)
         {
-            isSpawned = true;
-        }
-        if (isSpawned && !questionsExist)
-        {
-            GenerateQuestion();
+            currentCharacterText.text = options[i].GetComponent<AnswerClass>().currentCharacter.name + " CurrenC";
         }
     }
 
@@ -82,7 +74,6 @@ public class QuizManager : MonoBehaviour
 
         questionText.text = questions_Answers[currentQuestion].question;
         SetAnswers();
-        questionsExist = true;
         //}
         //else
         //{

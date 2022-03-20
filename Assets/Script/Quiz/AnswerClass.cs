@@ -9,9 +9,9 @@ public class AnswerClass : MonoBehaviour
     public bool isCorrect = false;
     public QuizManager quizManager;
     public CharacterManager characterManager;
-    public Text currentCharacterText;
 
-    private GameObject currentCharacter;
+    [HideInInspector]
+    public GameObject currentCharacter;
     #endregion
 
     #region Method

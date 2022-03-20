@@ -1,43 +1,13 @@
 {
     "m_SelectedDeviceId": "0e0f6d44",
     "m_SelectedPackage": {
-        "deviceId": "0e0f6d44",
-        "name": "com.DefaultCompany.Be4ME",
-        "processId": 11453,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "0e0f6d44",
-            "name": "net.oneplus.launcher",
-            "processId": 29822,
-            "exited": false
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME",
-            "processId": 30769,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME",
-            "processId": 6390,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME",
-            "processId": 6394,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME",
-            "processId": 9457,
-            "exited": true
-        },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME",
@@ -48,13 +18,25 @@
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME",
             "processId": 11449,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME",
             "processId": 11453,
-            "exited": false
+            "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 26413,
+            "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 26415,
+            "exited": true
         }
     ],
     "m_Tags": {
