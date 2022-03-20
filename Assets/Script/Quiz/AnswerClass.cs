@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnswerClass : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class AnswerClass : MonoBehaviour
     public bool isCorrect = false;
     public QuizManager quizManager;
     public CharacterManager characterManager;
+    public Text currentCharacterText;
 
     private GameObject currentCharacter;
     #endregion

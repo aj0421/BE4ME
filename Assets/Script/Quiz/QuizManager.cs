@@ -10,9 +10,14 @@ public class QuizManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion = 0;
 
+    public Text currentCharacterText;
+    public Text thisGameObjectText;
+    public Text isSpawnedText;
+    public Text questionexistText;
+
     public Text questionText;
     private bool isSpawned;
-    private bool questionsExist; 
+    private bool questionsExist;
     #endregion
 
     #region Method 

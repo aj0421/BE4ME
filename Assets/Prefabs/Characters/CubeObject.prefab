@@ -220,4 +220,12 @@ MonoBehaviour:
   - {fileID: 6999589790071587249, guid: c3a84607c80eefb4b92ad6696feb45cd, type: 3}
   - {fileID: 4947144533900038788, guid: aa1064bac29d3c94891ba233c3b39d76, type: 3}
   currentQuestion: 0
+  currentCharacterText: {fileID: 621434493669442026, guid: ea6783edbd535be41ab36a8365fe5b73,
+    type: 3}
+  thisGameObjectText: {fileID: 4044422106448961983, guid: e57fd9c7a70a6da45b11400e444daad6,
+    type: 3}
+  isSpawnedText: {fileID: 1462688634177601406, guid: 608487ad31d35314f9079c6dc9c3d308,
+    type: 3}
+  questionexistText: {fileID: 720964843027765877, guid: 24068c9db78c3974cadfaf46d1f6737b,
+    type: 3}
   questionText: {fileID: 0}
