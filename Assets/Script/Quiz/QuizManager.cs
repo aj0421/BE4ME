@@ -17,6 +17,9 @@ public class QuizManager : MonoBehaviour
 
     private bool characterHasSpawned;
     private bool questionExist;
+    private GameObject currentCharacter;
+    private List<QandA> currentCharacterQandA;
+
     #endregion
 
     #region Method 
@@ -27,7 +30,7 @@ public class QuizManager : MonoBehaviour
         Debug.Log("QuizManager is active");
     }
 
-    private void Update()
+    public void Update()
     {
         if (!questionExist)
         {
@@ -44,6 +47,8 @@ public class QuizManager : MonoBehaviour
                         if (character.activeInHierarchy)
                         {
                             characterHasSpawned = true;
+                            currentCharacter = character;
+                            currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;
                         }
                         else
                         {
@@ -65,9 +70,9 @@ public class QuizManager : MonoBehaviour
         for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerClass>().isCorrect = false;
-            options[i].transform.GetChild(0).GetComponent<Text>().text = questions_Answers[currentQuestion].answers[i];
+            options[i].transform.GetChild(0).GetComponent<Text>().text = currentCharacterQandA[currentQuestion].answers[i];
 
-            if (questions_Answers[currentQuestion].correctAnswers == i + 1)
+            if (currentCharacterQandA[currentQuestion].correctAnswers == i + 1)
             {
                 options[i].GetComponent<AnswerClass>().isCorrect = true;
             }
@@ -79,7 +84,9 @@ public class QuizManager : MonoBehaviour
         // Uncomment when we read the QnA from the class instead
         //if (questions_Answers.Count < 0)
         //{
-        questions_Answers.RemoveAt(currentQuestion);
+
+        currentCharacterQandA.RemoveAt(currentQuestion);
+        //questions_Answers.RemoveAt(currentQuestion);
         GenerateQuestion();
         //}
         //else
@@ -95,13 +102,13 @@ public class QuizManager : MonoBehaviour
         //{
         //Not really random tho
 
-        if (questions_Answers.Count < 0)
+        if (currentCharacterQandA.Count < 0)
         {
             return;
         }
-        currentQuestion = Random.RandomRange(0, questions_Answers.Count);
+        currentQuestion = Random.RandomRange(0, currentCharacterQandA.Count);
 
-        questionText.text = questions_Answers[currentQuestion].question;
+        questionText.text = currentCharacterQandA[currentQuestion].question;
         SetAnswers();
         questionExist = true;
         //}
@@ -109,7 +116,6 @@ public class QuizManager : MonoBehaviour
         //{
         //    Debug.Log("No more question to generate");
         //}
-
     }
     #endregion
 }

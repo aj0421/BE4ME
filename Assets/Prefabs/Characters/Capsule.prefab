@@ -125,3 +125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   characterName: Smalis
+  QuizManager: {fileID: 6727862984738435130, guid: ecccac22ce32b614fa725e42078a42de,
+    type: 3}
+  questionsAndAnswers: []

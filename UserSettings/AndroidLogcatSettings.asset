@@ -10,33 +10,39 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME",
-            "processId": 9460,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME",
-            "processId": 11449,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME",
-            "processId": 11453,
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 8534,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 26413,
+            "processId": 8532,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 26415,
+            "processId": 21742,
             "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 28642,
+            "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 28639,
+            "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.discord",
+            "processId": 13256,
+            "exited": false
         }
     ],
     "m_Tags": {

@@ -15,12 +15,6 @@ public class AnswerClass : MonoBehaviour
     #endregion
 
     #region Method
-
-    private void Awake()
-    {
-     
-    }
-
     public void Update()
     {
         //for (int i = 0; i < characterManager.characterArray.Length; i++)

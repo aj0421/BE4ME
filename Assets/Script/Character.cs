@@ -5,23 +5,25 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     #region Variables
-
     public int ID;
 
     public string characterName;
-
-    public QuizManager QuizManager;
+  
+    public GameObject quizManager;
 
     public List<QandA> questionsAndAnswers;
 
     private bool isActiveInHierarchy;
+    private bool questionHasBeenAdded;
+    #endregion
 
-    private void Start()
+    #region Method
+    public void Start()
     {
-        QuizManager.gameObject.SetActive(true);
+        quizManager.SetActive(true);
     }
 
-    private void Update()
+    public void Update()
     {
         if (this.gameObject.activeInHierarchy)
         {
@@ -30,24 +32,25 @@ public class Character : MonoBehaviour
 
         if (isActiveInHierarchy)
         {
-            AddQuestionsAndAnswersToCharactersList(ID);   //ÄR LITE OROLIG ÖVER DENNA? Hmmmmm. Ska det vara: GetComponent<Character>().ID ?
+            AddQuestionsAndAnswersToCharactersList();  
         }
     }
 
-    private void AddQuestionsAndAnswersToCharactersList(int ID_)
+    private void AddQuestionsAndAnswersToCharactersList()
     {
-        for (int i = 0; i < QuizManager.questions_Answers.Count; i++)
+        for (int i = 0; i < quizManager.GetComponent<QuizManager>().questions_Answers.Count; i++)
         {
-            if (ID == ID_)
+            if (ID == 0 && !questionHasBeenAdded)
             {
-                questionsAndAnswers.Add(QuizManager.questions_Answers[0]);
+                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[0]);
+                questionHasBeenAdded = true;
             }
-            else if (ID == ID_)
+            else if (ID == 1 && !questionHasBeenAdded)
             {
-                questionsAndAnswers.Add(QuizManager.questions_Answers[1]);
+                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[1]);
+                questionHasBeenAdded = true;
             }
         }
     }
-
     #endregion
 }
