@@ -27,8 +27,8 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     [SerializeField]
     private Button pause;
 
-    [SerializeField]
-    private Button repeat;
+    //[SerializeField]
+    //private Button repeat;
 
     [SerializeField]
     private Text instruction;
@@ -48,7 +48,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
             placedObject = Instantiate(placedPrefab, arPlane.transform.position, Quaternion.identity);
             play.gameObject.SetActive(true);
             pause.gameObject.SetActive(true);
-            repeat.gameObject.SetActive(true);
+            
             instruction.gameObject.SetActive(false);
         }
     }
