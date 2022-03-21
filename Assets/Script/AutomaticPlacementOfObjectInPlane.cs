@@ -37,7 +37,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     {
         ARPlaneManager = GetComponent<ARPlaneManager>();
         ARPlaneManager.planesChanged += PlaneChanged;
-        placedObject = Instantiate(placedPrefab, transform.position, Quaternion.identity);
+        //placedObject = Instantiate(placedPrefab, transform.position, Quaternion.identity);
     }
   
     private void PlaneChanged(ARPlanesChangedEventArgs args)
@@ -49,7 +49,6 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
             play.gameObject.SetActive(true);
             pause.gameObject.SetActive(true);
             repeat.gameObject.SetActive(true);
-           // quizPrefab.gameObject.SetActive(true);
             instruction.gameObject.SetActive(false);
         }
     }

@@ -28,17 +28,16 @@ public class Character : MonoBehaviour
 
     private GameObject FindMyGameObject(string name)
     {
-        Transform[] myResources = Resources.FindObjectsOfTypeAll<Transform>() as Transform[];
-        for (int i = 0; i < myResources.Length; i++)
+        foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
         {
-            if (myResources[i].CompareTag(name))
+            if (prefabToSpawn.CompareTag(name))
             {
-                Debug.Log("Character FindMYGameobjc : name " + myResources[i].tag);
-                return myResources[i].gameObject;
+                return prefabToSpawn;
             }
         }
         return null;
     }
+
     private void AddQuestionsAndAnswersToCharactersList()
     {
 
@@ -47,7 +46,7 @@ public class Character : MonoBehaviour
             if (ID == 0 && !questionHasBeenAdded)
             {
                 questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[0]);
-                 //questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[2]);
+                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[2]);
                 questionHasBeenAdded = true;
                 Debug.Log("ID 0 Count; " + questionsAndAnswers.Count);
             }
