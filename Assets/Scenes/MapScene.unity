@@ -890,7 +890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _options:
     locationOptions:
-      latitudeLongitude: 55.47162932036683, 13.015939188395533
+      latitudeLongitude: 55.471629671654746, 13.015937594048951
       zoom: 17.5
     extentOptions:
       extentType: 2
@@ -1086,12 +1086,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 1212898472}
   _locationStrings:
-  - 55.47162932036683, 13.015939188395533
+  - 55.471629671654746, 13.015937594048951
   - 55.61174908382239, 12.998974417558312
   _spawnScale: 10
   _markerPrefab:
-  - {fileID: 8835102943749012656, guid: 1aa8ff9895486964f92b7a007fa03acd, type: 3}
-  - {fileID: 2358315148890924452, guid: fe573e7abb8af466791f07600c0785e3, type: 3}
+  - {fileID: 1897978018001099412, guid: 1aa8ff9895486964f92b7a007fa03acd, type: 3}
+  - {fileID: 7719881071216956650, guid: fe573e7abb8af466791f07600c0785e3, type: 3}
 --- !u!1 &1417983207
 GameObject:
   m_ObjectHideFlags: 0
