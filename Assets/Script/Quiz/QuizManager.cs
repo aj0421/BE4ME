@@ -7,9 +7,9 @@ public class QuizManager : MonoBehaviour
 {
     #region Variable
     public List<QandA> questions_Answers;
-    public GameObject[] options;
+    //public GameObject[] options;
     public int currentQuestion = 0;
-    public CharacterManager CharacterManager;
+    //public CharacterManager CharacterManager;
 
     public Text currentCharacterText;
     public Text thisGameObjectText;
@@ -19,15 +19,21 @@ public class QuizManager : MonoBehaviour
     private bool questionExist;
     private GameObject currentCharacter;
     private List<QandA> currentCharacterQandA;
+    private GameObject[] answerOptions;
 
     #endregion
 
     #region Method 
+
     public void Start()
     {
         characterHasSpawned = false;
         questionExist = false;
         Debug.Log("QuizManager is active");
+        currentCharacter = GameObject.FindGameObjectWithTag("Character");
+        Debug.Log("QuizManager Start: Current character: " + currentCharacter.name + ", tag: " + currentCharacter.tag);
+        answerOptions = GameObject.FindGameObjectsWithTag("AnswerButton");
+        Debug.Log("QuizManager Start: answeroptions " + answerOptions.Length);
     }
 
     public void Update()
@@ -35,53 +41,33 @@ public class QuizManager : MonoBehaviour
         if (!questionExist)
         {
             Debug.Log("Manager Updater");
-            for (int i = 0; i < CharacterManager.characterArray.Length; i++)
+
+            if (currentCharacter != null)
             {
-                if (CharacterManager.characterArray.Length == 0)
+                characterHasSpawned = true;
+                currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;
+                Debug.Log("QuizManager Update: current character List of Q&A count: " + currentCharacterQandA.Count);
+                if(currentCharacterQandA.Count > 0)
                 {
-                    Debug.LogError("CharacterArray in CharacterManager is empty, you need to add the prefabs in the editor!");
-                }
-                else
-                {
-                    foreach (GameObject character in CharacterManager.characterArray)
-                    {
-                        Debug.Log(CharacterManager.characterArray.Length + " COUNT" + character.name);
-                        if (/*character.activeInHierarchy*/ character.name == "CubeObject")
-                        {
-                            Debug.Log("Is active in hiera");
-                            characterHasSpawned = true;
-                            currentCharacter = character;
-                            currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;
-                            Debug.Log("CurrentcCgarater count in update: " + currentCharacterQandA.Count);
-                        }
-                        else
-                        {
-                            Debug.Log("waiting for character to spawn.");
-                        }
-                        if (characterHasSpawned && currentCharacterQandA.Count != 0)
-                        {
-                            GenerateQuestion();
-                        }
-                    }
+                    Debug.Log("QuizManager Update: Calling GenerateQuestion()");
+                    GenerateQuestion();
                 }
             }
-
-           
         }
     }
 
     private void SetAnswers()
     {
-        for (int i = 0; i < options.Length; i++)
+        for (int i = 0; i < answerOptions.Length; i++)
         {
-            options[i].GetComponent<AnswerClass>().isCorrect = false;
-            options[i].transform.GetChild(0).GetComponent<Text>().text = currentCharacterQandA[currentQuestion].answers[i];
+            answerOptions[i].GetComponent<AnswerClass>().isCorrect = false;
+            answerOptions[i].transform.GetChild(0).GetComponent<Text>().text = currentCharacterQandA[currentQuestion].answers[i];
 
             if (currentCharacterQandA[currentQuestion].correctAnswers == i + 1)
             {
-                options[i].GetComponent<AnswerClass>().isCorrect = true;
+                answerOptions[i].GetComponent<AnswerClass>().isCorrect = true;
             }
-            Debug.Log("Setting answer" + options[i]);
+            Debug.Log("QuizManagewr SetAnswer: Setting answer" + answerOptions[i]);
         }
     }
 
@@ -115,12 +101,11 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
-            Debug.Log(currentCharacterQandA.Count +" Amount of current answre");
+            Debug.Log(currentCharacterQandA.Count + " Amount of current answre");
         }
-        currentQuestion = Random.RandomRange(0, currentCharacterQandA.Count);
-        Debug.Log("Current " + currentCharacterQandA.Count);
+        currentQuestion = Random.Range(0, currentCharacterQandA.Count);
         questionText.text = currentCharacterQandA[currentQuestion].question;
-
+        Debug.Log("QuizManager GanerateQuestion: question text: " + questionText.text);
         SetAnswers();
         questionExist = true;
         //}
