@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2504242512326328005}
   m_Layer: 5
   m_Name: A3
-  m_TagString: Untagged
+  m_TagString: AnswerButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,8 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 2347922033697945333, guid: ecccac22ce32b614fa725e42078a42de,
-    type: 3}
+  quizManager: {fileID: 0}
   characterManager: {fileID: 0}
   currentCharacter: {fileID: 0}
 --- !u!1 &2504242512357842814
@@ -262,7 +261,7 @@ GameObject:
   - component: {fileID: 2504242512430618666}
   m_Layer: 5
   m_Name: A4
-  m_TagString: Untagged
+  m_TagString: AnswerButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,8 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 2347922033697945333, guid: ecccac22ce32b614fa725e42078a42de,
-    type: 3}
+  quizManager: {fileID: 0}
   characterManager: {fileID: 0}
   currentCharacter: {fileID: 0}
 --- !u!1 &2504242512522201632
@@ -508,7 +506,7 @@ GameObject:
   - component: {fileID: 2504242512692078672}
   m_Layer: 5
   m_Name: A2
-  m_TagString: Untagged
+  m_TagString: AnswerButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,8 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 2347922033697945333, guid: ecccac22ce32b614fa725e42078a42de,
-    type: 3}
+  quizManager: {fileID: 0}
   characterManager: {fileID: 0}
   currentCharacter: {fileID: 0}
 --- !u!1 &2504242513143132663
@@ -754,7 +751,7 @@ GameObject:
   - component: {fileID: 2504242513509021978}
   m_Layer: 5
   m_Name: A1
-  m_TagString: Untagged
+  m_TagString: AnswerButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -901,8 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 2347922033697945333, guid: ecccac22ce32b614fa725e42078a42de,
-    type: 3}
+  quizManager: {fileID: 0}
   characterManager: {fileID: 0}
   currentCharacter: {fileID: 0}
 --- !u!1 &2504242513546333977
@@ -1249,7 +1245,7 @@ GameObject:
   - component: {fileID: 8882960352362773958}
   m_Layer: 5
   m_Name: CanvasQuiz
-  m_TagString: Untagged
+  m_TagString: CanvasQuiz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

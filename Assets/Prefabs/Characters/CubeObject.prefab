@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7719881071216956646}
   - component: {fileID: 7719881071216956649}
   - component: {fileID: 7719881071216956648}
-  - component: {fileID: 7719881071216956651}
   m_Layer: 0
   m_Name: CubeObject
   m_TagString: Character
@@ -194,40 +193,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   characterName: Tjockis
-  quizManager: {fileID: 0}
+  quizManager: {fileID: 3378652361288148198, guid: ecccac22ce32b614fa725e42078a42de,
+    type: 3}
   questionsAndAnswers: []
-  quizPrefab: {fileID: 0}
---- !u!114 &7719881071216956651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7719881071216956650}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09a326b7a218a8d4287441a07dd0cea9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questions_Answers:
-  - question: "\xC4r kaffe gott?"
-    answers:
-    - "\xD6RK"
-    - "JA F\xD6R FAN"
-    - "Vad \xE4r kaffe?"
-    - te4L4jf
-    correctAnswers: 1
-  options:
-  - {fileID: 8898818495379418525, guid: 851da458e93b09846ae7bc4920122f22, type: 3}
-  - {fileID: 5789804521615897838, guid: 352901c7c0e6fe54a8a48f382ba8373a, type: 3}
-  - {fileID: 6999589790071587249, guid: c3a84607c80eefb4b92ad6696feb45cd, type: 3}
-  - {fileID: 4947144533900038788, guid: aa1064bac29d3c94891ba233c3b39d76, type: 3}
-  currentQuestion: 0
-  CharacterManager: {fileID: 234999980467546351, guid: e61baee82becd44429b45d64e68ecbf9,
-    type: 3}
-  currentCharacterText: {fileID: 621434493669442026, guid: ea6783edbd535be41ab36a8365fe5b73,
-    type: 3}
-  thisGameObjectText: {fileID: 4044422106448961983, guid: e57fd9c7a70a6da45b11400e444daad6,
-    type: 3}
-  questionText: {fileID: 463910062372653416, guid: dfa7a3e6bc972054194d434e88f0c50f,
+  quizPrefab: {fileID: 8882960352362773959, guid: 7117ca1850e3d4b4b83900dcd086e17f,
     type: 3}

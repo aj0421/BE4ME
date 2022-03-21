@@ -37,7 +37,7 @@ public class QuizManager : MonoBehaviour
         {
             Debug.Log("Manager Updater");
 
-            if (currentCharacter != null)
+            if (currentCharacter != null && currentCharacter.activeInHierarchy)
             {
                 characterHasSpawned = true;
                 currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;

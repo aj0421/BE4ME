@@ -7,7 +7,7 @@ public class AnswerClass : MonoBehaviour
 {
     #region Variable
     public bool isCorrect = false;
-    public QuizManager quizManager;
+    public GameObject quizManager;
     public CharacterManager characterManager;
 
     [HideInInspector]
@@ -15,6 +15,11 @@ public class AnswerClass : MonoBehaviour
     #endregion
 
     #region Method
+
+    public void Start()
+    {
+        quizManager = GameObject.FindGameObjectWithTag("QuizManager");
+    }
     public void Update()
     {
         foreach (GameObject character in characterManager.characterArray)
@@ -35,12 +40,12 @@ public class AnswerClass : MonoBehaviour
         if (isCorrect)
         {
             Debug.Log("Correct Answer");
-            quizManager.Correct();
+            quizManager.GetComponent<QuizManager>().Correct();
         }
         else
         {
             Debug.Log("Wrong Answer");
-            quizManager.Correct();
+            quizManager.GetComponent<QuizManager>().Correct();
         }
     }
 
