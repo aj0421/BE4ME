@@ -1333,6 +1333,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeObject
       objectReference: {fileID: 0}
+    - target: {fileID: 7719881071216956650, guid: fe573e7abb8af466791f07600c0785e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7719881071216956651, guid: fe573e7abb8af466791f07600c0785e3,
         type: 3}
       propertyPath: questions_Answers.Array.size
@@ -2287,8 +2292,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
-      propertyPath: questions_Answers.Array.data[2].correctAnswers
+      propertyPath: questions_Answers.Array.data[0].correctAnswers
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[1].correctAnswers
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[2].correctAnswers
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}

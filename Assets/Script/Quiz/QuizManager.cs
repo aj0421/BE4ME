@@ -7,12 +7,7 @@ public class QuizManager : MonoBehaviour
 {
     #region Variable
     public List<QandA> questions_Answers;
-    //public GameObject[] options;
     public int currentQuestion = 0;
-    //public CharacterManager CharacterManager;
-
-    public Text currentCharacterText;
-    public Text thisGameObjectText;
     public Text questionText;
 
     private bool characterHasSpawned;
@@ -47,7 +42,7 @@ public class QuizManager : MonoBehaviour
                 characterHasSpawned = true;
                 currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;
                 Debug.Log("QuizManager Update: current character List of Q&A count: " + currentCharacterQandA.Count);
-                if(currentCharacterQandA.Count > 0)
+                if (currentCharacterQandA.Count > 0)
                 {
                     Debug.Log("QuizManager Update: Calling GenerateQuestion()");
                     GenerateQuestion();
@@ -73,46 +68,29 @@ public class QuizManager : MonoBehaviour
 
     public void Correct()
     {
-        // Uncomment when we read the QnA from the class instead
-        //if (questions_Answers.Count < 0)
-        //{
-
         currentCharacterQandA.RemoveAt(currentQuestion);
-        //questions_Answers.RemoveAt(currentQuestion);
-        GenerateQuestion();
-        //}
-        //else
-        //{
-        //    Debug.Log("No more questions");
-        //}
+        if (currentCharacterQandA.Count > 0)
+        {
+            GenerateQuestion();
+            //End quiz and add highscores
+        }
+        else
+        {
+            Debug.Log("QuizManager Correct: currentCharacterQandA Count is less than 0");
+        }
     }
 
     private void GenerateQuestion()
     {
-        // Uncomment when we read the QnA from the class instead
-        //if(questions_Answers.Count < 0)
-        //{
-        //Not really random tho
-
         if (currentCharacterQandA.Count < 0)
         {
-            Debug.Log("HEEEJ");
             return;
-        }
-        else
-        {
-            Debug.Log(currentCharacterQandA.Count + " Amount of current answre");
         }
         currentQuestion = Random.Range(0, currentCharacterQandA.Count);
         questionText.text = currentCharacterQandA[currentQuestion].question;
         Debug.Log("QuizManager GanerateQuestion: question text: " + questionText.text);
         SetAnswers();
         questionExist = true;
-        //}
-        //else
-        //{
-        //    Debug.Log("No more question to generate");
-        //}
     }
     #endregion
 }

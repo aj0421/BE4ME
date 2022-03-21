@@ -6,17 +6,14 @@ public class Character : MonoBehaviour
 {
     #region Variables
     public int ID;
-
     public string characterName;
-
     public GameObject quizManager;
-
     public List<QandA> questionsAndAnswers;
+    public GameObject quizPrefab;
 
     private bool isActiveInHierarchy;
     private bool questionHasBeenAdded;
-
-    public GameObject quizPrefab;
+    
     #endregion
 
     #region Method
@@ -25,19 +22,6 @@ public class Character : MonoBehaviour
         AddQuestionsAndAnswersToCharactersList();     
         quizManager.SetActive(true);
         quizPrefab.SetActive(true);
-    }
-
-    public void Update()
-    {
-        //if (this.gameObject.activeInHierarchy)
-        //{
-        //    isActiveInHierarchy = true;
-        //}
-
-        //if (isActiveInHierarchy)
-        //{
-        //    AddQuestionsAndAnswersToCharactersList();  
-        //}
     }
 
     private void AddQuestionsAndAnswersToCharactersList()
