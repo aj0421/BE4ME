@@ -17,7 +17,8 @@ public class CharacterSelector : MonoBehaviour
     {
         name = nametext.text;
         PlayerPrefs.SetInt("selectedCharacter", currentCharacter);
-        PlayerPrefs.SetString("name", name);
+        PlayerPrefs.SetString("name", nametext.text);
+        Debug.Log("Name: " + nametext.text);
 
         //TODO: Load scene here!
     }
