@@ -10,9 +10,6 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     [SerializeField]
     private GameObject placedPrefab;
 
-    //[SerializeField]
-    //private GameObject quizPrefab;
-
     private GameObject placedObject;
 
     [SerializeField]
@@ -27,9 +24,6 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     [SerializeField]
     private Button pause;
 
-    //[SerializeField]
-    //private Button repeat;
-
     [SerializeField]
     private Text instruction;
 
@@ -37,7 +31,6 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     {
         ARPlaneManager = GetComponent<ARPlaneManager>();
         ARPlaneManager.planesChanged += PlaneChanged;
-        //placedObject = Instantiate(placedPrefab, transform.position, Quaternion.identity);
     }
   
     private void PlaneChanged(ARPlanesChangedEventArgs args)
@@ -48,7 +41,6 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
             placedObject = Instantiate(placedPrefab, arPlane.transform.position, Quaternion.identity);
             play.gameObject.SetActive(true);
             pause.gameObject.SetActive(true);
-            
             instruction.gameObject.SetActive(false);
         }
     }

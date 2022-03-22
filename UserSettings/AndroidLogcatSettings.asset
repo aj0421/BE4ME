@@ -10,39 +10,51 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "0e0f6d44",
-            "name": "net.oneplus.launcher",
-            "processId": 22760,
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 3247,
+            "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.google.android.youtube",
+            "processId": 17013,
             "exited": false
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 26503,
+            "processId": 30938,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 4937,
+            "processId": 30944,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 4938,
+            "processId": 4467,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 10797,
+            "processId": 4472,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 19469,
-            "exited": true
+            "processId": 4473,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 4478,
+            "exited": false
         }
     ],
     "m_Tags": {

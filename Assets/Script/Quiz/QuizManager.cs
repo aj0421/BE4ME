@@ -10,27 +10,47 @@ public class QuizManager : MonoBehaviour
     public int currentQuestion = 0;
     public Text questionText;
 
-    private bool characterHasSpawned;
     private bool questionExist;
     private GameObject currentCharacter;
     private List<QandA> currentCharacterQandA;
-    private GameObject[] answerOptions;
-
+    private List<GameObject> answerOptions;
     #endregion
 
     #region Method 
 
     public void Start()
     {
-        characterHasSpawned = false;
         questionExist = false;
         Debug.Log("QuizManager is active");
-        currentCharacter = GameObject.FindGameObjectWithTag("Character");
+        currentCharacter = FindMyGameObject("Character");
         Debug.Log("QuizManager Start: Current character: " + currentCharacter.name + ", tag: " + currentCharacter.tag);
-        answerOptions = GameObject.FindGameObjectsWithTag("AnswerButton");
-        Debug.Log("QuizManager Start: answeroptions " + answerOptions.Length);
+        answerOptions = FindList("AnswerButton");
+        Debug.Log("QuizManager Start: answeroptions " + answerOptions.Count);
     }
 
+    private GameObject FindMyGameObject(string name)
+    {
+        foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
+        {
+            if (prefabToSpawn.CompareTag(name))
+            {
+                return prefabToSpawn;
+            }
+        }
+        return null;
+    }
+    private List<GameObject> FindList(string name)
+    {
+        List<GameObject> temp = new List<GameObject>();
+        foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+        {
+            if (prefabToSpawn.CompareTag(name))
+            {
+                temp.Add(prefabToSpawn);
+            }
+        }
+        return temp;
+    }
     public void Update()
     {
         if (!questionExist)
@@ -39,7 +59,6 @@ public class QuizManager : MonoBehaviour
 
             if (currentCharacter != null && currentCharacter.activeInHierarchy)
             {
-                characterHasSpawned = true;
                 currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;
                 Debug.Log("QuizManager Update: current character List of Q&A count: " + currentCharacterQandA.Count);
                 if (currentCharacterQandA.Count > 0)
@@ -53,7 +72,7 @@ public class QuizManager : MonoBehaviour
 
     private void SetAnswers()
     {
-        for (int i = 0; i < answerOptions.Length; i++)
+        for (int i = 0; i < answerOptions.Count; i++)
         {
             answerOptions[i].GetComponent<AnswerClass>().isCorrect = false;
             answerOptions[i].transform.GetChild(0).GetComponent<Text>().text = currentCharacterQandA[currentQuestion].answers[i];

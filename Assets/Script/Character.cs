@@ -10,7 +10,6 @@ public class Character : MonoBehaviour
     public List<QandA> questionsAndAnswers;
 
     private GameObject quizManager;
-   // private GameObject quizPrefab;
     private bool questionHasBeenAdded;
     #endregion
 
@@ -18,12 +17,9 @@ public class Character : MonoBehaviour
     public void Start()
     {
         quizManager = FindMyGameObject("QuizManager");
-        //quizPrefab = FindMyGameObject("CanvasQuiz");
         quizManager.SetActive(true);
         AddQuestionsAndAnswersToCharactersList();
-      
     }
-
   
     private GameObject FindMyGameObject(string name)
     {
