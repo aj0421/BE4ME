@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class TimeMachine : MonoBehaviour
 {
     public CameraShake CameraShake;
+    public UIManager UIManager;
     public Text countdownText;
     public float duration = 6.0f;
     public float magnitude = 0.3f;
 
     private float counter;
+    private bool isBlackedOut = false;
 
     public void Start()
     {
@@ -18,7 +20,9 @@ public class TimeMachine : MonoBehaviour
 
         if(CameraShake != null)
         {
+            Vibration.Vibrate(3000);
             StartCoroutine(CameraShake.Shake(duration, magnitude));
+            
         }
     }
 
@@ -32,6 +36,12 @@ public class TimeMachine : MonoBehaviour
         else
         {
             countdownText.text = "" + 0;
+        }
+
+        if(counter < 0.2 && isBlackedOut == false)
+        {
+            StartCoroutine(UIManager.GetComponent<UIManager>().FadeToBlack());
+            isBlackedOut = true;
         }
     }
 }
