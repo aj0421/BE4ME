@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadCharacter : MonoBehaviour
 {
     public GameObject[] characters;
     public Transform spawnLocation;
     public Transform parent;
+    public Text savedPlaterText;
 
     private Vector3 scaleChange;
     private Vector3 positionChange;
@@ -22,5 +24,6 @@ public class LoadCharacter : MonoBehaviour
         prefabClone.transform.localScale += scaleChange;
         prefabClone.transform.position += positionChange;
         prefabClone.transform.SetParent(parent);
+        savedPlaterText.text = name;
     }
 }
