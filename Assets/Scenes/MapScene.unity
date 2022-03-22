@@ -896,7 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _options:
     locationOptions:
-      latitudeLongitude: 55.471629671654746, 13.015937594048951
+      latitudeLongitude: 55.47162761515714, 13.015943992573954
       zoom: 17.5
     extentOptions:
       extentType: 2
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 1212898472}
   _locationStrings:
-  - 55.471629671654746, 13.015937594048951
+  - 55.47162761515714, 13.015943992573954
   - 55.61174908382239, 12.998974417558312
   _spawnScale: 10
   _markerPrefab:
