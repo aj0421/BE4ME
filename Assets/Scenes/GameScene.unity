@@ -1568,6 +1568,26 @@ PrefabInstance:
       propertyPath: repeatButton
       value: 
       objectReference: {fileID: 1576940563}
+    - target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
+        type: 3}
+      propertyPath: audioList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
+        type: 3}
+      propertyPath: audioList.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a127bb26f97903499725f1b1bcfdd8d, type: 3}
+    - target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
+        type: 3}
+      propertyPath: audioList.Array.data[1].name
+      value: englishWoman
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124105612505341728, guid: 208904d5d17706649a5aaf789d076faf,
+        type: 3}
+      propertyPath: audioList.Array.data[1].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1124105612505341729, guid: 208904d5d17706649a5aaf789d076faf,
         type: 3}
       propertyPath: m_RootOrder
@@ -1898,6 +1918,11 @@ PrefabInstance:
       propertyPath: instruction
       value: 
       objectReference: {fileID: 1471958912}
+    - target: {fileID: 2087204425, guid: 2ee2a2e8ed5e15d45a565d0c51961f92, type: 3}
+      propertyPath: placedPrefab
+      value: 
+      objectReference: {fileID: 1897978018001099412, guid: 1aa8ff9895486964f92b7a007fa03acd,
+        type: 3}
     - target: {fileID: 3636355977830778848, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
         type: 3}
       propertyPath: m_Name
