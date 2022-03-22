@@ -7,25 +7,20 @@ public class Character : MonoBehaviour
     #region Variables
     public int ID;
     public string characterName;
-    private GameObject quizManager;
     public List<QandA> questionsAndAnswers;
-    private GameObject quizPrefab;
 
-    private bool isActiveInHierarchy;
+    private GameObject quizManager;
     private bool questionHasBeenAdded;
-
     #endregion
 
     #region Method
     public void Start()
     {
         quizManager = FindMyGameObject("QuizManager");
-        quizPrefab = FindMyGameObject("CanvasQuiz");
         quizManager.SetActive(true);
         AddQuestionsAndAnswersToCharactersList();
-        quizPrefab.SetActive(true);
     }
-
+  
     private GameObject FindMyGameObject(string name)
     {
         foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
@@ -40,7 +35,6 @@ public class Character : MonoBehaviour
 
     private void AddQuestionsAndAnswersToCharactersList()
     {
-
         for (int i = 0; i < quizManager.GetComponent<QuizManager>().questions_Answers.Count; i++)
         {
             if (ID == 0 && !questionHasBeenAdded)

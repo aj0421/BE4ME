@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "0e0f6d44",
     "m_SelectedPackage": {
-        "deviceId": "0e0f6d44",
-        "name": "com.DefaultCompany.Be4ME1",
-        "processId": 2472,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,43 +11,49 @@
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 28648,
+            "processId": 3247,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
-            "name": "com.DefaultCompany.Be4ME1",
-            "processId": 21743,
-            "exited": true
-        },
-        {
-            "deviceId": "0e0f6d44",
-            "name": "net.oneplus.launcher",
-            "processId": 22760,
+            "name": "com.google.android.youtube",
+            "processId": 17013,
             "exited": false
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 9844,
+            "processId": 30938,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 17974,
+            "processId": 30944,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 17980,
+            "processId": 4467,
             "exited": true
         },
         {
             "deviceId": "0e0f6d44",
             "name": "com.DefaultCompany.Be4ME1",
-            "processId": 2472,
+            "processId": 4472,
+            "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 4473,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME1",
+            "processId": 4478,
             "exited": false
         }
     ],

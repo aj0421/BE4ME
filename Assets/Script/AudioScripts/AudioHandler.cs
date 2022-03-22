@@ -11,21 +11,44 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private Audio[] audioList;
 
+    [SerializeField]
+    private Button quizButton; 
+    
+    [SerializeField]
+    private Button repeatButton;
+
     public List<GameObject> characters;
 
     private int index;
-    private bool paused;
     private Audio audio;
+    private bool isActive;
     #endregion
 
     #region Method
     private void Start()
     {
+        isActive = false;
         foreach (Audio a in audioList)
         {
             a.source = gameObject.AddComponent<AudioSource>();
             a.source.clip = a.clip;
             a.source.volume = a.volume;
+        }
+    }
+
+    public void Update()
+    {
+        if (isActive == true)
+        {
+            SpawnButton(audio);
+        }
+    }
+    public void SpawnButton(Audio a)
+    {
+        if (a.source.isPlaying == false)
+        {
+            quizButton.gameObject.SetActive(true);
+            repeatButton.gameObject.SetActive(true);
         }
     }
 
@@ -36,13 +59,14 @@ public class AudioHandler : MonoBehaviour
             index = i;
             audio = audioList[index];
 
-            if(audio.source != null)
+            if (audio.source != null)
             {
                 audio.source.Play();
-                paused = false;
+                isActive = true;
             }
         }
         Debug.Log("index" + index);
+        SpawnButton(audio);
     }
 
     public void Pause()
@@ -52,6 +76,7 @@ public class AudioHandler : MonoBehaviour
         {
             audio.source.Pause();
             Debug.Log("WE HAVE PAUSED");
+            isActive = false;
         }
         else
         {
