@@ -17,7 +17,7 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private Button repeatButton;
 
-    public List<GameObject> characters;
+    private List<GameObject> characters;
 
     private int index;
     private Audio audio;
@@ -25,7 +25,7 @@ public class AudioHandler : MonoBehaviour
     #endregion
 
     #region Method
-    private void Start()
+    public void Start()
     {
         isActive = false;
         foreach (Audio a in audioList)
@@ -34,6 +34,28 @@ public class AudioHandler : MonoBehaviour
             a.source.clip = a.clip;
             a.source.volume = a.volume;
         }
+        characters = FindList("Character");
+       
+    }
+    private List<GameObject> FindList(string name)
+    {
+        List<GameObject> temp = new List<GameObject>();
+        foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+        {
+            if (prefabToSpawn.CompareTag(name))
+            {
+                temp.Add(prefabToSpawn);
+            }
+        }
+        return temp;
+    }
+    private int CheckActiveCharacter(int i)
+    {
+        if (characters[i].activeInHierarchy)
+        {
+            audio = audioList[i];
+        }
+        return i;
     }
 
     public void Update()
@@ -57,8 +79,8 @@ public class AudioHandler : MonoBehaviour
         for (int i = 0; i < audioList.Length; i++)
         {
             index = i;
-            audio = audioList[index];
-
+            //audio = audioList[index];
+            CheckActiveCharacter(index);
             if (audio.source != null)
             {
                 audio.source.Play();
