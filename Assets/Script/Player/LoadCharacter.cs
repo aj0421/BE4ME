@@ -12,6 +12,7 @@ public class LoadCharacter : MonoBehaviour
 
     private Vector3 scaleChange;
     private Vector3 positionChange;
+    private Image playerIcon;
 
     private void Start()
     {
