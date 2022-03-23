@@ -19,7 +19,7 @@ public class LoadCharacter : MonoBehaviour
         string name = PlayerPrefs.GetString("name");
         GameObject characterPrefab = characters[currentCharacter];
         GameObject prefabClone = Instantiate(characterPrefab, parent.position, parent.rotation);
-        scaleChange = new Vector3(10, 30, 10);
+        scaleChange = new Vector3(20, 20, 20);
         positionChange = new Vector3(0, 20, 0);
         prefabClone.transform.localScale += scaleChange;
         prefabClone.transform.position += positionChange;
