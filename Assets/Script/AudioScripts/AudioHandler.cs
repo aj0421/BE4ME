@@ -12,20 +12,21 @@ public class AudioHandler : MonoBehaviour
     private Audio[] audioList;
 
     [SerializeField]
-    private Button quizButton; 
-    
+    private Button quizButton;
+
     [SerializeField]
     private Button repeatButton;
 
-    public List<GameObject> characters;
+    private List<GameObject> characters;
 
     private int index;
     private Audio audio;
+    AudioSource aSource;
     private bool isActive;
     #endregion
 
     #region Method
-    private void Start()
+    public void Start()
     {
         isActive = false;
         foreach (Audio a in audioList)
@@ -34,18 +35,32 @@ public class AudioHandler : MonoBehaviour
             a.source.clip = a.clip;
             a.source.volume = a.volume;
         }
+        characters = FindList("Character");
+        audio = audioList[index];
+    }
+    private List<GameObject> FindList(string name)
+    {
+        List<GameObject> temp = new List<GameObject>();
+        foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+        {
+            if (prefabToSpawn.CompareTag(name))
+            {
+                temp.Add(prefabToSpawn);
+            }
+        }
+        return temp;
     }
 
     public void Update()
     {
         if (isActive == true)
         {
-            SpawnButton(audio);
+            SpawnButton();
         }
     }
-    public void SpawnButton(Audio a)
+    public void SpawnButton()
     {
-        if (a.source.isPlaying == false)
+        if (aSource.isPlaying == false)
         {
             quizButton.gameObject.SetActive(true);
             repeatButton.gameObject.SetActive(true);
@@ -54,27 +69,36 @@ public class AudioHandler : MonoBehaviour
 
     public void Play()
     {
-        for (int i = 0; i < audioList.Length; i++)
-        {
-            index = i;
-            audio = audioList[index];
+        CheckCharacters();
+        SpawnButton();
+    }
 
-            if (audio.source != null)
+    private void CheckCharacters()
+    {
+        for (int i = 0; i < characters.Count; i++)
+        {
+            if (characters[i].activeInHierarchy)
             {
-                audio.source.Play();
-                isActive = true;
+                audio.source = characters[i].GetComponent<AudioSource>();
+                aSource = audio.source;
+                Debug.Log("Play: active character: " + characters[i].name);
+
+                if (aSource != null)
+                {
+                    aSource.Play();
+                    isActive = true;
+                    Debug.Log("CheckCharacters: active audioclip: " + aSource.clip);
+                }
             }
+            Debug.Log("Play: index: " + i);
         }
-        Debug.Log("index" + index);
-        SpawnButton(audio);
     }
 
     public void Pause()
     {
-        audio = audioList[index];
-        if (audio.source.isPlaying && audio.source != null)
+        if (aSource.isPlaying && aSource != null)
         {
-            audio.source.Pause();
+            aSource.Pause();
             Debug.Log("WE HAVE PAUSED");
             isActive = false;
         }
@@ -86,9 +110,8 @@ public class AudioHandler : MonoBehaviour
 
     public void Repeat()
     {
-        audio = audioList[index];
-        audio.source.time = 0;
-        audio.source.Play();
+        aSource.time = 0;
+        aSource.Play();
     }
     #endregion
 }

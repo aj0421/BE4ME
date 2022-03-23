@@ -500,7 +500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &292374225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -905,7 +905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &540542784
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1898,6 +1898,11 @@ PrefabInstance:
       propertyPath: instruction
       value: 
       objectReference: {fileID: 1471958912}
+    - target: {fileID: 2087204425, guid: 2ee2a2e8ed5e15d45a565d0c51961f92, type: 3}
+      propertyPath: placedPrefab
+      value: 
+      objectReference: {fileID: 1897978018001099412, guid: 1aa8ff9895486964f92b7a007fa03acd,
+        type: 3}
     - target: {fileID: 3636355977830778848, guid: 2ee2a2e8ed5e15d45a565d0c51961f92,
         type: 3}
       propertyPath: m_Name
@@ -2153,6 +2158,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7719881071216956650, guid: fe573e7abb8af466791f07600c0785e3,
         type: 3}
+    - target: {fileID: 234999980467546351, guid: e61baee82becd44429b45d64e68ecbf9,
+        type: 3}
+      propertyPath: characterArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e61baee82becd44429b45d64e68ecbf9, type: 3}
 --- !u!1001 &2504242513097559756
@@ -2390,6 +2400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
