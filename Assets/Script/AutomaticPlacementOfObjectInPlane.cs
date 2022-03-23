@@ -7,8 +7,8 @@ using UnityEngine.XR.ARFoundation;
 [RequireComponent(typeof(ARPlaneManager))]
 public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
 {
-    //[SerializeField]
-    //private GameObject placedPrefab;
+    [SerializeField]
+    private GameObject placedPrefab;
 
     private GameObject placedObject;
 
