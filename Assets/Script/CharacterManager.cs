@@ -8,6 +8,8 @@ public class CharacterManager : MonoBehaviour
     public GameObject[] characterArray;
 
     private GameObject quizPrefab;
+
+    public string storedValue;
     #endregion
 
     #region Method

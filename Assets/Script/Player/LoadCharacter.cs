@@ -17,7 +17,7 @@ public class LoadCharacter : MonoBehaviour
     private GameObject prefabClone;
     private int currentCharacter;
     private string playerName;
-        private Image playerIcon;
+    private Image playerIcon;
 
     private void Start()
     {
@@ -44,7 +44,7 @@ public class LoadCharacter : MonoBehaviour
 
         Debug.Log("LOAD CHARACTER IsWalking: Player " + prefabClone.name + ", player animator: " + playerAnimator);
 
-        if(playerAnimator != null)
+        if (playerAnimator != null)
         {
             playerAnimator.Play("WalkForward");
             Debug.Log("Playing WalkForward");

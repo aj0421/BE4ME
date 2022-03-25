@@ -536,7 +536,7 @@ MonoBehaviour:
   position:
     x: 0
     y: 0
-  prefab: {fileID: 7414126791596113512, guid: fe573e7abb8af466791f07600c0785e3, type: 3}
+  prefab: {fileID: 8786605890435966822, guid: 3483caf52e6efcc4cb262e70d1342009, type: 3}
 --- !u!4 &534448990
 Transform:
   m_ObjectHideFlags: 0
@@ -846,7 +846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _options:
     locationOptions:
-      latitudeLongitude: 55.47162761515714, 13.015943992573954
+      latitudeLongitude: 55.47162793838045, 13.015942928553207
       zoom: 17.5
     extentOptions:
       extentType: 2
@@ -1042,12 +1042,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 1212898472}
   _locationStrings:
-  - 55.47162761515714, 13.015943992573954
-  - 55.61174908382239, 12.998974417558312
+  - 55.47162793838045, 13.015942928553207
   _spawnScale: 10
   _markerPrefab:
-  - {fileID: 1897978018001099412, guid: 1aa8ff9895486964f92b7a007fa03acd, type: 3}
-  - {fileID: 7719881071216956650, guid: fe573e7abb8af466791f07600c0785e3, type: 3}
+  - {fileID: 8786605890435966822, guid: 3483caf52e6efcc4cb262e70d1342009, type: 3}
 --- !u!114 &1308185614 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1308185614, guid: 81a8beb84a4af4147b1f4db90b3eb1b6,
