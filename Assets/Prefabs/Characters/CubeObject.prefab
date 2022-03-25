@@ -193,4 +193,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   characterName: Tjockis
+  year: 1880
   questionsAndAnswers: []

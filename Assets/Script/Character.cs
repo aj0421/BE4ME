@@ -7,7 +7,9 @@ public class Character : MonoBehaviour
     #region Variables
     public int ID;
     public string characterName;
+    public int year;
     public List<QandA> questionsAndAnswers;
+ 
 
     private GameObject quizManager;
     private bool questionHasBeenAdded;
@@ -16,9 +18,9 @@ public class Character : MonoBehaviour
     #region Method
     public void Start()
     {
-        quizManager = FindMyGameObject("QuizManager");
-        quizManager.SetActive(true);
-        AddQuestionsAndAnswersToCharactersList();
+        //quizManager = FindMyGameObject("QuizManager");
+        //quizManager.SetActive(true);
+        //AddQuestionsAndAnswersToCharactersList();
     }
   
     private GameObject FindMyGameObject(string name)
