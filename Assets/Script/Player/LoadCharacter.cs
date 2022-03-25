@@ -9,6 +9,7 @@ public class LoadCharacter : MonoBehaviour
     public Transform spawnLocation;
     public Transform parent;
     public Text savedPlaterText;
+    public Image playerIconImage;
 
     private Animator playerAnimator;
     private Vector3 scaleChange;
@@ -17,7 +18,6 @@ public class LoadCharacter : MonoBehaviour
     private GameObject prefabClone;
     private int currentCharacter;
     private string playerName;
-        private Image playerIcon;
 
     private void Start()
     {
@@ -32,6 +32,8 @@ public class LoadCharacter : MonoBehaviour
         prefabClone.transform.localScale += scaleChange;
         prefabClone.transform.position += positionChange;
         prefabClone.transform.SetParent(parent);
+
+        playerIconImage.sprite = prefabClone.GetComponent<PlayerData>().playerIcon;
 
         //Animation
         playerAnimator = prefabClone.GetComponent<Animator>();
