@@ -28,13 +28,11 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
 
     private string storedValue;
 
-    private int year;
-
     private GameObject[] characters;
 
     private void Awake()
     {
-      
+       // CheckCharacter(new Vector3(0, 0, 0));
         ARPlaneManager = GetComponent<ARPlaneManager>();
         ARPlaneManager.planesChanged += PlaneChanged;
     }
@@ -44,7 +42,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
         if (args.added != null && placedObject == null)
         {
             ARPlane arPlane = args.added[0];
-            CheckCharacter(arPlane.transform.position);
+           CheckCharacter(arPlane.transform.position);
           //  placedObject = Instantiate(placedPrefab, arPlane.transform.position, Quaternion.identity);
             play.gameObject.SetActive(true);
             pause.gameObject.SetActive(true);
@@ -58,7 +56,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
         characters = characterManager.gameObject.GetComponent<CharacterManager>().characterArray;
         storedValue = characterManager.gameObject.GetComponent<CharacterManager>().storedValue;
       
-        foreach (var item in characters)
+        foreach (GameObject item in characters)
         {
             string yearFromCharacter = item.GetComponent<Character>().year;
             if (yearFromCharacter == storedValue)

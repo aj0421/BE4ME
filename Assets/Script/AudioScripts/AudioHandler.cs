@@ -28,6 +28,7 @@ public class AudioHandler : MonoBehaviour
     #region Method
     public void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         isActive = false;
         foreach (Audio a in audioList)
         {
@@ -81,16 +82,16 @@ public class AudioHandler : MonoBehaviour
             {
                 audio.source = characters[i].GetComponent<AudioSource>();
                 aSource = audio.source;
-                Debug.Log("Play: active character: " + characters[i].name);
+              //  Debug.Log("Play: active character: " + characters[i].name);
 
                 if (aSource != null)
                 {
                     aSource.Play();
                     isActive = true;
-                    Debug.Log("CheckCharacters: active audioclip: " + aSource.clip);
+                    //Debug.Log("CheckCharacters: active audioclip: " + aSource.clip);
                 }
             }
-            Debug.Log("Play: index: " + i);
+           // Debug.Log("Play: index: " + i);
         }
     }
 

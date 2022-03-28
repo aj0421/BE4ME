@@ -46,7 +46,6 @@ public class YearUI : MonoBehaviour
         {
             ValueChangeHandler(dropdown);
         });
-      
     }
 
     private void ValueChangeHandler(Dropdown target)

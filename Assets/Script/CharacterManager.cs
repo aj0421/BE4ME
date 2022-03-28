@@ -15,6 +15,7 @@ public class CharacterManager : MonoBehaviour
     #region Method
     public void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         quizPrefab = FindMyGameObject("CanvasQuiz");
     }
     private GameObject FindMyGameObject(string name)
