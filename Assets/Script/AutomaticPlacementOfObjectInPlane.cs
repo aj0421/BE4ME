@@ -30,9 +30,9 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
 
     private GameObject[] characters;
 
-    private void Awake()
+    public void Awake()
     {
-       // CheckCharacter(new Vector3(0, 0, 0));
+       //CheckCharacter(new Vector3(0, 0, 0));
         ARPlaneManager = GetComponent<ARPlaneManager>();
         ARPlaneManager.planesChanged += PlaneChanged;
     }
@@ -43,7 +43,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
         {
             ARPlane arPlane = args.added[0];
            CheckCharacter(arPlane.transform.position);
-          //  placedObject = Instantiate(placedPrefab, arPlane.transform.position, Quaternion.identity);
+          // placedObject = Instantiate(placedPrefab, arPlane.transform.position, Quaternion.identity);
             play.gameObject.SetActive(true);
             pause.gameObject.SetActive(true);
             instruction.gameObject.SetActive(false);
@@ -63,6 +63,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
             {
                 placedPrefab = item;
                 placedObject = Instantiate(placedPrefab, position, Quaternion.identity);
+                
                 Debug.Log("AutomaticPlacementOfObjectInPlane : CheckCharacter : spawning this " + placedObject.name + "and year " + yearFromCharacter);
             }
         }
