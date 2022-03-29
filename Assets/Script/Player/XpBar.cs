@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class XpBar : MonoBehaviour
 {
     public float fillSpeed = 0.5f;
+    public Text scoretext;
 
     private Slider slider;
     private ParticleSystem particles;
     private float targetXP = 0f;
+    private float remainingXP;
+    private float currentScore = 0;
+    private int playerLevel = 1;
 
     private void Awake()
     {
@@ -19,7 +23,7 @@ public class XpBar : MonoBehaviour
 
     private void Start()
     {
-        IncrementXP(0.75f);
+        IncrementScoreAndXP(75);
     }
 
     private void Update()
@@ -36,10 +40,25 @@ public class XpBar : MonoBehaviour
         {
             particles.Stop();
         }
+
+        if(slider.value >= 1.0f)
+        {
+            //TODO: change the following to fill slider for the remaining part of the XP instead of 0.1f.
+            slider.value = 0.1f;
+            targetXP = 0.0f;  
+        }
+
+        if(scoretext != null)
+        {
+            scoretext.text = PlayerPrefs.GetFloat("playerScore") + " P";
+        }
     }
 
-    public void IncrementXP(float newXP)
+    private void IncrementScoreAndXP(float newScore)
     {
-        targetXP = slider.value + newXP;
+        currentScore = currentScore + newScore;
+        PlayerPrefs.SetFloat("playerScore", currentScore);
+
+        targetXP = slider.value + newScore/100;
     }
 }
