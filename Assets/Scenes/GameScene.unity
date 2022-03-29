@@ -2124,9 +2124,9 @@ PrefabInstance:
       objectReference: {fileID: 101748660}
     - target: {fileID: 2504242512326328005, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
-      propertyPath: characterManager
+      propertyPath: characterParent
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1330330984}
     - target: {fileID: 2504242512430618666, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
       propertyPath: quizManager
@@ -2134,9 +2134,9 @@ PrefabInstance:
       objectReference: {fileID: 101748660}
     - target: {fileID: 2504242512430618666, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
-      propertyPath: characterManager
+      propertyPath: characterParent
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1330330984}
     - target: {fileID: 2504242512692078672, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
       propertyPath: quizManager
@@ -2144,9 +2144,9 @@ PrefabInstance:
       objectReference: {fileID: 101748660}
     - target: {fileID: 2504242512692078672, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
-      propertyPath: characterManager
+      propertyPath: characterParent
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1330330984}
     - target: {fileID: 2504242513509021978, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
       propertyPath: quizManager
@@ -2154,9 +2154,9 @@ PrefabInstance:
       objectReference: {fileID: 101748660}
     - target: {fileID: 2504242513509021978, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
-      propertyPath: characterManager
+      propertyPath: characterParent
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1330330984}
     - target: {fileID: 8882960352362773955, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2266,11 +2266,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CanvasQuiz
-      objectReference: {fileID: 0}
-    - target: {fileID: 8882960352362773959, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}

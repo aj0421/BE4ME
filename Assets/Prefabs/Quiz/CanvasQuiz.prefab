@@ -164,8 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 0}
-  characterManager: {fileID: 0}
   currentCharacter: {fileID: 0}
+  characterParent: {fileID: 0}
 --- !u!1 &2504242512357842814
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,8 +409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 0}
-  characterManager: {fileID: 0}
   currentCharacter: {fileID: 0}
+  characterParent: {fileID: 0}
 --- !u!1 &2504242512522201632
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,8 +654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 0}
-  characterManager: {fileID: 0}
   currentCharacter: {fileID: 0}
+  characterParent: {fileID: 0}
 --- !u!1 &2504242513143132663
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,8 +899,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 0}
-  characterManager: {fileID: 0}
   currentCharacter: {fileID: 0}
+  characterParent: {fileID: 0}
 --- !u!1 &2504242513546333977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,7 +1249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8882960352362773955
 RectTransform:
   m_ObjectHideFlags: 0
