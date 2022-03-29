@@ -32,7 +32,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
 
     public void Awake()
     {
-       //CheckCharacter(new Vector3(0, 0, 0));
+        // CheckCharacter(new Vector3(0, 0, 0));
         ARPlaneManager = GetComponent<ARPlaneManager>();
         ARPlaneManager.planesChanged += PlaneChanged;
     }

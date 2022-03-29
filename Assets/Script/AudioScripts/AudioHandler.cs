@@ -23,6 +23,8 @@ public class AudioHandler : MonoBehaviour
     private Audio audio;
     AudioSource aSource;
     private bool isActive;
+    public Text text;
+    public Text play;
     #endregion
 
     #region Method
@@ -53,6 +55,11 @@ public class AudioHandler : MonoBehaviour
 
     public void Update()
     {
+        if (characters == null)
+        {
+            characters = FindList("Character");
+
+        }
         if (isActive == true)
         {
             SpawnButton();
@@ -70,27 +77,38 @@ public class AudioHandler : MonoBehaviour
     public void Play()
     {
         CheckCharacters();
-        SpawnButton();
+        //  SpawnButton();
     }
 
     private void CheckCharacters()
     {
+     
         for (int i = 0; i < characters.Count; i++)
         {
+            play.text = audio.source.name;
+            //play.text =  characters[i].GetComponent<AudioSource>().clip.name;
+            //  play.text = "the count of character: " + characters[i].name;
             if (characters[i].activeInHierarchy)
             {
+                play.text = "The Character is active";
                 audio.source = characters[i].GetComponent<AudioSource>();
+           
                 aSource = audio.source;
                 Debug.Log("Play: active character: " + characters[i].name);
 
                 if (aSource != null)
                 {
                     aSource.Play();
+                    string test = "The sound comes from: ";
+                    var tes1 = characters[i].GetComponent<AudioSource>().clip.name;
+                    var tes2 = aSource.isPlaying;
+
+                    text.text = test + tes1 + " and the audio is playing: " + tes2;
                     isActive = true;
-                   Debug.Log("CheckCharacters: active audioclip: " + aSource.clip);
+                    Debug.Log("CheckCharacters: active audioclip: " + aSource.clip);
                 }
             }
-           // Debug.Log("Play: index: " + i);
+            // Debug.Log("Play: index: " + i);
         }
     }
 
