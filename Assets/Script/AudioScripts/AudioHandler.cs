@@ -17,14 +17,13 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private Button repeatButton;
 
-    private List<GameObject> characters;
+    private GameObject parent;
+    private GameObject child;
 
     private int index;
     private Audio audio;
     AudioSource aSource;
     private bool isActive;
-    public Text text;
-    public Text play;
     #endregion
 
     #region Method
@@ -37,29 +36,10 @@ public class AudioHandler : MonoBehaviour
             a.source.clip = a.clip;
             a.source.volume = a.volume;
         }
-        characters = FindList("Character");
         audio = audioList[index];
     }
-    private List<GameObject> FindList(string name)
-    {
-        List<GameObject> temp = new List<GameObject>();
-        foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
-        {
-            if (prefabToSpawn.CompareTag(name))
-            {
-                temp.Add(prefabToSpawn);
-            }
-        }
-        return temp;
-    }
-
     public void Update()
     {
-        if (characters == null)
-        {
-            characters = FindList("Character");
-
-        }
         if (isActive == true)
         {
             SpawnButton();
@@ -76,39 +56,20 @@ public class AudioHandler : MonoBehaviour
 
     public void Play()
     {
-        CheckCharacters();
-        //  SpawnButton();
+        CheckCharacter();
+         SpawnButton();
     }
 
-    private void CheckCharacters()
+    private void CheckCharacter()
     {
-     
-        for (int i = 0; i < characters.Count; i++)
+        parent = GameObject.FindGameObjectWithTag("CharacterParent");
+        child = parent.transform.GetChild(0).gameObject;
+        audio.source = child.GetComponent<AudioSource>();
+        aSource = audio.source;
+        if (aSource != null)
         {
-            play.text = audio.source.name;
-            //play.text =  characters[i].GetComponent<AudioSource>().clip.name;
-            //  play.text = "the count of character: " + characters[i].name;
-            if (characters[i].activeInHierarchy)
-            {
-                play.text = "The Character is active";
-                audio.source = characters[i].GetComponent<AudioSource>();
-           
-                aSource = audio.source;
-                Debug.Log("Play: active character: " + characters[i].name);
-
-                if (aSource != null)
-                {
-                    aSource.Play();
-                    string test = "The sound comes from: ";
-                    var tes1 = characters[i].GetComponent<AudioSource>().clip.name;
-                    var tes2 = aSource.isPlaying;
-
-                    text.text = test + tes1 + " and the audio is playing: " + tes2;
-                    isActive = true;
-                    Debug.Log("CheckCharacters: active audioclip: " + aSource.clip);
-                }
-            }
-            // Debug.Log("Play: index: " + i);
+            aSource.Play();
+            isActive = true;
         }
     }
 

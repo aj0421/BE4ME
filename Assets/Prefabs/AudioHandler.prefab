@@ -54,5 +54,3 @@ MonoBehaviour:
     source: {fileID: 0}
   quizButton: {fileID: 0}
   repeatButton: {fileID: 0}
-  text: {fileID: 0}
-  play: {fileID: 0}

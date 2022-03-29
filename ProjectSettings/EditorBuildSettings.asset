@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/CharacterSelection.unity
     guid: e37562921ae252840ae85579b8ee6dc9
   - enabled: 1
@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: b6bb114b70849a1448e562e8ba5a6a48
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TimemachineScene.unity
     guid: 637a8d7a39602204db7bef2105a60807
   m_configObjects:

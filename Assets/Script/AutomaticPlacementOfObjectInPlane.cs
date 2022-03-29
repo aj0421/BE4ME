@@ -12,6 +12,9 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     private GameObject placedObject;
 
     [SerializeField]
+    private GameObject characterParent;
+
+    [SerializeField]
     private Camera arCamera;
 
     [SerializeField]
@@ -28,22 +31,22 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
 
     private string storedValue;
 
-    private GameObject[] characters;
+    private List<GameObject> characters;
 
     public void Awake()
     {
-        // CheckCharacter(new Vector3(0, 0, 0));
+        //For debug purpose
+        //CheckCharacter(new Vector3(0, 0, 0));
         ARPlaneManager = GetComponent<ARPlaneManager>();
         ARPlaneManager.planesChanged += PlaneChanged;
     }
-  
+
     private void PlaneChanged(ARPlanesChangedEventArgs args)
     {
         if (args.added != null && placedObject == null)
         {
             ARPlane arPlane = args.added[0];
-           CheckCharacter(arPlane.transform.position);
-          // placedObject = Instantiate(placedPrefab, arPlane.transform.position, Quaternion.identity);
+            CheckCharacter(arPlane.transform.position);
             play.gameObject.SetActive(true);
             pause.gameObject.SetActive(true);
             instruction.gameObject.SetActive(false);
@@ -53,9 +56,9 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     private void CheckCharacter(Vector3 position)
     {
         GameObject characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
-        characters = characterManager.gameObject.GetComponent<CharacterManager>().characterArray;
+        characters = FindList("Character");
         storedValue = characterManager.gameObject.GetComponent<CharacterManager>().storedValue;
-      
+
         foreach (GameObject item in characters)
         {
             string yearFromCharacter = item.GetComponent<Character>().year;
@@ -63,9 +66,22 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
             {
                 placedPrefab = item;
                 placedObject = Instantiate(placedPrefab, position, Quaternion.identity);
-                
+                placedObject.transform.SetParent(characterParent.transform, false);
                 Debug.Log("AutomaticPlacementOfObjectInPlane : CheckCharacter : spawning this " + placedObject.name + "and year " + yearFromCharacter);
             }
         }
+    }
+
+    private List<GameObject> FindList(string name)
+    {
+        List<GameObject> temp = new List<GameObject>();
+        foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+        {
+            if (prefabToSpawn.CompareTag(name))
+            {
+                temp.Add(prefabToSpawn);
+            }
+        }
+        return temp;
     }
 }
