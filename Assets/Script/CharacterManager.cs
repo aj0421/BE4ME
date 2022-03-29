@@ -7,14 +7,32 @@ public class CharacterManager : MonoBehaviour
     #region Variables
     public GameObject[] characterArray;
 
-    private GameObject quizPrefab;
+   
+
+
+    public string storedValue;
+
+    private static CharacterManager instance;
     #endregion
 
+
+
     #region Method
-    public void Start()
+    private void Awake()
     {
-        quizPrefab = FindMyGameObject("CanvasQuiz");
+        DontDestroyOnLoad(this.gameObject);
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+       
     }
+   
     private GameObject FindMyGameObject(string name)
     {
         foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
@@ -25,11 +43,6 @@ public class CharacterManager : MonoBehaviour
             }
         }
         return null;
-    }
-
-    public void ActivateQuiz()
-    {
-        quizPrefab.SetActive(true);
     }
     #endregion
 }

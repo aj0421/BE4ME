@@ -95,7 +95,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 06227e55adab8eb47a32081b38085239, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.91
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -193,4 +193,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   characterName: Tjockis
+  year: 1880
   questionsAndAnswers: []

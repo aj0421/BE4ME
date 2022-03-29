@@ -14,12 +14,15 @@ public class QuizManager : MonoBehaviour
     private GameObject currentCharacter;
     private List<QandA> currentCharacterQandA;
     private List<GameObject> answerOptions;
+    private GameObject quizPrefab;
+
     #endregion
 
     #region Method 
 
     public void Start()
     {
+        quizPrefab = FindMyGameObject("CanvasQuiz");
         questionExist = false;
         Debug.Log("QuizManager is active");
         currentCharacter = FindMyGameObject("Character");
@@ -27,7 +30,10 @@ public class QuizManager : MonoBehaviour
         answerOptions = FindList("AnswerButton");
         Debug.Log("QuizManager Start: answeroptions " + answerOptions.Count);
     }
-
+    public void ActivateQuiz()
+    {
+        quizPrefab.SetActive(true);
+    }
     private GameObject FindMyGameObject(string name)
     {
         foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))

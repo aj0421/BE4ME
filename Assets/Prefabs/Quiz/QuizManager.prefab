@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3378652361288148196
 Transform:
   m_ObjectHideFlags: 0
@@ -50,13 +50,20 @@ MonoBehaviour:
     - "JA F\xD6R FAN"
     - "VAD \xC4R KAFFE?"
     - ERU GO ELLEH?
-    correctAnswers: 1
+    correctAnswers: 2
   - question: "Vilket djur \xE4r b\xE4st? (nej inte subjektivt)"
     answers:
     - Giraff
     - Bagge
     - Get
     - "Fj\xE4ril"
-    correctAnswers: 2
+    correctAnswers: 3
+  - question: "F\xE5r f\xE5r d\xE5r?"
+    answers:
+    - Ja
+    - Kanske
+    - Mjau
+    - "F\xE5r f\xE5r lamm"
+    correctAnswers: 4
   currentQuestion: 0
   questionText: {fileID: 0}

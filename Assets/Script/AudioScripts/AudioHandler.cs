@@ -17,7 +17,8 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private Button repeatButton;
 
-    private List<GameObject> characters;
+    private GameObject parent;
+    private GameObject child;
 
     private int index;
     private Audio audio;
@@ -35,22 +36,8 @@ public class AudioHandler : MonoBehaviour
             a.source.clip = a.clip;
             a.source.volume = a.volume;
         }
-        characters = FindList("Character");
         audio = audioList[index];
     }
-    private List<GameObject> FindList(string name)
-    {
-        List<GameObject> temp = new List<GameObject>();
-        foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
-        {
-            if (prefabToSpawn.CompareTag(name))
-            {
-                temp.Add(prefabToSpawn);
-            }
-        }
-        return temp;
-    }
-
     public void Update()
     {
         if (isActive == true)
@@ -69,28 +56,20 @@ public class AudioHandler : MonoBehaviour
 
     public void Play()
     {
-        CheckCharacters();
-        SpawnButton();
+        CheckCharacter();
+         SpawnButton();
     }
 
-    private void CheckCharacters()
+    private void CheckCharacter()
     {
-        for (int i = 0; i < characters.Count; i++)
+        parent = GameObject.FindGameObjectWithTag("CharacterParent");
+        child = parent.transform.GetChild(0).gameObject;
+        audio.source = child.GetComponent<AudioSource>();
+        aSource = audio.source;
+        if (aSource != null)
         {
-            if (characters[i].activeInHierarchy)
-            {
-                audio.source = characters[i].GetComponent<AudioSource>();
-                aSource = audio.source;
-                Debug.Log("Play: active character: " + characters[i].name);
-
-                if (aSource != null)
-                {
-                    aSource.Play();
-                    isActive = true;
-                    Debug.Log("CheckCharacters: active audioclip: " + aSource.clip);
-                }
-            }
-            Debug.Log("Play: index: " + i);
+            aSource.Play();
+            isActive = true;
         }
     }
 

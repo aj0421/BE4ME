@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimeMachine : MonoBehaviour
 {
@@ -42,6 +43,10 @@ public class TimeMachine : MonoBehaviour
         {
             StartCoroutine(UIManager.GetComponent<UIManager>().FadeToBlack());
             isBlackedOut = true;
+        }
+        if (isBlackedOut)
+        {
+            SceneManager.LoadScene(1);
         }
     }
 }

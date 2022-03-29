@@ -24,7 +24,7 @@ public class CollisionDetection : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Character"))
+        if (other.gameObject.CompareTag("Marker"))
         {
             other.GetComponent<MeshRenderer>().material.color = Color.red;
             button.gameObject.SetActive(true);
@@ -33,7 +33,7 @@ public class CollisionDetection : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Character"))
+        if (other.gameObject.CompareTag("Marker"))
         {
             other.GetComponent<MeshRenderer>().material.color = Color.blue;
             button.gameObject.SetActive(false);

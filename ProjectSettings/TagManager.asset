@@ -8,6 +8,9 @@ TagManager:
   - QuizManager
   - AnswerButton
   - CanvasQuiz
+  - CharacterManager
+  - Marker
+  - CharacterParent
   layers:
   - Default
   - TransparentFX
