@@ -25,7 +25,7 @@ public class XpBar : MonoBehaviour
 
     private void Start()
     {
-        IncrementScoreAndXP(80);
+        IncrementScoreAndXP(240);
     }
 
     private void LateUpdate()
