@@ -14,6 +14,8 @@ public class XpBar : MonoBehaviour
     private float remainingXP;
     private float currentScore = 0;
     private int playerLevel = 1;
+    private float xpToNextLevel = 100f;
+    private float currentTotalXp;
 
     private void Awake()
     {
@@ -23,14 +25,20 @@ public class XpBar : MonoBehaviour
 
     private void Start()
     {
-        IncrementScoreAndXP(75);
+        IncrementScoreAndXP(80);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        if(slider.value < targetXP)
+        if (slider.value < targetXP)
         {
             slider.value += fillSpeed * Time.deltaTime;
+
+            while (CheckRemainingXpAndSetSliderValue())
+            {
+                playerLevel++;
+            }
+
             if (!particles.isPlaying)
             {
                 particles.Play();
@@ -41,16 +49,26 @@ public class XpBar : MonoBehaviour
             particles.Stop();
         }
 
-        if(slider.value >= 1.0f)
+        if (scoretext != null)
         {
-            //TODO: change the following to fill slider for the remaining part of the XP instead of 0.1f.
-            slider.value = 0.1f;
-            targetXP = 0.0f;  
+            scoretext.text = PlayerPrefs.GetFloat("playerScore") + "            " + playerLevel + " lvl";
         }
+    }
 
-        if(scoretext != null)
+    private bool CheckRemainingXpAndSetSliderValue()
+    {
+        if (targetXP > (currentTotalXp / 100) && slider.value >= 1)
         {
-            scoretext.text = PlayerPrefs.GetFloat("playerScore") + " P";
+            remainingXP = 1.0f - targetXP;
+            slider.value = 0.0f;
+            targetXP = remainingXP * -1;
+            currentTotalXp = currentTotalXp - xpToNextLevel;
+
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -59,6 +77,6 @@ public class XpBar : MonoBehaviour
         currentScore = currentScore + newScore;
         PlayerPrefs.SetFloat("playerScore", currentScore);
 
-        targetXP = slider.value + newScore/100;
+        targetXP = slider.value + newScore / 100;
     }
 }
