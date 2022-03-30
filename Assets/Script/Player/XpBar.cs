@@ -6,10 +6,16 @@ using UnityEngine.UI;
 public class XpBar : MonoBehaviour
 {
     public float fillSpeed = 0.5f;
+    public Text scoretext;
 
     private Slider slider;
     private ParticleSystem particles;
     private float targetXP = 0f;
+    private float remainingXP;
+    private float currentScore = 0;
+    private int playerLevel = 1;
+    private float xpToNextLevel = 100f;
+    private float currentTotalXp;
 
     private void Awake()
     {
@@ -19,14 +25,20 @@ public class XpBar : MonoBehaviour
 
     private void Start()
     {
-        IncrementXP(2.40f);
+        IncrementScoreAndXP(240);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        if(slider.value < targetXP)
+        if (slider.value < targetXP)
         {
             slider.value += fillSpeed * Time.deltaTime;
+
+            while (CheckRemainingXpAndSetSliderValue())
+            {
+                playerLevel++;
+            }
+
             if (!particles.isPlaying)
             {
                 particles.Play();
@@ -36,10 +48,35 @@ public class XpBar : MonoBehaviour
         {
             particles.Stop();
         }
+
+        if (scoretext != null)
+        {
+            scoretext.text = PlayerPrefs.GetFloat("playerScore") + "            " + playerLevel + " lvl";
+        }
     }
 
-    public void IncrementXP(float newXP)
+    private bool CheckRemainingXpAndSetSliderValue()
     {
-        targetXP = slider.value + newXP;
+        if (targetXP > (currentTotalXp / 100) && slider.value >= 1)
+        {
+            remainingXP = 1.0f - targetXP;
+            slider.value = 0.0f;
+            targetXP = remainingXP * -1;
+            currentTotalXp = currentTotalXp - xpToNextLevel;
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private void IncrementScoreAndXP(float newScore)
+    {
+        currentScore = currentScore + newScore;
+        PlayerPrefs.SetFloat("playerScore", currentScore);
+
+        targetXP = slider.value + newScore / 100;
     }
 }
