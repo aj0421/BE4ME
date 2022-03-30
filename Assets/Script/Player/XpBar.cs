@@ -19,7 +19,7 @@ public class XpBar : MonoBehaviour
 
     private void Start()
     {
-        IncrementXP(0.75f);
+        IncrementXP(2.40f);
     }
 
     private void Update()
