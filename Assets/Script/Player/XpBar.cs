@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class XpBar : MonoBehaviour
 {
     public float fillSpeed = 0.5f;
-    public Text scoretext;
+    public Text scoreText;
+    public Text levelText;
 
     private Slider slider;
     private ParticleSystem particles;
@@ -49,9 +50,10 @@ public class XpBar : MonoBehaviour
             particles.Stop();
         }
 
-        if (scoretext != null)
+        if (scoreText != null)
         {
-            scoretext.text = PlayerPrefs.GetFloat("playerScore") + "            " + playerLevel + " lvl";
+            scoreText.text = PlayerPrefs.GetFloat("playerScore") + ""; // + "            " + playerLevel + " lvl";
+            levelText.text = playerLevel + "";
         }
     }
 
