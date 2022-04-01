@@ -10,18 +10,32 @@ public class YearUI : MonoBehaviour
     private Dropdown dropdown;
 
     private List<string> options;
+    private List<string> temp;
     private GameObject[] characterArray;
 
     public List<string> year;
 
     public string storedValue;
     private GameObject characterManager;
+    private GameObject character;
+    int index = 0;
     #endregion
 
 
     #region Method
     public void Start()
     {
+        Initialize();
+        ValueChangeHandler(dropdown);
+        dropdown.onValueChanged.AddListener(delegate
+        {
+            ValueChangeHandler(dropdown);
+        });  
+    }
+    private void Initialize()
+    {
+        character = GameObject.FindGameObjectWithTag("Character");
+       
         characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
         characterArray = characterManager.gameObject.GetComponent<CharacterManager>().characterArray;
         dropdown = GetComponent<Dropdown>();
@@ -31,23 +45,35 @@ public class YearUI : MonoBehaviour
         {
             string yearFromCharacter = item.GetComponent<Character>().year;
             year.Add(yearFromCharacter.ToString());
-            Debug.Log("YearUI : Start: Adding year to a list: " + year.Count);
-        }
-
-        for (int i = 0; i < year.Count; i++)
-        {
-            options.Add(year[i]);
         }
         dropdown.ClearOptions();
+         Select(dropdown);
         dropdown.AddOptions(options);
         Debug.Log("YearUI : Start: The options " + year);
-        ValueChangeHandler(dropdown);
-        dropdown.onValueChanged.AddListener(delegate
-        {
-            ValueChangeHandler(dropdown);
-        });
     }
 
+    private void Select(Dropdown target)
+    {
+        for (int i = 0; i < year.Count; i++)
+        {
+            bool isCompleted = characterManager.gameObject.GetComponent<CharacterManager>().isCompleted;
+            if (!isCompleted)
+            {
+                options.Add(year[i]);
+                Debug.Log("Added year: " + options[i].ToString());
+                return;
+            }
+            else
+            {
+                i++;
+                options.Add(year[i]);
+                return;
+              
+            }
+        }
+    }
+    
+    
     private void ValueChangeHandler(Dropdown target)
     {
         storedValue = target.options[target.value].text;

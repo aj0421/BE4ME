@@ -21,6 +21,7 @@ public class Character : MonoBehaviour
         quizManager = FindMyGameObject("QuizManager");
         quizManager.SetActive(true);
         AddQuestionsAndAnswersToCharactersList();
+
     }
 
     private GameObject FindMyGameObject(string name)

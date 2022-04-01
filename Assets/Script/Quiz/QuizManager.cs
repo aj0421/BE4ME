@@ -19,6 +19,7 @@ public class QuizManager : MonoBehaviour
     public GameObject guiPrefab;
     public GameObject scorePrefab;
     public GameObject quizPanel;
+    private GameObject characterManager;
 
     #endregion
 
@@ -26,6 +27,7 @@ public class QuizManager : MonoBehaviour
 
     public void Start()
     {
+        characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
         quizPrefab = FindMyGameObject("CanvasQuiz");
         questionExist = false;
         Debug.Log("QuizManager is active");
@@ -118,6 +120,7 @@ public class QuizManager : MonoBehaviour
             quizPanel.SetActive(false);
             scorePrefab.SetActive(true);
             currentCharacter.GetComponent<Character>().isCompleted = true;
+            characterManager.GetComponent<CharacterManager>().isCompleted = currentCharacter.GetComponent<Character>().isCompleted;
             exitButton.gameObject.SetActive(true);
             Debug.Log("QuizManager Correct: currentCharacterQandA Count is less than 0");
             return;

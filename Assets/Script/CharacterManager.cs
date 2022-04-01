@@ -7,19 +7,19 @@ public class CharacterManager : MonoBehaviour
     #region Variables
     public GameObject[] characterArray;
 
-   
-
-
     public string storedValue;
-
     private static CharacterManager instance;
+
+    public bool isCompleted;
     #endregion
-
-
 
     #region Method
     private void Awake()
     {
+        foreach (var item in characterArray)
+        {
+            isCompleted = item.GetComponent<Character>().isCompleted;
+        }
         DontDestroyOnLoad(this.gameObject);
 
         if (instance == null)
@@ -30,9 +30,8 @@ public class CharacterManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-       
     }
-   
+
     private GameObject FindMyGameObject(string name)
     {
         foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
