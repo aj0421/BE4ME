@@ -51,6 +51,11 @@ public class CollisionDetection : MonoBehaviour
             other.GetComponent<MeshRenderer>().material.color = Color.blue;
             button.gameObject.SetActive(false);
         }
+        if (other.gameObject.CompareTag("TimeMachine"))
+        {
+            timeMachineButton.gameObject.SetActive(false);
+            dropDown.gameObject.SetActive(false);
+        }
     }
     #endregion
 }

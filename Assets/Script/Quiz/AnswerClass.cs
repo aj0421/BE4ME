@@ -19,7 +19,6 @@ public class AnswerClass : MonoBehaviour
 
     public void Start()
     {
-
         quizManager = GameObject.FindGameObjectWithTag("QuizManager");
     }
     public void Update()
@@ -36,6 +35,7 @@ public class AnswerClass : MonoBehaviour
 
             quizManager.GetComponent<QuizManager>().Correct();
             gameObject.GetComponent<Image>().color = new Color(37, 41, 88, 1);    //Dark blue
+           
         }
         else
         {

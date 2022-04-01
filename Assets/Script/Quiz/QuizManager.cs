@@ -9,12 +9,14 @@ public class QuizManager : MonoBehaviour
     public List<QandA> questions_Answers;
     public int currentQuestion = 0;
     public Text questionText;
+    public Button exitButton;
 
     private bool questionExist;
     private GameObject currentCharacter;
     private List<QandA> currentCharacterQandA;
     private List<GameObject> answerOptions;
     private GameObject quizPrefab;
+    public GameObject guiPrefab;
 
     #endregion
 
@@ -33,6 +35,7 @@ public class QuizManager : MonoBehaviour
     public void ActivateQuiz()
     {
         quizPrefab.SetActive(true);
+        guiPrefab.SetActive(false);
     }
     private GameObject FindMyGameObject(string name)
     {
@@ -59,21 +62,30 @@ public class QuizManager : MonoBehaviour
     }
     public void Update()
     {
-        if (!questionExist)
+        if (!currentCharacter.GetComponent<Character>().isCompleted)
         {
-            Debug.Log("Manager Updater");
-
-            if (currentCharacter != null && currentCharacter.activeInHierarchy)
+            if (!questionExist)
             {
-                currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;
-                Debug.Log("QuizManager Update: current character List of Q&A count: " + currentCharacterQandA.Count);
-                if (currentCharacterQandA.Count > 0)
+                Debug.Log("Manager Updater");
+
+                if (currentCharacter != null && currentCharacter.activeInHierarchy)
                 {
-                    Debug.Log("QuizManager Update: Calling GenerateQuestion()");
-                    GenerateQuestion();
+                    currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;
+
+                    Debug.Log("QuizManager Update: current character List of Q&A count: " + currentCharacterQandA.Count);
+
+                    if (currentCharacterQandA.Count > 0)
+                    {
+                        Debug.Log("QuizManager Update: Calling GenerateQuestion()");
+                        GenerateQuestion();
+                    }
                 }
             }
         }
+        Debug.Log("The count of the list ; " + currentCharacterQandA.Count);
+        Debug.Log("the iscompleted bool is:  " + currentCharacter.GetComponent<Character>().isCompleted);
+       
+
     }
 
     private void SetAnswers()
@@ -87,7 +99,7 @@ public class QuizManager : MonoBehaviour
             {
                 answerOptions[i].GetComponent<AnswerClass>().isCorrect = true;
             }
-            Debug.Log("QuizManagewr SetAnswer: Setting answer" + answerOptions[i]);
+            Debug.Log("QuizManager SetAnswer: Setting answer" + answerOptions[i]);
         }
     }
 
@@ -101,13 +113,21 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
+            currentCharacter.GetComponent<Character>().isCompleted = true;
+            exitButton.gameObject.SetActive(true);
             Debug.Log("QuizManager Correct: currentCharacterQandA Count is less than 0");
+            return;
         }
     }
 
+    public void PressExit()
+    {
+        quizPrefab.SetActive(false);
+        guiPrefab.SetActive(true);
+    }
     private void GenerateQuestion()
     {
-        if (currentCharacterQandA.Count < 0)
+        if (currentCharacterQandA.Count <= 0)
         {
             return;
         }
