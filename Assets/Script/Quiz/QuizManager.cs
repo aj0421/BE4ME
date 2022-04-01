@@ -70,26 +70,22 @@ public class QuizManager : MonoBehaviour
         {
             if (!questionExist)
             {
-                Debug.Log("Manager Updater");
-
+               
                 if (currentCharacter != null && currentCharacter.activeInHierarchy)
                 {
                     currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;
 
-                    Debug.Log("QuizManager Update: current character List of Q&A count: " + currentCharacterQandA.Count);
+                  
 
                     if (currentCharacterQandA.Count > 0)
                     {
-                        Debug.Log("QuizManager Update: Calling GenerateQuestion()");
+                       
                         GenerateQuestion();
                     }
                 }
             }
         }
-        Debug.Log("The count of the list ; " + currentCharacterQandA.Count);
-        Debug.Log("the iscompleted bool is:  " + currentCharacter.GetComponent<Character>().isCompleted);
        
-
     }
 
     private void SetAnswers()

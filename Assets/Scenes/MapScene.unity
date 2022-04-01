@@ -1555,6 +1555,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterManager
       objectReference: {fileID: 0}
+    - target: {fileID: 234999980467546351, guid: e61baee82becd44429b45d64e68ecbf9,
+        type: 3}
+      propertyPath: characterArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 234999980467546351, guid: e61baee82becd44429b45d64e68ecbf9,
+        type: 3}
+      propertyPath: characterArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 8327977426604024559, guid: ad1cc5826a9d6a743aa611f3544dea36,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e61baee82becd44429b45d64e68ecbf9, type: 3}
 --- !u!1 &1662661825
