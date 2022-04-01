@@ -17,6 +17,8 @@ public class QuizManager : MonoBehaviour
     private List<GameObject> answerOptions;
     private GameObject quizPrefab;
     public GameObject guiPrefab;
+    public GameObject scorePrefab;
+    public GameObject quizPanel;
 
     #endregion
 
@@ -113,6 +115,8 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
+            quizPanel.SetActive(false);
+            scorePrefab.SetActive(true);
             currentCharacter.GetComponent<Character>().isCompleted = true;
             exitButton.gameObject.SetActive(true);
             Debug.Log("QuizManager Correct: currentCharacterQandA Count is less than 0");

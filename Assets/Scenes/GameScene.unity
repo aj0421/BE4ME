@@ -2117,142 +2117,59 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2124069461, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124069462, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.40205887
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124069462, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.45877236
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124069462, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.45877236
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124069462, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -358
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124069462, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 867
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124069465, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124069465, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2124069465, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 101748661}
-    - target: {fileID: 2124069465, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124069465, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PressExit
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124069465, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: QuizManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124069465, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2504242512326328005, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: quizManager
-      value: 
-      objectReference: {fileID: 101748660}
-    - target: {fileID: 2504242512326328005, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: characterParent
-      value: 
-      objectReference: {fileID: 1330330984}
-    - target: {fileID: 2504242512430618666, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: quizManager
-      value: 
-      objectReference: {fileID: 101748660}
-    - target: {fileID: 2504242512430618666, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: characterParent
-      value: 
-      objectReference: {fileID: 1330330984}
-    - target: {fileID: 2504242512692078672, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: quizManager
-      value: 
-      objectReference: {fileID: 101748660}
-    - target: {fileID: 2504242512692078672, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: characterParent
-      value: 
-      objectReference: {fileID: 1330330984}
-    - target: {fileID: 2504242513509021978, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: quizManager
-      value: 
-      objectReference: {fileID: 101748660}
-    - target: {fileID: 2504242513509021978, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: characterParent
-      value: 
-      objectReference: {fileID: 1330330984}
-    - target: {fileID: 5950488905876631070, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5950488905876631070, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5950488905876631070, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5950488905876631070, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -577
-      objectReference: {fileID: 0}
-    - target: {fileID: 5950488905876631070, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -273
-      objectReference: {fileID: 0}
-    - target: {fileID: 5950488905876631070, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5950488905876631070, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5950488905876631070, guid: 7117ca1850e3d4b4b83900dcd086e17f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8315378079060572332, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+    - target: {fileID: 612082570377448866, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504242512326328005, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+        type: 3}
+      propertyPath: quizManager
+      value: 
+      objectReference: {fileID: 101748660}
+    - target: {fileID: 2504242512326328005, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+        type: 3}
+      propertyPath: characterParent
+      value: 
+      objectReference: {fileID: 1330330984}
+    - target: {fileID: 2504242512430618666, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+        type: 3}
+      propertyPath: quizManager
+      value: 
+      objectReference: {fileID: 101748660}
+    - target: {fileID: 2504242512430618666, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+        type: 3}
+      propertyPath: characterParent
+      value: 
+      objectReference: {fileID: 1330330984}
+    - target: {fileID: 2504242512692078672, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+        type: 3}
+      propertyPath: quizManager
+      value: 
+      objectReference: {fileID: 101748660}
+    - target: {fileID: 2504242512692078672, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+        type: 3}
+      propertyPath: characterParent
+      value: 
+      objectReference: {fileID: 1330330984}
+    - target: {fileID: 2504242513509021978, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+        type: 3}
+      propertyPath: quizManager
+      value: 
+      objectReference: {fileID: 101748660}
+    - target: {fileID: 2504242513509021978, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+        type: 3}
+      propertyPath: characterParent
+      value: 
+      objectReference: {fileID: 1330330984}
+    - target: {fileID: 8882960352314725214, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8882960352362773955, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
@@ -2383,6 +2300,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2504242513097559758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 612082570377448866, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2504242513097559756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2504242513097559759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8882960352314725214, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2504242513097559756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3378652360613831490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2462,9 +2391,19 @@ PrefabInstance:
       objectReference: {fileID: 545963132}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
+      propertyPath: quizPanel
+      value: 
+      objectReference: {fileID: 2504242513097559759}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
       propertyPath: exitButton
       value: 
       objectReference: {fileID: 2504242513097559757}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: scorePrefab
+      value: 
+      objectReference: {fileID: 2504242513097559758}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questionText
