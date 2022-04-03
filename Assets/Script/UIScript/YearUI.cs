@@ -48,8 +48,7 @@ public class YearUI : MonoBehaviour
         }
 
         Select(); 
-      // dropdown.AddOptions(options);
-      
+   
     }
 
     private void Select()
@@ -73,7 +72,6 @@ public class YearUI : MonoBehaviour
                 dropdown.AddOptions(options);
                 Debug.Log("Added year: " + options[i].ToString());
                 return;
-
             }
         }
     }
@@ -84,7 +82,6 @@ public class YearUI : MonoBehaviour
         storedValue = target.options[target.value].text;
         characterManager.gameObject.GetComponent<CharacterManager>().storedValue = storedValue;
         Debug.Log("YearUI: ValueChangeHandler : stored value: " + storedValue);
-
     }
 
     #endregion

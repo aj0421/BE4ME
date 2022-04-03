@@ -1,56 +1,113 @@
 ﻿namespace Mapbox.Examples
 {
-	using UnityEngine;
-	using Mapbox.Utils;
-	using Mapbox.Unity.Map;
-	using Mapbox.Unity.MeshGeneration.Factories;
-	using Mapbox.Unity.Utilities;
-	using System.Collections.Generic;
+    using UnityEngine;
+    using Mapbox.Utils;
+    using Mapbox.Unity.Map;
+    using Mapbox.Unity.MeshGeneration.Factories;
+    using Mapbox.Unity.Utilities;
+    using System.Collections.Generic;
+    using UnityEngine.UI;
 
-	public class SpawnOnMap : MonoBehaviour
-	{
-		[SerializeField]
-		AbstractMap _map;
+    public class SpawnOnMap : MonoBehaviour
+    {
+        [SerializeField]
+        AbstractMap _map;
 
-		[SerializeField]
-		[Geocode]
-		string[] _locationStrings;
-		Vector2d[] _locations;
+        [SerializeField]
+        [Geocode]
+        string[] _locationStrings;   
+        
+        [SerializeField]
+        [Geocode]
+        string _locationTimeMachine; 
 
-		[SerializeField]
-		float _spawnScale = 100f;
+        Vector2d[] _locations;
+       
+        Vector2d[] _timeMachinelocations;
 
-		[SerializeField]
-		GameObject[] _markerPrefab;
+        [SerializeField]
+        float _spawnScale = 100f;
 
-		List<GameObject> _spawnedObjects;
+        [SerializeField]
+        GameObject[] _markerPrefab;
 
-		void Start()
-		{
-			_locations = new Vector2d[_locationStrings.Length];
-			_spawnedObjects = new List<GameObject>();
-			for (int i = 0; i < _locationStrings.Length; i++)
-			{
-				string locationString = _locationStrings[i];
-				_locations[i] = Conversions.StringToLatLon(locationString);
-				GameObject instance = Instantiate(_markerPrefab[i]);
-				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
-				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-                _spawnedObjects.Add(instance);
-			}
-		}
+        [SerializeField]
+        GameObject _timeMachinePrefab;
 
-		private void Update()
-		{
-			int count = _spawnedObjects.Count;
-			for (int i = 0; i < count; i++)
-			{
-				GameObject spawnedObject = _spawnedObjects[i];
-				Vector2d location = _locations[i];
-				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
-				spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-			}
-		}
+        List<GameObject> _spawnedObjects;
+        bool hasSpawned;
+
+        public Text text;
+        void Start()
+        {
+            _locations = new Vector2d[_locationStrings.Length];
+            _timeMachinelocations = new Vector2d[_locationTimeMachine.Length];
+            _spawnedObjects = new List<GameObject>();
+            Initialize();
+            for (int i = 0; i < _locationStrings.Length; i++)
+            {
+                string locationString = _locationStrings[i];
+                _locations[i] = Conversions.StringToLatLon(locationString);
+
+                CheckYear();            
+            }
+                 
+        }
+
+        private void Initialize() 
+        {
+            _timeMachinelocations[0] = Conversions.StringToLatLon(_locationTimeMachine);
+            GameObject timeMachine = Instantiate(_timeMachinePrefab);
+            timeMachine.transform.localPosition = _map.GeoToWorldPosition(_timeMachinelocations[0], true);
+        }
+
+        private void CheckYear()
+        {
+            var characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
+            var storedValue = characterManager.GetComponent<CharacterManager>().storedValue;
+          
+            if (storedValue == null)
+            {
+                return;
+            }
+            
+            if(!hasSpawned)
+            {
+
+            switch (storedValue)
+            {
+                case "1880":
+                    GameObject instance = Instantiate(_markerPrefab[0]);
+                    instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+                    instance.transform.localPosition = _map.GeoToWorldPosition(_locations[0], true);
+                    _spawnedObjects.Add(instance);
+                        hasSpawned = true;
+                        text.text = "positio " + _locations[0].ToString() + "Count of " + _locations.Length;
+
+                    break;
+                case "1996":
+                    GameObject inst = Instantiate(_markerPrefab[0]);
+                    inst.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+                    inst.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
+                    _spawnedObjects.Add(inst);
+                        hasSpawned = true;
+                        text.text = "pos " + _locations[0].ToString() + "Count of " + _locations.Length;
+                        break;
+            }
+            }
+        }
+
+        private void Update()
+        {
+            int count = _spawnedObjects.Count;
+            for (int i = 0; i < count; i++)
+            {
+                GameObject spawnedObject = _spawnedObjects[i];
+                Vector2d location = _locations[i];
+                spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
+                spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+            }
+        }
 
     }
 }
