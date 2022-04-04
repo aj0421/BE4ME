@@ -9,6 +9,7 @@ public class Introduction : MonoBehaviour
     public Text introductionText;
     public Text playerName;
     public GameObject guideScore;
+    public Image clickIndicator;
 
     private List<string> allTexts;
     private bool previousWasTouching = false;
@@ -40,6 +41,8 @@ public class Introduction : MonoBehaviour
     {
         if (this.gameObject.activeInHierarchy)
         {
+            StartCoroutine(ClickFading(true));
+
             //isTouching = Input.touchCount > 0;
 
             //if (isTouching && !previousWasTouching && index > allTexts.Count -1)
@@ -127,5 +130,25 @@ public class Introduction : MonoBehaviour
 
         string part6 = "Good luck!";
         allTexts.Add(part6);
+    }
+
+    private IEnumerator ClickFading(bool fadeMinus)
+    {
+        if (fadeMinus)
+        {
+            for (float i = 2; i >= 0; i -= Time.deltaTime)
+            {
+                clickIndicator.color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+        }
+        else
+        {
+            for (float i = 0; i <= 2; i += Time.deltaTime)
+            {
+                clickIndicator.color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+        }
     }
 }
