@@ -7,8 +7,8 @@ public class CharacterSelector : MonoBehaviour
 {
     public GameObject[] characters;
     public Text nametext;  //TODO: This is currently set to the placeholder text, change it to whatever the player enters.
-    public Button swedishButton;
-    public Button englishButton;
+    //public Button swedishButton;
+    //public Button englishButton;
 
     [SerializeField]
     private int currentCharacter = 0;
@@ -19,8 +19,8 @@ public class CharacterSelector : MonoBehaviour
 
     private void Start()
     {
-        swedishButton.onClick.AddListener(ButtonClickSwedish);
-        englishButton.onClick.AddListener(ButtonClickEnglish);
+        //swedishButton.onClick.AddListener(ButtonClickSwedish);
+        //englishButton.onClick.AddListener(ButtonClickEnglish);
     }
 
     public void SaveSelected()
@@ -28,8 +28,7 @@ public class CharacterSelector : MonoBehaviour
         name = nametext.text;
         PlayerPrefs.SetInt("selectedCharacter", currentCharacter);
         PlayerPrefs.SetString("name", nametext.text);
-        PlayerPrefs.SetString("language", SelectedLanguage());
-        Debug.Log("Name: " + nametext.text);
+        //PlayerPrefs.SetString("language", SelectedLanguage());
     }
 
     private string SelectedLanguage()

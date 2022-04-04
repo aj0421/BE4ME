@@ -14,17 +14,19 @@ public class Introduction : MonoBehaviour
     private bool isTouching = false;
     private int index = 1;
     private bool isSwedish;
-    private string selectedLanguage = "swedish"; //default
+    //private string selectedLanguage = "swedish"; //default
+    private string language;
 
     private void Awake()
     {
         allTexts = new List<string>();
-        selectedLanguage = PlayerPrefs.GetString("language");
-        if (selectedLanguage == "swedish")
+        //selectedLanguage = PlayerPrefs.GetString("language");
+        language = PlayerPrefs.GetString("language");
+        if (language == "Swedish (sv")
         {
             AddTextPartsToListSwedish();
         }
-        else if (selectedLanguage == "english")
+        else if (language == "English (en)")
         {
             AddTextPartsToListEnglish();
         }
