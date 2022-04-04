@@ -36,7 +36,5 @@ public class LanguageSelecting : MonoBehaviour
     static void LocaleSelected(int index)
     {
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
-        PlayerPrefs.SetString("language", LocalizationSettings.SelectedLocale.ToString());
-        Debug.Log("language index: " + LocalizationSettings.SelectedLocale.ToString());
     }
 }

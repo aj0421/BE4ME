@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class Introduction : MonoBehaviour
@@ -13,16 +14,13 @@ public class Introduction : MonoBehaviour
     private bool previousWasTouching = false;
     private bool isTouching = false;
     private int index = 1;
-    private bool isSwedish;
-    //private string selectedLanguage = "swedish"; //default
     private string language;
 
     private void Awake()
     {
         allTexts = new List<string>();
-        //selectedLanguage = PlayerPrefs.GetString("language");
-        language = PlayerPrefs.GetString("language");
-        if (language == "Swedish (sv")
+        language = LocalizationSettings.SelectedLocale.ToString();
+        if (language == "Swedish (sv)")
         {
             AddTextPartsToListSwedish();
         }
@@ -30,9 +28,12 @@ public class Introduction : MonoBehaviour
         {
             AddTextPartsToListEnglish();
         }
+        else
+        {
+            AddTextPartsToListEnglish();  //Default
+        }
 
         introductionText.text = allTexts[0];
-        Debug.Log("alltext count: " + allTexts.Count + " 1: " + allTexts[0]);
     }
 
     private void Update()
