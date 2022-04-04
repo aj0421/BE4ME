@@ -70,22 +70,16 @@ public class QuizManager : MonoBehaviour
         {
             if (!questionExist)
             {
-               
                 if (currentCharacter != null && currentCharacter.activeInHierarchy)
                 {
                     currentCharacterQandA = currentCharacter.GetComponent<Character>().questionsAndAnswers;
-
-                  
-
                     if (currentCharacterQandA.Count > 0)
                     {
-                       
                         GenerateQuestion();
                     }
                 }
             }
         }
-       
     }
 
     private void SetAnswers()
@@ -109,7 +103,6 @@ public class QuizManager : MonoBehaviour
         if (currentCharacterQandA.Count > 0)
         {
             GenerateQuestion();
-            //End quiz and add highscores
         }
         else
         {

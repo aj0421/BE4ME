@@ -15,14 +15,14 @@
 
         [SerializeField]
         [Geocode]
-        string[] _locationStrings;   
-        
+        string[] _locationStrings;
+
         [SerializeField]
         [Geocode]
-        string _locationTimeMachine; 
+        string _locationTimeMachine;
 
         Vector2d[] _locations;
-       
+
         Vector2d[] _timeMachinelocations;
 
         [SerializeField]
@@ -48,13 +48,11 @@
             {
                 string locationString = _locationStrings[i];
                 _locations[i] = Conversions.StringToLatLon(locationString);
-
-                CheckYear();            
             }
-                 
+            CheckYear();
         }
 
-        private void Initialize() 
+        private void Initialize()
         {
             _timeMachinelocations[0] = Conversions.StringToLatLon(_locationTimeMachine);
             GameObject timeMachine = Instantiate(_timeMachinePrefab);
@@ -65,35 +63,33 @@
         {
             var characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
             var storedValue = characterManager.GetComponent<CharacterManager>().storedValue;
-          
+
             if (storedValue == null)
             {
                 return;
             }
-            
-            if(!hasSpawned)
-            {
 
-            switch (storedValue)
+            if (!hasSpawned)
             {
-                case "1880":
-                    GameObject instance = Instantiate(_markerPrefab[0]);
-                    instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-                    instance.transform.localPosition = _map.GeoToWorldPosition(_locations[0], true);
-                    _spawnedObjects.Add(instance);
+                switch (storedValue)
+                {
+                    case "1880":
+                        GameObject instance = Instantiate(_markerPrefab[0]);
+                        instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+                        instance.transform.localPosition = _map.GeoToWorldPosition(_locations[0], true);
+                        _spawnedObjects.Add(instance);
                         hasSpawned = true;
                         text.text = "positio " + _locations[0].ToString() + "Count of " + _locations.Length;
-
-                    break;
-                case "1996":
-                    GameObject inst = Instantiate(_markerPrefab[0]);
-                    inst.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-                    inst.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
-                    _spawnedObjects.Add(inst);
+                        break;
+                    case "1996":
+                        GameObject inst = Instantiate(_markerPrefab[0]);
+                        inst.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+                        inst.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
+                        _spawnedObjects.Add(inst);
                         hasSpawned = true;
                         text.text = "pos " + _locations[0].ToString() + "Count of " + _locations.Length;
                         break;
-            }
+                }
             }
         }
 
@@ -108,6 +104,5 @@
                 spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
             }
         }
-
     }
 }

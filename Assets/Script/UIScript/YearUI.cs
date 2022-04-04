@@ -14,7 +14,7 @@ public class YearUI : MonoBehaviour
 
     public List<string> year;
 
-    public string storedValue;
+    public string storedValue = "";
     private GameObject characterManager;
     private GameObject character;
     int index = 0;
@@ -27,11 +27,17 @@ public class YearUI : MonoBehaviour
         dropdown = GetComponent<Dropdown>();
         dropdown.ClearOptions();
         Initialize();
+        string setDefaultValue = characterManager.gameObject.GetComponent<CharacterManager>().storedValue;
+        dropdown.value = dropdown.options.FindIndex(x => x.text == setDefaultValue);
         ValueChangeHandler(dropdown);
+      
         dropdown.onValueChanged.AddListener(delegate
         {
             ValueChangeHandler(dropdown);
+    
         });
+
+
     }
     private void Initialize()
     {
@@ -46,9 +52,8 @@ public class YearUI : MonoBehaviour
             string yearFromCharacter = item.GetComponent<Character>().year;
             year.Add(yearFromCharacter.ToString());
         }
-
-        Select(); 
-   
+        Select();
+        
     }
 
     private void Select()
@@ -76,12 +81,11 @@ public class YearUI : MonoBehaviour
         }
     }
 
-
     private void ValueChangeHandler(Dropdown target)
     {
         storedValue = target.options[target.value].text;
         characterManager.gameObject.GetComponent<CharacterManager>().storedValue = storedValue;
-        Debug.Log("YearUI: ValueChangeHandler : stored value: " + storedValue);
+        characterManager.GetComponent<CharacterManager>().ChangeYearUI();// Find another place to put this.
     }
 
     #endregion
