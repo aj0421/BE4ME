@@ -92,23 +92,20 @@ public class Introduction : MonoBehaviour
         string part1 = "Hej " + PlayerPrefs.GetString("name") + " !";
         allTexts.Add(part1);
 
-        string part2 = "Nu ska du få lära dig om historien om en känd kvinna från helsingborg vid namn Maria Zoegas";
+        string part2 = "Nu ska du få lära dig historien om en känd kvinna från helsingborg vid namn <b>Maria Zoegas</b>";
         allTexts.Add(part2);
 
-        string part3 = "Men det är inte spelet som kommer berätta det utan du får själv hitta henne.";
+        string part3 = "Men spelet kommer inte berätta om henne, utan du får själv hitta henne.";
         allTexts.Add(part3);
 
-        string part4 = "Hon dog för flera år sen, men vi har skapat en tidsmaskin som du har tillåtelse att använda.";
+        string part4 = "Hon dog tyvärr för många år sen, men vi har skapat en tidsmaskin som du kan använda.";
         allTexts.Add(part4);
 
-        string part5 = "Vi har placerat tidsmaskinen här på lekplatsen. Hittar du den kan du resa bak i tiden för att prata med henne.";
+        string part5 = "Vi har ställd tidsmaskinen här på lekplatsen. Hittar du den, kan du resa bak i tiden för att prata med henne.";
         allTexts.Add(part5);
 
-        string part6 = "Vi har en nyckel som du behöver för att använda den";
+        string part6 = "Lycka till!";
         allTexts.Add(part6);
-
-        string part7 = "Om du är osäker på något på skärmen, tryck på frågetecknet.";
-        allTexts.Add(part7);
     }
 
     private void AddTextPartsToListEnglish()
@@ -116,16 +113,19 @@ public class Introduction : MonoBehaviour
         string part1 = "Hi " + PlayerPrefs.GetString("name") + " !";
         allTexts.Add(part1);
 
-        string part2 = "one";
+        string part2 = "Now you will learn the story of a famous woman from Helsingborg named <b>Maria Zoegas</b>";
         allTexts.Add(part2);
 
-        string part3 = "two";
+        string part3 = "But the game won't tell you about her, you'll have to find her yourself.";
         allTexts.Add(part3);
 
-        string part4 = "three";
+        string part4 = "Unfortunately, she died many years ago, but we have created a time machine that you can use.";
         allTexts.Add(part4);
 
-        string part5 = "four";
+        string part5 = "We've placed the time machine here in the playground. If you find it, you can travel back in time to talk to her.";
         allTexts.Add(part5);
+
+        string part6 = "Good luck!";
+        allTexts.Add(part6);
     }
 }
