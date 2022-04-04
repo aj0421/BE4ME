@@ -21,6 +21,10 @@ MonoBehaviour:
     m_Address: Assets/Languages/Tables/button_go_in_timemachine Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: fb25c23c7f6786d45b0d91cbbdf5b652
+    m_Address: Assets/Languages/Tables/UI_TEXT Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: ce5b174338af7054c83b2fc39dd10588, type: 2}
   m_SchemaSet:
