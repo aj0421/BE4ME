@@ -9,9 +9,11 @@ public class XpBar : MonoBehaviour
     public Text scoreText;
     public Text levelText;
 
+    public Score Score;
+
     private Slider slider;
     private ParticleSystem particles;
-    private float targetXP = 0f;
+    private float targetXP; // = 0f;
     private float remainingXP;
     private float currentScore = 0;
     private int playerLevel = 1;
@@ -26,7 +28,9 @@ public class XpBar : MonoBehaviour
 
     private void Start()
     {
-        IncrementScoreAndXP(240);
+        Score = new Score(currentScore, targetXP, slider);
+        Score.IncrementScoreAndXP(150);
+        //IncrementScoreAndXP(240);
     }
 
     private void LateUpdate()
@@ -74,7 +78,29 @@ public class XpBar : MonoBehaviour
         }
     }
 
-    private void IncrementScoreAndXP(float newScore)
+    //public void IncrementScoreAndXP(float newScore)
+    //{
+    //    currentScore = currentScore + newScore;
+    //    PlayerPrefs.SetFloat("playerScore", currentScore);
+
+    //    targetXP = slider.value + newScore / 100;
+    //}
+}
+
+public class Score
+{
+    float currentScore;
+    float targetXP;
+    Slider slider;
+
+    public Score(float _currentScore, float _targetXP, Slider _slider)
+    {
+        this.currentScore = _currentScore;
+        this.targetXP = _targetXP;
+        this.slider = _slider;
+    }
+
+    public void IncrementScoreAndXP(float newScore)
     {
         currentScore = currentScore + newScore;
         PlayerPrefs.SetFloat("playerScore", currentScore);

@@ -13,6 +13,8 @@ public class AnswerClass : MonoBehaviour
     public GameObject currentCharacter;
 
     public GameObject characterParent;
+
+    private int score;
     #endregion
 
     #region Method
