@@ -110,7 +110,7 @@ public class QuizManager : MonoBehaviour
 
     private void GenerateQuestion()
     {
-        if (currentCharacterQandA.Count < 0)
+        if (currentCharacterQandA.Count <= 0)
         {
             return;
         }

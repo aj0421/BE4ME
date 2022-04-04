@@ -30,5 +30,33 @@ MonoBehaviour:
     m_Localized: What's your name?
     m_Metadata:
       m_Items: []
+  - m_Id: 2831247933440
+    m_Localized: Go to map
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3428818812928
+    m_Localized: PAUSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3973667291136
+    m_Localized: REPEAT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4364798722048
+    m_Localized: LISTEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4796249997312
+    m_Localized: Move the camera slowly and steady
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5874773327872
+    m_Localized: START QUIZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18217431400448
+    m_Localized: Arrival in
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

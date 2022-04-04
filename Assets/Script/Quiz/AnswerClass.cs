@@ -19,12 +19,7 @@ public class AnswerClass : MonoBehaviour
 
     public void Start()
     {
-
         quizManager = GameObject.FindGameObjectWithTag("QuizManager");
-    }
-    public void Update()
-    {
-       
     }
 
     public void Answer()
@@ -32,22 +27,16 @@ public class AnswerClass : MonoBehaviour
         if (isCorrect)
         {
             Debug.Log("Correct Answer");
-            StartCoroutine(VisualTimer(new Color(46, 204, 113, 1)));
-
-            quizManager.GetComponent<QuizManager>().Correct();
-            gameObject.GetComponent<Image>().color = new Color(37, 41, 88, 1);    //Dark blue
+            StartCoroutine(VisualTimer(new Color(255, 0, 150, 1), new Color(37, 41, 88, 1)));
         }
         else
         {
             Debug.Log("Wrong Answer");
-            StartCoroutine(VisualTimer(new Color(255, 0, 0, 1)));
-
-            quizManager.GetComponent<QuizManager>().Correct();
-            gameObject.GetComponent<Image>().color = new Color(37, 41, 88, 1);    //Dark blue
+            StartCoroutine(VisualTimer(new Color(255, 0, 0, 1), new Color(37, 41, 88, 1)));
         }
     }
 
-    public IEnumerator VisualTimer(Color buttonColor)
+    public IEnumerator VisualTimer(Color buttonColor, Color buttonColorNormal)
     {
         float waitDuration = 1.2f;
         float normalized = 0;
@@ -55,8 +44,12 @@ public class AnswerClass : MonoBehaviour
         {
             gameObject.GetComponent<Image>().color = buttonColor;
             normalized += Time.deltaTime / waitDuration;
+
             yield return null;
         }
+
+        quizManager.GetComponent<QuizManager>().Correct();
+        gameObject.GetComponent<Image>().color = buttonColorNormal;    //Dark blue
     }
 
     #endregion

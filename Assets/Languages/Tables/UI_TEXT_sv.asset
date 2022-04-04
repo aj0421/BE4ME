@@ -30,5 +30,33 @@ MonoBehaviour:
     m_Localized: "Vad \xE4r ditt namn?"
     m_Metadata:
       m_Items: []
+  - m_Id: 2831247933440
+    m_Localized: "G\xE5 till kartan"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3428818812928
+    m_Localized: PAUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3973667291136
+    m_Localized: LYSSNA IGEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4364798722048
+    m_Localized: LYSSNA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4796249997312
+    m_Localized: "R\xF6r kameren l\xE5ngsamt och stadigt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5874773327872
+    m_Localized: STARTA QUIZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18217431400448
+    m_Localized: Framme om
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

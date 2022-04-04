@@ -29,6 +29,36 @@ MonoBehaviour:
     m_Key: CC_UI_NAMEINPUT
     m_Metadata:
       m_Items: []
+  - m_Id: 2831247933440
+    m_Key: G_B_GOMAP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3428818812928
+    m_Key: G_B_PAUSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3973667291136
+    m_Key: G_B_REPEAT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4364798722048
+    m_Key: G_B_PLAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4796249997312
+    m_Key: G_INSTRUCTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5874773327872
+    m_Key: 'G_STARTQUIZ
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18217431400448
+    m_Key: T_T_ARRIVAL
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
