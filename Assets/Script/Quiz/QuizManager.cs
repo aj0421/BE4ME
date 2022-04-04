@@ -29,11 +29,14 @@ public class QuizManager : MonoBehaviour
         Debug.Log("QuizManager Start: Current character: " + currentCharacter.name + ", tag: " + currentCharacter.tag);
         answerOptions = FindList("AnswerButton");
         Debug.Log("QuizManager Start: answeroptions " + answerOptions.Count);
+        ActivateQuiz();
     }
+
     public void ActivateQuiz()
     {
         quizPrefab.SetActive(true);
     }
+
     private GameObject FindMyGameObject(string name)
     {
         foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
