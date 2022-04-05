@@ -33,13 +33,13 @@ public class AnswerClass : MonoBehaviour
         {
             Debug.Log("Correct Answer");
             StartCoroutine(VisualTimer(new Color(255, 0, 150, 1), new Color(37, 41, 88, 1)));
-            audio.GetComponent<AudioHandler>().Correct(this.gameObject);
+            audio.GetComponent<AudioHandler>().CheckAnswer(this.gameObject, "correct");
         }
         else
         {
             Debug.Log("Wrong Answer");
             StartCoroutine(VisualTimer(new Color(255, 0, 0, 1), new Color(37, 41, 88, 1)));
-            audio.GetComponent<AudioHandler>().Wrong(this.gameObject);
+            audio.GetComponent<AudioHandler>().CheckAnswer(this.gameObject, "wrong");
         }
     }
 

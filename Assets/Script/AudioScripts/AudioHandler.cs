@@ -53,30 +53,26 @@ public class AudioHandler : MonoBehaviour
             repeatButton.gameObject.SetActive(true);
         }
     }
-
-    public void Correct(GameObject button)
+    public void CheckAnswer(GameObject button, string name)
     {
         audio.source = button.GetComponent<AudioSource>();
         aSource = audio.source;
 
-        aSource.clip = audioList[2].clip;
-        aSource.Play();
+        foreach (var item in audioList)
+        {
+            if (item.name == name)
+            {
+                aSource.clip = item.clip;
+                aSource.Play();
+            }
+        }
 
-    }
-
-    public void Wrong(GameObject button)
-    {
-        audio.source = button.GetComponent<AudioSource>();
-        aSource = audio.source;
-
-        aSource.clip = audioList[3].clip;
-        aSource.Play();
     }
 
     public void Play()
     {
         CheckCharacter();
-         SpawnButton();
+        SpawnButton();
     }
 
     private void CheckCharacter()
