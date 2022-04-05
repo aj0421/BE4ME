@@ -15,12 +15,12 @@ public class Introduction : MonoBehaviour
     private bool previousWasTouching = false;
     private bool isTouching = false;
     private int index = 1;
-    private string language;
+    private string language = "";
 
     private void Awake()
     {
         allTexts = new List<string>();
-        language = LocalizationSettings.SelectedLocale.ToString();
+        //  language = LocalizationSettings.SelectedLocale.ToString();
         if (language == "Swedish (sv)")
         {
             AddTextPartsToListSwedish();
@@ -33,6 +33,10 @@ public class Introduction : MonoBehaviour
         {
             AddTextPartsToListEnglish();  //Default
         }
+        //if (language == null || language == "") 
+        //{
+        //    AddTextPartsToListEnglish();  
+        //}
 
         introductionText.text = allTexts[0];
     }
@@ -43,50 +47,45 @@ public class Introduction : MonoBehaviour
         {
             StartCoroutine(ClickFading(true));
 
-            //isTouching = Input.touchCount > 0;
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                if (touch.phase == TouchPhase.Ended)
+                {
+                    if (index > allTexts.Count - 1)
+                    {
+                        this.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        introductionText.text = allTexts[index];
+                        index++;
+                    }
+                }
+            }
 
-            //if (isTouching && !previousWasTouching && index > allTexts.Count -1)
-            //{
-            //    this.gameObject.SetActive(false);
-            //}
-            //else
-            //{
-            //    introductionText.text = allTexts[index];
-            //    index++;
-            //    previousWasTouching = isTouching;
-            //}
-
-            //isTouching = Input.touchCount > 0;
-            //if (isTouching && !previousWasTouching)
-            //{
-            //    for (index = 0; index < allTexts.Count; index++)
-            //    {
-            //        introductionText.text = allTexts[index];
-            //        previousWasTouching = isTouching;
-            //    }
-            //}
 
             //Mouse
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                isTouching = true;
-            }
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    isTouching = true;
+            //}
 
-            if (isTouching)
-            {
-                if (index > allTexts.Count - 1)
-                {
-                    this.gameObject.SetActive(false);
-                }
-                else
-                {
-                    introductionText.text = allTexts[index];
-                    index++;
-                    isTouching = false;
-                }
+            //if (isTouching)
+            //{
+            //    if (index > allTexts.Count - 1)
+            //    {
+            //        this.gameObject.SetActive(false);
+            //    }
+            //    else
+            //    {
+            //        introductionText.text = allTexts[index];
+            //        index++;
+            //        isTouching = false;
+            //    }
 
-            }
+            //}
         }
     }
 

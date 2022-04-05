@@ -49,7 +49,6 @@ public class AnswerClass : MonoBehaviour
 
             yield return null;
         }
-
         quizManager.GetComponent<QuizManager>().Correct();
         gameObject.GetComponent<Image>().color = buttonColorNormal;    //Dark blue
     }

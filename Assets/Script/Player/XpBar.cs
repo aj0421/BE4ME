@@ -25,7 +25,10 @@ public class XpBar : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    //TODO: Behövs en onDisable?!
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -40,6 +43,7 @@ public class XpBar : MonoBehaviour
             case 2:
                 IncrementScoreAndXP(20);
                 break;
+
         }
     }
 
