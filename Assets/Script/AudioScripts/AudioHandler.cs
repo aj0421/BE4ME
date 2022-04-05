@@ -53,7 +53,7 @@ public class AudioHandler : MonoBehaviour
             repeatButton.gameObject.SetActive(true);
         }
     }
-    public void CheckAnswer(GameObject button, string name)
+    public void AddSoundEffects(GameObject button, string name)
     {
         audio.source = button.GetComponent<AudioSource>();
         aSource = audio.source;

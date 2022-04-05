@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4517444118042657805
+--- !u!1 &6086394527921753578
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4517444118042657806}
-  - component: {fileID: 4517444118925533803}
+  - component: {fileID: 8374505012150238966}
+  - component: {fileID: 3152887788828385868}
   m_Layer: 0
   m_Name: AudioHandler
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4517444118042657806
+--- !u!4 &8374505012150238966
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4517444118042657805}
+  m_GameObject: {fileID: 6086394527921753578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4517444118925533803
+--- !u!114 &3152887788828385868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4517444118042657805}
+  m_GameObject: {fileID: 6086394527921753578}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e36549baefb3804bb97de0509badecd, type: 3}
@@ -50,6 +50,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: englishWoman
     clip: {fileID: 8300000, guid: 6a127bb26f97903499725f1b1bcfdd8d, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: correct
+    clip: {fileID: 8300000, guid: 56555578ffc268f4a8b7feb300cca652, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: wrong
+    clip: {fileID: 8300000, guid: f868243faa2db8740a24bef78574fb46, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: timetravel
+    clip: {fileID: 8300000, guid: b817967f1963c9d4395b99d85901a601, type: 3}
     volume: 1
     source: {fileID: 0}
   quizButton: {fileID: 0}
