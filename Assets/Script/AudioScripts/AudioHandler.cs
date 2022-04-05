@@ -54,6 +54,25 @@ public class AudioHandler : MonoBehaviour
         }
     }
 
+    public void Correct(GameObject button)
+    {
+        audio.source = button.GetComponent<AudioSource>();
+        aSource = audio.source;
+
+        aSource.clip = audioList[2].clip;
+        aSource.Play();
+
+    }
+
+    public void Wrong(GameObject button)
+    {
+        audio.source = button.GetComponent<AudioSource>();
+        aSource = audio.source;
+
+        aSource.clip = audioList[3].clip;
+        aSource.Play();
+    }
+
     public void Play()
     {
         CheckCharacter();

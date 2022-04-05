@@ -15,6 +15,8 @@ public class AnswerClass : MonoBehaviour
     public GameObject characterParent;
 
     private int score;
+
+    GameObject audio;
     #endregion
 
     #region Method
@@ -22,6 +24,7 @@ public class AnswerClass : MonoBehaviour
     public void Start()
     {
         quizManager = GameObject.FindGameObjectWithTag("QuizManager");
+        audio = GameObject.Find("AudioHandler");
     }
 
     public void Answer()
@@ -30,11 +33,13 @@ public class AnswerClass : MonoBehaviour
         {
             Debug.Log("Correct Answer");
             StartCoroutine(VisualTimer(new Color(255, 0, 150, 1), new Color(37, 41, 88, 1)));
+            audio.GetComponent<AudioHandler>().Correct(this.gameObject);
         }
         else
         {
             Debug.Log("Wrong Answer");
             StartCoroutine(VisualTimer(new Color(255, 0, 0, 1), new Color(37, 41, 88, 1)));
+            audio.GetComponent<AudioHandler>().Wrong(this.gameObject);
         }
     }
 
