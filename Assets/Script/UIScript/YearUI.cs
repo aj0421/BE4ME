@@ -85,7 +85,6 @@ public class YearUI : MonoBehaviour
     {
         storedValue = target.options[target.value].text;
         characterManager.gameObject.GetComponent<CharacterManager>().storedValue = storedValue;
-        characterManager.GetComponent<CharacterManager>().ChangeYearUI();// Find another place to put this.
     }
 
     #endregion

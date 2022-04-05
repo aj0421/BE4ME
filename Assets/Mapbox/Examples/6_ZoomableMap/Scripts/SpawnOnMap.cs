@@ -35,9 +35,9 @@
         GameObject _timeMachinePrefab;
 
         List<GameObject> _spawnedObjects;
+      
         bool hasSpawned;
-
-        public Text text;
+     
         void Start()
         {
             _locations = new Vector2d[_locationStrings.Length];
@@ -61,9 +61,9 @@
 
         private void CheckYear()
         {
-            var characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
-            var storedValue = characterManager.GetComponent<CharacterManager>().storedValue;
-
+            GameObject characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
+            string storedValue = characterManager.GetComponent<CharacterManager>().storedValue;
+            GameObject instance;
             if (storedValue == null)
             {
                 return;
@@ -74,20 +74,20 @@
                 switch (storedValue)
                 {
                     case "1880":
-                        GameObject instance = Instantiate(_markerPrefab[0]);
+                        instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[0], true);
                         _spawnedObjects.Add(instance);
                         hasSpawned = true;
-                        text.text = "positio " + _locations[0].ToString() + "Count of " + _locations.Length;
+                        characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
                     case "1996":
-                        GameObject inst = Instantiate(_markerPrefab[0]);
-                        inst.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-                        inst.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
-                        _spawnedObjects.Add(inst);
+                        instance = Instantiate(_markerPrefab[0]);
+                        instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+                        instance.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
+                        _spawnedObjects.Add(instance);
                         hasSpawned = true;
-                        text.text = "pos " + _locations[0].ToString() + "Count of " + _locations.Length;
+                        characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
                 }
             }

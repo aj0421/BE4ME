@@ -30,11 +30,8 @@ public class QuizManager : MonoBehaviour
         characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
         quizPrefab = FindMyGameObject("CanvasQuiz");
         questionExist = false;
-        Debug.Log("QuizManager is active");
         currentCharacter = FindMyGameObject("Character");
-        Debug.Log("QuizManager Start: Current character: " + currentCharacter.name + ", tag: " + currentCharacter.tag);
         answerOptions = FindList("AnswerButton");
-        Debug.Log("QuizManager Start: answeroptions " + answerOptions.Count);
     }
     public void ActivateQuiz()
     {
@@ -93,7 +90,6 @@ public class QuizManager : MonoBehaviour
             {
                 answerOptions[i].GetComponent<AnswerClass>().isCorrect = true;
             }
-            Debug.Log("QuizManager SetAnswer: Setting answer" + answerOptions[i]);
         }
     }
 
@@ -111,7 +107,6 @@ public class QuizManager : MonoBehaviour
             currentCharacter.GetComponent<Character>().isCompleted = true;
             characterManager.GetComponent<CharacterManager>().isCompleted = currentCharacter.GetComponent<Character>().isCompleted;
             exitButton.gameObject.SetActive(true);
-            Debug.Log("QuizManager Correct: currentCharacterQandA Count is less than 0");
             return;
         }
     }
@@ -129,7 +124,6 @@ public class QuizManager : MonoBehaviour
         }
         currentQuestion = Random.Range(0, currentCharacterQandA.Count);
         questionText.text = currentCharacterQandA[currentQuestion].question;
-        Debug.Log("QuizManager GanerateQuestion: question text: " + questionText.text);
         SetAnswers();
         questionExist = true;
     }

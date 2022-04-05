@@ -10,7 +10,7 @@ public class CharacterManager : MonoBehaviour
 
     public string storedValue;
 
-    public Text text;
+    public Text yearText;
     private static CharacterManager instance;
 
     public bool isCompleted;
@@ -37,11 +37,11 @@ public class CharacterManager : MonoBehaviour
 
     public void ChangeYearUI()
     {
-        if (text == null)
+        if (yearText == null)
         {
             try
             {
-                text = GameObject.Find("YearText").GetComponent<Text>();
+                yearText = GameObject.Find("YearText").GetComponent<Text>();
 
             }
             catch
@@ -49,13 +49,13 @@ public class CharacterManager : MonoBehaviour
                 return;
             }
         }
-        else if (storedValue == "")
+        if (storedValue == "")
         {
             return;
         }
         else
         {
-            text.text = storedValue;
+            yearText.text = storedValue;
         }
     }
     #endregion
