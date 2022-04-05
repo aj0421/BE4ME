@@ -14,16 +14,20 @@ public class TimeMachine : MonoBehaviour
 
     private float counter;
     private bool isBlackedOut = false;
+    private GameObject audioHandler;
 
     public void Start()
     {
+        audioHandler = GameObject.Find("AudioHandler");
+    
         counter = 6;
 
         if(CameraShake != null)
         {
             Vibration.Vibrate(3000);
             StartCoroutine(CameraShake.Shake(duration, magnitude));
-            
+            audioHandler.GetComponent<AudioHandler>().CheckAnswer(this.gameObject, "timetravel");
+
         }
     }
 
