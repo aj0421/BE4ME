@@ -526,7 +526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2052322299, guid: 81a8beb84a4af4147b1f4db90b3eb1b6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2052322301, guid: 81a8beb84a4af4147b1f4db90b3eb1b6, type: 3}
       propertyPath: guideScore
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   _spawnScale: 10
   _markerPrefab:
   - {fileID: 8786605890435966822, guid: 3483caf52e6efcc4cb262e70d1342009, type: 3}
-  _timeMachinePrefab: {fileID: 8480905390404277570, guid: df22bcbf67c1f654489548dfd493906e,
+  _timeMachinePrefab: {fileID: 6404528534815007893, guid: 73768679ea243c0469a0cbb363506f31,
     type: 3}
 --- !u!114 &1308185614 stripped
 MonoBehaviour:
