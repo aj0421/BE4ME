@@ -24,10 +24,7 @@ public class CollisionDetection : MonoBehaviour
             button = GameObject.Find("ButtonHandler").GetComponentInChildren<Button>();
             timeMachineButton = GameObject.Find("ButtonHandler").GetComponentInChildren<Button>();
         }
-        else
-        {
-            Debug.Log("Button not found");
-        }
+       
     }
     private void OnTriggerEnter(Collider other)
     {
