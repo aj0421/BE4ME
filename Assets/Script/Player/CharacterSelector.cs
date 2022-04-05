@@ -12,7 +12,13 @@ public class CharacterSelector : MonoBehaviour
     private int currentCharacter = 0;
 
     private string name;
+    private GameObject audioHandler;
 
+
+    public void Awake()
+    {
+        audioHandler = GameObject.Find("AudioHandler");
+    }
     public void SaveSelected()
     {
         name = nametext.text;
@@ -30,6 +36,7 @@ public class CharacterSelector : MonoBehaviour
         characters[currentCharacter].SetActive(false);
         currentCharacter = (currentCharacter + 1) % characters.Length;
         characters[currentCharacter].SetActive(true);
+        audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "button_sound");
     }
 
     public void SelectPreviousCharacter()
@@ -42,5 +49,6 @@ public class CharacterSelector : MonoBehaviour
             currentCharacter += characters.Length;
         }
         characters[currentCharacter].SetActive(true);
+        audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "button_sound");
     }
 }
