@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class XpBar : MonoBehaviour
@@ -8,8 +9,6 @@ public class XpBar : MonoBehaviour
     public float fillSpeed = 0.5f;
     public Text scoreText;
     public Text levelText;
-
-    public Score Score;
 
     private Slider slider;
     private ParticleSystem particles;
@@ -19,18 +18,29 @@ public class XpBar : MonoBehaviour
     private int playerLevel = 1;
     private float xpToNextLevel = 100f;
     private float currentTotalXp;
+    private int sceneIndex;
 
-    private void Awake()
+    private void OnEnable()
     {
-        slider = gameObject.GetComponent<Slider>();
-        particles = GameObject.Find("XpParticles").GetComponent<ParticleSystem>();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void Start()
+    //TODO: Behövs en onDisable?!
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Score = new Score(currentScore, targetXP, slider);
-        Score.IncrementScoreAndXP(150);
-        //IncrementScoreAndXP(240);
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        switch (sceneIndex)
+        {
+            case 1:
+                slider = gameObject.GetComponent<Slider>();
+                particles = GameObject.Find("XpParticles").GetComponent<ParticleSystem>();
+                IncrementScoreAndXP(50);
+                break;
+            case 2:
+                IncrementScoreAndXP(20);
+                break;
+        }
     }
 
     private void LateUpdate()
@@ -56,7 +66,7 @@ public class XpBar : MonoBehaviour
 
         if (scoreText != null)
         {
-            scoreText.text = PlayerPrefs.GetFloat("playerScore") + ""; // + "            " + playerLevel + " lvl";
+            scoreText.text = PlayerPrefs.GetFloat("playerScore") + "";
             levelText.text = playerLevel + "";
         }
     }
@@ -76,28 +86,6 @@ public class XpBar : MonoBehaviour
         {
             return false;
         }
-    }
-
-    //public void IncrementScoreAndXP(float newScore)
-    //{
-    //    currentScore = currentScore + newScore;
-    //    PlayerPrefs.SetFloat("playerScore", currentScore);
-
-    //    targetXP = slider.value + newScore / 100;
-    //}
-}
-
-public class Score
-{
-    float currentScore;
-    float targetXP;
-    Slider slider;
-
-    public Score(float _currentScore, float _targetXP, Slider _slider)
-    {
-        this.currentScore = _currentScore;
-        this.targetXP = _targetXP;
-        this.slider = _slider;
     }
 
     public void IncrementScoreAndXP(float newScore)

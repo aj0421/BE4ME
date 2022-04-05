@@ -44,12 +44,9 @@ public class LoadCharacter : MonoBehaviour
     {
         //TODO: Check if player is moving then return true else return false
 
-        Debug.Log("LOAD CHARACTER IsWalking: Player " + prefabClone.name + ", player animator: " + playerAnimator);
-
         if(playerAnimator != null)
         {
             playerAnimator.Play("WalkForward");
-            Debug.Log("Playing WalkForward");
         }
 
         return true;

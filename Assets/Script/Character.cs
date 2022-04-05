@@ -44,7 +44,6 @@ public class Character : MonoBehaviour
                 questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[0]);
                 questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[2]);
                 questionHasBeenAdded = true;
-                Debug.Log("ID 0 Count; " + questionsAndAnswers.Count);
             }
             else if (ID == 1 && !questionHasBeenAdded)
             {
