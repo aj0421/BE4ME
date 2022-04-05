@@ -160,3 +160,28 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 232.904039 seconds.
+  path: Assets/Scenes/GameScene.unity
+  artifactKey: Guid(b6bb114b70849a1448e562e8ba5a6a48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameScene.unity using Guid(b6bb114b70849a1448e562e8ba5a6a48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a14c5ea0bbe5d3ef03f2391031383feb') in 0.025639 seconds 
+  Import took 0.663892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 311.509169 seconds.
+  path: Assets/gui_gameS.prefab
+  artifactKey: Guid(81a8beb84a4af4147b1f4db90b3eb1b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gui_gameS.prefab using Guid(81a8beb84a4af4147b1f4db90b3eb1b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1374f1b59f63c165cc214bc992fdfb33') in 1.388677 seconds 
+  Import took 1.414774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.809850 seconds.
+  path: Assets/Scenes/TimemachineScene.unity
+  artifactKey: Guid(637a8d7a39602204db7bef2105a60807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TimemachineScene.unity using Guid(637a8d7a39602204db7bef2105a60807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abdc4c8bc09dae4928a88016aeef4ba6') in 0.015636 seconds 
+  Import took 0.056315 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
