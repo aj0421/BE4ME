@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterManager : MonoBehaviour
 {
     #region Variables
     public GameObject[] characterArray;
 
-   
-
-
     public string storedValue;
 
+    public Text yearText;
     private static CharacterManager instance;
+
+    public bool isCompleted;
     #endregion
-
-
 
     #region Method
     private void Awake()
     {
+        foreach (var item in characterArray)
+        {
+            isCompleted = item.GetComponent<Character>().isCompleted;
+        }
         DontDestroyOnLoad(this.gameObject);
 
         if (instance == null)
@@ -30,19 +33,30 @@ public class CharacterManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-       
     }
-   
-    private GameObject FindMyGameObject(string name)
+
+    public void ChangeYearUI()
     {
-        foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
+        if (yearText == null)
         {
-            if (prefabToSpawn.CompareTag(name))
+            try
             {
-                return prefabToSpawn;
+                yearText = GameObject.Find("YearText").GetComponent<Text>();
+
+            }
+            catch
+            {
+                return;
             }
         }
-        return null;
+        if (storedValue == "")
+        {
+            return;
+        }
+        else
+        {
+            yearText.text = storedValue;
+        }
     }
     #endregion
 }

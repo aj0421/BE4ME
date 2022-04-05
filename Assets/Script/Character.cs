@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
     public string characterName;
     public string year;
     public List<QandA> questionsAndAnswers;
- 
+    public bool isCompleted = false;
 
     private GameObject quizManager;
     private bool questionHasBeenAdded;
@@ -21,6 +21,7 @@ public class Character : MonoBehaviour
         quizManager = FindMyGameObject("QuizManager");
         quizManager.SetActive(true);
         AddQuestionsAndAnswersToCharactersList();
+
     }
 
     private GameObject FindMyGameObject(string name)

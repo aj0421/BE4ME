@@ -14,45 +14,77 @@ public class YearUI : MonoBehaviour
 
     public List<string> year;
 
-    public string storedValue;
+    public string storedValue = "";
     private GameObject characterManager;
+    private GameObject character;
+    int index = 0;
+    bool isCompleted;
     #endregion
-
 
     #region Method
     public void Start()
     {
+        dropdown = GetComponent<Dropdown>();
+        dropdown.ClearOptions();
+        Initialize();
+        string setDefaultValue = characterManager.gameObject.GetComponent<CharacterManager>().storedValue;
+        dropdown.value = dropdown.options.FindIndex(x => x.text == setDefaultValue);
+        ValueChangeHandler(dropdown);
+      
+        dropdown.onValueChanged.AddListener(delegate
+        {
+            ValueChangeHandler(dropdown);
+    
+        });
+
+
+    }
+    private void Initialize()
+    {
+        character = GameObject.FindGameObjectWithTag("Character");
         characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
         characterArray = characterManager.gameObject.GetComponent<CharacterManager>().characterArray;
-        dropdown = GetComponent<Dropdown>();
         options = new List<string>();
         year = new List<string>();
+
         foreach (var item in characterArray)
         {
             string yearFromCharacter = item.GetComponent<Character>().year;
             year.Add(yearFromCharacter.ToString());
-            Debug.Log("YearUI : Start: Adding year to a list: " + year.Count);
         }
+        Select();
+        
+    }
 
+    private void Select()
+    {
         for (int i = 0; i < year.Count; i++)
         {
-            options.Add(year[i]);
+            isCompleted = characterManager.gameObject.GetComponent<CharacterManager>().isCompleted;
+            if (!isCompleted)
+            {
+                options.Add(year[index]);
+                index++;
+                dropdown.AddOptions(options);
+                Debug.Log("Added year: " + options[i].ToString());
+                return;
+            }
+            else
+            {
+                options.Add(year[index]);
+                index++;
+                options.Add(year[index]);
+                dropdown.AddOptions(options);
+                Debug.Log("Added year: " + options[i].ToString());
+                return;
+            }
         }
-        dropdown.ClearOptions();
-        dropdown.AddOptions(options);
-        Debug.Log("YearUI : Start: The options " + year);
-        ValueChangeHandler(dropdown);
-        dropdown.onValueChanged.AddListener(delegate
-        {
-            ValueChangeHandler(dropdown);
-        });
     }
 
     private void ValueChangeHandler(Dropdown target)
     {
         storedValue = target.options[target.value].text;
         characterManager.gameObject.GetComponent<CharacterManager>().storedValue = storedValue;
-        Debug.Log("YearUI: ValueChangeHandler : stored value: " + storedValue);
     }
 
     #endregion

@@ -11,6 +11,7 @@ TagManager:
   - CharacterManager
   - Marker
   - CharacterParent
+  - TimeMachine
   layers:
   - Default
   - TransparentFX

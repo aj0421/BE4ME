@@ -8,14 +8,21 @@ public class CollisionDetection : MonoBehaviour
     #region Variable
     [SerializeField]
     private Button button;
+
+    [SerializeField]
+    private Button timeMachineButton;
+    
+    [SerializeField]
+    private Dropdown dropDown;
     #endregion
 
     #region Method
     private void Start()
     {
-        if(button == null)
+        if(button == null && timeMachineButton == null)
         {
             button = GameObject.Find("ButtonHandler").GetComponentInChildren<Button>();
+            timeMachineButton = GameObject.Find("ButtonHandler").GetComponentInChildren<Button>();
         }
         else
         {
@@ -29,6 +36,12 @@ public class CollisionDetection : MonoBehaviour
             other.GetComponent<MeshRenderer>().material.color = Color.red;
             button.gameObject.SetActive(true);
         }
+        if (other.gameObject.CompareTag("TimeMachine"))
+        {
+            timeMachineButton.gameObject.SetActive(true);
+            dropDown.gameObject.SetActive(true);
+
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -37,6 +50,11 @@ public class CollisionDetection : MonoBehaviour
         {
             other.GetComponent<MeshRenderer>().material.color = Color.blue;
             button.gameObject.SetActive(false);
+        }
+        if (other.gameObject.CompareTag("TimeMachine"))
+        {
+            timeMachineButton.gameObject.SetActive(false);
+            dropDown.gameObject.SetActive(false);
         }
     }
     #endregion

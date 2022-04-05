@@ -46,7 +46,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
         if (args.added != null && placedObject == null)
         {
             ARPlane arPlane = args.added[0];
-          //  CheckCharacter(arPlane.transform.position);
+           // CheckCharacter(arPlane.transform.position);
             play.gameObject.SetActive(true);
             pause.gameObject.SetActive(true);
             instruction.gameObject.SetActive(false);
@@ -67,7 +67,6 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
                 placedPrefab = item;
                 placedObject = Instantiate(placedPrefab, position, Quaternion.identity);
                 placedObject.transform.SetParent(characterParent.transform, false);
-                Debug.Log("AutomaticPlacementOfObjectInPlane : CheckCharacter : spawning this " + placedObject.name + "and year " + yearFromCharacter);
             }
         }
     }
