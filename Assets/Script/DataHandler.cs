@@ -39,7 +39,6 @@ public class DataHandler : MonoBehaviour
     private void LateUpdate()
     {
         position = new Vector3(0, 0, 0).GetGeoPosition(map.CenterMercator, map.WorldRelativeScale);
-        Debug.Log("positio" + position);
     }
     //var lat = prefab.transform.GetGeoPosition(new Vector2d(0, 0), 1);
  

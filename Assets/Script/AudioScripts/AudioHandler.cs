@@ -72,7 +72,7 @@ public class AudioHandler : MonoBehaviour
     public void Play()
     {
         CheckCharacter();
-        SpawnButton();
+        AddSoundEffects(this.gameObject, "button_tap");
     }
 
     private void CheckCharacter()
@@ -93,6 +93,7 @@ public class AudioHandler : MonoBehaviour
         if (aSource.isPlaying && aSource != null)
         {
             aSource.Pause();
+            AddSoundEffects(this.gameObject, "button_tap");
             Debug.Log("WE HAVE PAUSED");
             isActive = false;
         }
@@ -105,7 +106,8 @@ public class AudioHandler : MonoBehaviour
     public void Repeat()
     {
         aSource.time = 0;
-        aSource.Play();
+        aSource.Play(); 
+        AddSoundEffects(this.gameObject, "button_tap");
     }
     #endregion
 }

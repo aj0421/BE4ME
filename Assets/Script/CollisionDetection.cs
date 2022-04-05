@@ -40,7 +40,6 @@ public class CollisionDetection : MonoBehaviour
         {
             timeMachineButton.gameObject.SetActive(true);
             dropDown.gameObject.SetActive(true);
-
         }
     }
 

@@ -24,6 +24,7 @@ public class CharacterSelector : MonoBehaviour
         name = nametext.text;
         PlayerPrefs.SetInt("selectedCharacter", currentCharacter);
         PlayerPrefs.SetString("name", nametext.text);
+        audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "button_tap");
     }
 
     /// <summary>
@@ -36,7 +37,7 @@ public class CharacterSelector : MonoBehaviour
         characters[currentCharacter].SetActive(false);
         currentCharacter = (currentCharacter + 1) % characters.Length;
         characters[currentCharacter].SetActive(true);
-        audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "button_sound");
+        audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "character_select");
     }
 
     public void SelectPreviousCharacter()
@@ -49,6 +50,6 @@ public class CharacterSelector : MonoBehaviour
             currentCharacter += characters.Length;
         }
         characters[currentCharacter].SetActive(true);
-        audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "button_sound");
+        audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "character_select");
     }
 }

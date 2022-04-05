@@ -19,7 +19,7 @@ public class TimeMachine : MonoBehaviour
     public void Start()
     {
         audioHandler = GameObject.Find("AudioHandler");
-    
+      
         counter = 6;
 
         if(CameraShake != null)
@@ -27,16 +27,18 @@ public class TimeMachine : MonoBehaviour
             Vibration.Vibrate(3000);
             StartCoroutine(CameraShake.Shake(duration, magnitude));
             audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "timetravel");
-
         }
+      
     }
 
     public void Update()
     {
-        if(counter > 0)
+      
+        if (counter > 0)
         {
             counter -= Time.deltaTime;
             countdownText.text = "" + Mathf.Ceil(counter);
+           
         }
         else
         {
