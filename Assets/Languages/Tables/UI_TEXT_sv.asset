@@ -62,9 +62,5 @@ MonoBehaviour:
     m_Localized: "\xC5ka i tidsmaskin"
     m_Metadata:
       m_Items: []
-  - m_Id: 442422958424064
-    m_Localized: Tillbaka
-    m_Metadata:
-      m_Items: []
   references:
     version: 1
