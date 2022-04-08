@@ -33,10 +33,10 @@ public class Introduction : MonoBehaviour
         {
             AddTextPartsToListEnglish();  //Default
         }
-        //if (language == null || language == "") 
-        //{
-        //    AddTextPartsToListEnglish();  
-        //}
+        if (language == null || language == "")
+        {
+            AddTextPartsToListEnglish();
+        }
 
         introductionText.text = allTexts[0];
     }
