@@ -15,6 +15,7 @@ public class AnswerClass : MonoBehaviour
     public GameObject characterParent;
 
     private int score;
+    private float storedScore;
     #endregion
 
     #region Method
@@ -22,6 +23,13 @@ public class AnswerClass : MonoBehaviour
     public void Start()
     {
         quizManager = GameObject.FindGameObjectWithTag("QuizManager");
+        storedScore = PlayerPrefs.GetFloat("playerScore");
+    }
+
+    private int CalculateNewScore(int newScore)
+    {
+        score += newScore;
+        return score;
     }
 
     public void Answer()
@@ -30,11 +38,15 @@ public class AnswerClass : MonoBehaviour
         {
             Debug.Log("Correct Answer");
             StartCoroutine(VisualTimer(new Color(255, 0, 150, 1), new Color(37, 41, 88, 1)));
+            storedScore += CalculateNewScore(50);
+            PlayerPrefs.SetFloat("updatedScore", storedScore);
         }
         else
         {
             Debug.Log("Wrong Answer");
             StartCoroutine(VisualTimer(new Color(255, 0, 0, 1), new Color(37, 41, 88, 1)));
+            storedScore += CalculateNewScore(10);
+            PlayerPrefs.SetFloat("updatedScore", storedScore);
         }
     }
 
