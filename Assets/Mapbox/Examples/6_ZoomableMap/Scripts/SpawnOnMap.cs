@@ -57,6 +57,7 @@
             _timeMachinelocations[0] = Conversions.StringToLatLon(_locationTimeMachine);
             GameObject timeMachine = Instantiate(_timeMachinePrefab);
             timeMachine.transform.localPosition = _map.GeoToWorldPosition(_timeMachinelocations[0], true);
+            timeMachine.transform.position += new Vector3(0, 10, 0);  //NEW
             
         }
 

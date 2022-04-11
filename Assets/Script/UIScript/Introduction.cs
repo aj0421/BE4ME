@@ -20,7 +20,7 @@ public class Introduction : MonoBehaviour
     private void Awake()
     {
         allTexts = new List<string>();
-        //  language = LocalizationSettings.SelectedLocale.ToString();
+        language = LocalizationSettings.SelectedLocale.ToString();
         if (language == "Swedish (sv)")
         {
             AddTextPartsToListSwedish();
