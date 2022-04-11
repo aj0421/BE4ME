@@ -19,6 +19,7 @@ public class XpBar : MonoBehaviour
     private float xpToNextLevel = 100f;
     private float currentTotalXp;
     private int sceneIndex;
+    private float updatedScore;
 
     private void OnEnable()
     {
@@ -38,10 +39,16 @@ public class XpBar : MonoBehaviour
             case 1:
                 slider = gameObject.GetComponent<Slider>();
                 particles = GameObject.Find("XpParticles").GetComponent<ParticleSystem>();
-                IncrementScoreAndXP(50);
+                updatedScore = PlayerPrefs.GetFloat("updatedScore");
+                if(updatedScore > 0)
+                {
+                    Debug.Log("The new score from quiz = " + updatedScore);
+                    IncrementScoreAndXP(updatedScore);
+                }
+                //IncrementScoreAndXP(60);
                 break;
             case 2:
-                IncrementScoreAndXP(20);
+                //IncrementScoreAndXP(20);
                 break;
 
         }
@@ -49,29 +56,32 @@ public class XpBar : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (slider.value < targetXP)
+        if(sceneIndex == 1)
         {
-            slider.value += fillSpeed * Time.deltaTime;
-
-            while (CheckRemainingXpAndSetSliderValue())
+            if (slider.value < targetXP)
             {
-                playerLevel++;
+                slider.value += fillSpeed * Time.deltaTime;
+
+                while (CheckRemainingXpAndSetSliderValue())
+                {
+                    playerLevel++;
+                }
+
+                if (!particles.isPlaying)
+                {
+                    particles.Play();
+                }
+            }
+            else
+            {
+                particles.Stop();
             }
 
-            if (!particles.isPlaying)
+            if (scoreText != null)
             {
-                particles.Play();
+                scoreText.text = PlayerPrefs.GetFloat("playerScore") + "";
+                levelText.text = playerLevel + "";
             }
-        }
-        else
-        {
-            particles.Stop();
-        }
-
-        if (scoreText != null)
-        {
-            scoreText.text = PlayerPrefs.GetFloat("playerScore") + "";
-            levelText.text = playerLevel + "";
         }
     }
 
