@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7719881071216956648}
   m_Layer: 0
   m_Name: CubeObject
-  m_TagString: Character
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,3 +195,4 @@ MonoBehaviour:
   characterName: Tjockis
   year: 1880
   questionsAndAnswers: []
+  isCompleted: 0
