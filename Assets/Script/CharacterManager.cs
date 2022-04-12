@@ -19,10 +19,6 @@ public class CharacterManager : MonoBehaviour
     #region Method
     private void Awake()
     {
-        foreach (var item in characterArray)
-        {
-            isCompleted = item.GetComponent<Character>().isCompleted;
-        }
         DontDestroyOnLoad(this.gameObject);
 
         if (instance == null)
@@ -33,6 +29,11 @@ public class CharacterManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        foreach (var item in characterArray)
+        {
+            isCompleted = item.GetComponent<Character>().isCompleted;
+        }
     }
 
     public void ChangeYearUI()
@@ -42,7 +43,6 @@ public class CharacterManager : MonoBehaviour
             try
             {
                 yearText = GameObject.Find("YearText").GetComponent<Text>();
-
             }
             catch
             {
