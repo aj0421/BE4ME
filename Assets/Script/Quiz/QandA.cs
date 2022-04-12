@@ -6,10 +6,5 @@ public class QandA
    public string question;
    public string[] answers;
    public int correctAnswers;
-
-    #endregion
-
-    #region Method
-
     #endregion
 }

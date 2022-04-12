@@ -33,6 +33,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
 
     private List<GameObject> characters;
 
+    public Transform target;
     public void Awake()
     {
         //For debug purpose
@@ -68,6 +69,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
                 placedObject = Instantiate(placedPrefab, position, Quaternion.identity);
                 placedObject.transform.SetParent(characterParent.transform, false);
                 placedObject.transform.position += new Vector3(0, -2, 0);
+                placedObject.transform.LookAt(target);
             }
         }
     }
