@@ -7,6 +7,7 @@
     using Mapbox.Unity.Utilities;
     using System.Collections.Generic;
     using UnityEngine.UI;
+    using System.Collections;
 
     public class SpawnOnMap : MonoBehaviour
     {
@@ -43,21 +44,28 @@
             _locations = new Vector2d[_locationStrings.Length];
             _timeMachinelocations = new Vector2d[_locationTimeMachine.Length];
             _spawnedObjects = new List<GameObject>();
-            Initialize();
+
+           
             for (int i = 0; i < _locationStrings.Length; i++)
             {
                 string locationString = _locationStrings[i];
                 _locations[i] = Conversions.StringToLatLon(locationString);
             }
+            StartCoroutine(LateStart(1f));
             CheckYear();
         }
-
+        IEnumerator LateStart(float waitTime)
+        {
+            yield return new WaitForSeconds(waitTime);
+            //Your Function You Want to Call
+            Initialize();
+        }
         private void Initialize()
         {
             _timeMachinelocations[0] = Conversions.StringToLatLon(_locationTimeMachine);
             GameObject timeMachine = Instantiate(_timeMachinePrefab);
             timeMachine.transform.position = _map.GeoToWorldPosition(_timeMachinelocations[0], true);
-            timeMachine.transform.position += new Vector3(0, 55, 0);  //NEW
+            //timeMachine.transform.position += new Vector3(0, 55, 0);  //NEW
 
         }
 
