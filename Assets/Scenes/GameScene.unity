@@ -3389,11 +3389,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuizManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3378652361288148198, guid: ecccac22ce32b614fa725e42078a42de,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: guiPrefab

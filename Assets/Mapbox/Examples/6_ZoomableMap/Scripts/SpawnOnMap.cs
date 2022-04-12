@@ -35,9 +35,9 @@
         GameObject _timeMachinePrefab;
 
         List<GameObject> _spawnedObjects;
-      
+
         bool hasSpawned;
-     
+
         void Start()
         {
             _locations = new Vector2d[_locationStrings.Length];
@@ -58,7 +58,7 @@
             GameObject timeMachine = Instantiate(_timeMachinePrefab);
             timeMachine.transform.position = _map.GeoToWorldPosition(_timeMachinelocations[0], true);
             timeMachine.transform.position += new Vector3(0, 55, 0);  //NEW
-            
+
         }
 
         private void CheckYear()
@@ -84,6 +84,14 @@
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
                     case "1996":
+                        instance = Instantiate(_markerPrefab[0]);
+                        instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+                        instance.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
+                        _spawnedObjects.Add(instance);
+                        hasSpawned = true;
+                        characterManager.GetComponent<CharacterManager>().ChangeYearUI();
+                        break;
+                    case "1969":
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);

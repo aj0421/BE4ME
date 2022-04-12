@@ -69,6 +69,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7460944963670365900, guid: 4b1cba0cb3350e848bae6c0350642d86,
         type: 3}
+      propertyPath: ID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460944963670365900, guid: 4b1cba0cb3350e848bae6c0350642d86,
+        type: 3}
       propertyPath: year
       value: 1969
       objectReference: {fileID: 0}

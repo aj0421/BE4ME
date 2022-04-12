@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3378652361288148196
 Transform:
   m_ObjectHideFlags: 0
@@ -65,5 +65,23 @@ MonoBehaviour:
     - Mjau
     - "F\xE5r f\xE5r lamm"
     correctAnswers: 4
+  - question: "Vem \xE4r b\xE4st"
+    answers:
+    - Ja
+    - Kanske
+    - Mjau
+    - "F\xE5r f\xE5r lamm"
+    correctAnswers: 4
+  - question: "Vem \xE4r Winnie"
+    answers:
+    - Ja
+    - Kanske
+    - Mjau
+    - "F\xE5r f\xE5r lamm"
+    correctAnswers: 4
   currentQuestion: 0
   questionText: {fileID: 0}
+  exitButton: {fileID: 0}
+  guiPrefab: {fileID: 0}
+  scorePrefab: {fileID: 0}
+  quizPanel: {fileID: 0}

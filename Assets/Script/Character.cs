@@ -49,7 +49,12 @@ public class Character : MonoBehaviour
             {
                 questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[1]);
                 questionHasBeenAdded = true;
-            }
+            }  
+            else if (ID == 2 && !questionHasBeenAdded)
+            {
+                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[3]);
+                questionHasBeenAdded = true;
+            } 
         }
     }
     #endregion
