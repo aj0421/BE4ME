@@ -15,10 +15,11 @@ public class YearUI : MonoBehaviour
     public List<string> year;
 
     public string storedValue = "";
-    private GameObject characterManager;
+    public GameObject characterManager;
     private GameObject character;
     int index = 0;
     bool isCompleted;
+    private GameObject currentCharacter;
     #endregion
 
     #region Method
@@ -37,8 +38,8 @@ public class YearUI : MonoBehaviour
     
         });
 
-
     }
+
     private void Initialize()
     {
         character = GameObject.FindGameObjectWithTag("Character");
@@ -50,35 +51,76 @@ public class YearUI : MonoBehaviour
         foreach (var item in characterArray)
         {
             string yearFromCharacter = item.GetComponent<Character>().year;
+            currentCharacter = item;
             year.Add(yearFromCharacter.ToString());
         }
         Select();
-        
+        //Select2();
     }
 
     private void Select()
     {
+        Debug.Log("year count: " + year.Count);
         for (int i = 0; i < year.Count; i++)
         {
-            isCompleted = characterManager.gameObject.GetComponent<CharacterManager>().isCompleted;
-            if (!isCompleted)
-            {
-                options.Add(year[index]);
-                index++;
-                dropdown.AddOptions(options);
-                Debug.Log("Added year: " + options[i].ToString());
-                return;
-            }
-            else
-            {
-                options.Add(year[index]);
-                index++;
-                options.Add(year[index]);
-                dropdown.AddOptions(options);
-                Debug.Log("Added year: " + options[i].ToString());
-                return;
-            }
+            Debug.Log("year :" + year[i]);
+            //isCompleted = characterManager.gameObject.GetComponent<CharacterManager>().isCompleted;
+            //if (!isCompleted)
+            //{
+            //    options.Add(year[index]);
+            //    index++;
+            //    dropdown.AddOptions(options);
+            //    Debug.Log("Added year: " + options[index].ToString());
+            //    return;
+            //}
+            //else
+            //{
+            //    options.Add(year[index]);
+            //    index++;
+            //    options.Add(year[index]);
+            //    dropdown.AddOptions(options);
+            //    Debug.Log("Added year: " + options[index].ToString());
+            //    return;
+            //}
         }
+
+        switch (characterManager.GetComponent<CharacterManager>().storedValue)
+        {
+            case "2022":
+                Debug.Log(characterManager.GetComponent<CharacterManager>().yearText.text + " year text");
+                AddOptionsToDropdown(year[0]);
+                break;
+            case "1880":
+                Debug.Log(characterManager.GetComponent<CharacterManager>().yearText.text + " year text");
+                AddOptionsToDropdown(year[1]);
+                break;
+            case "1996":
+                Debug.Log(characterManager.GetComponent<CharacterManager>().yearText.text + " year text");
+                AddOptionsToDropdown(year[2]);
+                break;
+            case "1969":
+                Debug.Log(characterManager.GetComponent<CharacterManager>().yearText.text + " year text");
+                break;
+        }
+
+        Debug.Log("year index 1st: " + index + " completed: " + isCompleted);
+
+        isCompleted = characterManager.gameObject.GetComponent<CharacterManager>().isCompleted;
+        AddOptionsToDropdown(year[index]);
+        index++;
+
+        if (isCompleted)
+        {
+            AddOptionsToDropdown(year[index]);
+            Debug.Log("year options is completed: " + isCompleted);
+        }
+        Debug.Log("year index 2nd: " + index + " completed: " + isCompleted);
+    }
+
+    private void AddOptionsToDropdown(string _year)
+    {
+        options.Add(_year);
+        dropdown.AddOptions(options);
     }
 
     private void ValueChangeHandler(Dropdown target)
