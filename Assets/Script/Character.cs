@@ -23,7 +23,6 @@ public class Character : MonoBehaviour
         AddQuestionsAndAnswersToCharactersList();
 
     }
-
     private GameObject FindMyGameObject(string name)
     {
         foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))

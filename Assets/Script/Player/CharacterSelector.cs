@@ -14,7 +14,6 @@ public class CharacterSelector : MonoBehaviour
     private string name;
     private GameObject audioHandler;
 
-
     public void Awake()
     {
         audioHandler = GameObject.Find("AudioHandler");

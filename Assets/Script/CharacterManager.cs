@@ -44,7 +44,6 @@ public class CharacterManager : MonoBehaviour
             try
             {
                 yearText = GameObject.Find("YearText").GetComponent<Text>();
-
             }
             catch
             {

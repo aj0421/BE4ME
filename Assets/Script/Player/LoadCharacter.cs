@@ -42,13 +42,10 @@ public class LoadCharacter : MonoBehaviour
 
     private bool IsWalking()
     {
-        //TODO: Check if player is moving then return true else return false
-
         if(playerAnimator != null)
         {
             playerAnimator.Play("WalkForward");
         }
-
         return true;
     }
 }

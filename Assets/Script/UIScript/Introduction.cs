@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class Introduction : MonoBehaviour
 {
+    #region Variables
+
+
     public Text introductionText;
     public Text playerName;
     public GameObject guideScore;
@@ -16,7 +19,9 @@ public class Introduction : MonoBehaviour
     private bool isTouching = false;
     private int index = 1;
     private string language = "";
+    #endregion
 
+    #region Methods
     private void Awake()
     {
         allTexts = new List<string>();
@@ -63,10 +68,7 @@ public class Introduction : MonoBehaviour
                     }
                 }
             }
-
-
             //Mouse
-
             if (Input.GetMouseButtonDown(0))
             {
                 isTouching = true;
@@ -84,11 +86,11 @@ public class Introduction : MonoBehaviour
                     index++;
                     isTouching = false;
                 }
-
             }
         }
     }
 
+    #region IntroductionText
     private void AddTextPartsToListSwedish()
     {
         string part1 = "Hej " + PlayerPrefs.GetString("name") + " !";
@@ -130,6 +132,7 @@ public class Introduction : MonoBehaviour
         string part6 = "Good luck!";
         allTexts.Add(part6);
     }
+    #endregion
 
     private IEnumerator ClickFading(bool fadeMinus)
     {
@@ -150,4 +153,5 @@ public class Introduction : MonoBehaviour
             }
         }
     }
+    #endregion
 }

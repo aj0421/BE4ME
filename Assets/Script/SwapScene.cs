@@ -15,6 +15,5 @@ public class SwapScene : MonoBehaviour
     {
         audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "button_tap");
         SceneManager.LoadScene(ID);
-      
     }
 }

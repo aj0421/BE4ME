@@ -25,7 +25,6 @@ public class SaveScore : MonoBehaviour
         for (int i = 0; i < temp.Count; i++)
         {
             save.allSavedData.Add(temp[i]);
-            Debug.Log("SAVE " + save.allSavedData[i]);
         }
         File.WriteAllLines(path, save.allSavedData);
         return save;

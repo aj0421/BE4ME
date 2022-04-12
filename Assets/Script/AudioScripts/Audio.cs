@@ -12,7 +12,6 @@ public class Audio
     [Range(0f, 1f)]
     public float volume;
 
-
     [HideInInspector]
     public AudioSource source;
 }

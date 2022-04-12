@@ -81,8 +81,6 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    
-
     private void SetAnswers()
     {
         for (int i = 0; i < answerOptions.Count; i++)
