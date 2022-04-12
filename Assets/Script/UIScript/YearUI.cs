@@ -63,7 +63,6 @@ public class YearUI : MonoBehaviour
                 options.Add(year[index]);
                 index++;
                 dropdown.AddOptions(options);
-                Debug.Log("Added year: " + options[i].ToString());
                 return;
             }
             else
@@ -72,7 +71,6 @@ public class YearUI : MonoBehaviour
                 index++;
                 options.Add(year[index]);
                 dropdown.AddOptions(options);
-                Debug.Log("Added year: " + options[i].ToString());
                 return;
             }
         }
