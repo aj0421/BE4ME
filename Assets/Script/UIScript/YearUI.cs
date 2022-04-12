@@ -30,14 +30,11 @@ public class YearUI : MonoBehaviour
         string setDefaultValue = characterManager.gameObject.GetComponent<CharacterManager>().storedValue;
         dropdown.value = dropdown.options.FindIndex(x => x.text == setDefaultValue);
         ValueChangeHandler(dropdown);
-      
         dropdown.onValueChanged.AddListener(delegate
         {
             ValueChangeHandler(dropdown);
     
         });
-
-
     }
     private void Initialize()
     {

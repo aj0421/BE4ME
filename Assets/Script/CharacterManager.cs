@@ -14,6 +14,8 @@ public class CharacterManager : MonoBehaviour
     private static CharacterManager instance;
 
     public bool isCompleted;
+
+    public List<string> answerList = new List<string>();
     #endregion
 
     #region Method

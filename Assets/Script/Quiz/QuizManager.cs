@@ -26,7 +26,6 @@ public class QuizManager : MonoBehaviour
 
     public void Start()
     {
-
         characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
         quizPrefab = FindMyGameObject("CanvasQuiz");
         questionExist = false;
@@ -63,6 +62,7 @@ public class QuizManager : MonoBehaviour
         }
         return temp;
     }
+
     public void Update()
     {
         if (!currentCharacter.GetComponent<Character>().isCompleted)
@@ -80,6 +80,8 @@ public class QuizManager : MonoBehaviour
             }
         }
     }
+
+    
 
     private void SetAnswers()
     {
@@ -117,6 +119,7 @@ public class QuizManager : MonoBehaviour
         quizPrefab.SetActive(false);
         guiPrefab.SetActive(true);
     }
+
     private void GenerateQuestion()
     {
         if (currentCharacterQandA.Count <= 0)

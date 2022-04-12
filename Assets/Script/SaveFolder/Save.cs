@@ -5,9 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Save 
 {
-  //  public Hashtable scoreTable = new Hashtable();
-
+    public List<string> allSavedData = new List<string>();
     public string score;
     public string name;
-   
 }

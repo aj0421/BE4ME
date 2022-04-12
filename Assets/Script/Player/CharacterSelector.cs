@@ -18,6 +18,8 @@ public class CharacterSelector : MonoBehaviour
     public void Awake()
     {
         audioHandler = GameObject.Find("AudioHandler");
+        PlayerPrefs.SetFloat("playerScore", 0);
+        PlayerPrefs.SetFloat("updatedScore", 0);
     }
     public void SaveSelected()
     {

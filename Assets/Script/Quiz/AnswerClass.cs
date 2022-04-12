@@ -14,6 +14,8 @@ public class AnswerClass : MonoBehaviour
 
     public GameObject characterParent;
 
+    private GameObject characterManager;
+
     private int score;
 
     GameObject audio;
@@ -24,7 +26,9 @@ public class AnswerClass : MonoBehaviour
 
     public void Start()
     {
+
         quizManager = GameObject.FindGameObjectWithTag("QuizManager");
+        characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
         storedScore = PlayerPrefs.GetFloat("playerScore");
         audio = GameObject.Find("AudioHandler");
     }
@@ -35,8 +39,14 @@ public class AnswerClass : MonoBehaviour
         return score;
     }
 
+    public void GetAnswer(Text answer)
+    {
+        characterManager.GetComponent<CharacterManager>().answerList.Add(answer.text);
+    }
+
     public void Answer()
     {
+        string selectedAnswer;
         if (isCorrect)
         {
             Debug.Log("Correct Answer");
