@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class AudioHandler : MonoBehaviour
 {
     #region Variable
-
     [SerializeField]
     private Audio[] audioList;
 
@@ -94,7 +93,6 @@ public class AudioHandler : MonoBehaviour
         {
             aSource.Pause();
             AddSoundEffects(this.gameObject, "button_tap");
-            Debug.Log("WE HAVE PAUSED");
             isActive = false;
         }
         else

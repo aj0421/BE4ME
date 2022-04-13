@@ -24,8 +24,6 @@ public static class Vibration
         else
             Handheld.Vibrate();
     }
-
-
     public static void Vibrate(long milliseconds)
     {
         if (isAndroid())

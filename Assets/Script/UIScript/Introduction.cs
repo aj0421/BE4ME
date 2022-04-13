@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class Introduction : MonoBehaviour
 {
+    #region Variables
+
+
     public Text introductionText;
     public Text playerName;
     public GameObject guideScore;
@@ -99,21 +102,22 @@ public class Introduction : MonoBehaviour
         }
     }
 
+    #region IntroductionText
     private void AddTextPartsToListSwedish()
     {
         //string part1 = "Hej " + PlayerPrefs.GetString("name") + " !";
         //allTexts.Add(part1);
 
-        //string part2 = "Nu ska du få lära dig historien om en känd kvinna från helsingborg vid namn <b>Maria Zoegas</b>";
+        //string part2 = "Nu ska du fï¿½ lï¿½ra dig historien om en kï¿½nd kvinna frï¿½n helsingborg vid namn <b>Maria Zoegas</b>";
         //allTexts.Add(part2);
 
-        //string part3 = "Men spelet kommer inte berätta om henne, utan du får själv hitta henne.";
+        //string part3 = "Men spelet kommer inte berï¿½tta om henne, utan du fï¿½r sjï¿½lv hitta henne.";
         //allTexts.Add(part3);
 
-        //string part4 = "Hon dog tyvärr för många år sen, men vi har skapat en tidsmaskin som du kan använda.";
+        //string part4 = "Hon dog tyvï¿½rr fï¿½r mï¿½nga ï¿½r sen, men vi har skapat en tidsmaskin som du kan anvï¿½nda.";
         //allTexts.Add(part4);
 
-        //string part5 = "Vi har ställd tidsmaskinen här på lekplatsen. Hittar du den, kan du resa bak i tiden för att prata med henne.";
+        //string part5 = "Vi har stï¿½lld tidsmaskinen hï¿½r pï¿½ lekplatsen. Hittar du den, kan du resa bak i tiden fï¿½r att prata med henne.";
         //allTexts.Add(part5);
 
         //string part6 = "Lycka till!";
@@ -121,19 +125,19 @@ public class Introduction : MonoBehaviour
         string part1 = "Hej " + PlayerPrefs.GetString("name") + " !";
         allTexts.Add(part1);
 
-        string part2 = "Nu ska du få resa i tiden och samla stjärnor!";
+        string part2 = "Nu ska du fï¿½ resa i tiden och samla stjï¿½rnor!";
         allTexts.Add(part2);
 
-        string part3 = "Vi har ställt en tidsmaskin här på lekplatsen.";
+        string part3 = "Vi har stï¿½llt en tidsmaskin hï¿½r pï¿½ lekplatsen.";
         allTexts.Add(part3);
 
-        string part4 = "Varje år du åker till, finns det en tjej som kommer ställa lite frågor.";
+        string part4 = "Varje ï¿½r du ï¿½ker till, finns det en tjej som kommer stï¿½lla lite frï¿½gor.";
         allTexts.Add(part4);
 
-        string part5 = "Svarar du rätt på frågorna, får du flera stjärnor och levlar upp!";
+        string part5 = "Svarar du rï¿½tt pï¿½ frï¿½gorna, fï¿½r du flera stjï¿½rnor och levlar upp!";
         allTexts.Add(part5);
-         
-        string part7 = "Du ska åka till totalt 3 olika år.";
+
+        string part7 = "Du ska ï¿½ka till totalt 3 olika ï¿½r.";
         allTexts.Add(part7);
 
         string part6 = "Lycka till!";
@@ -159,7 +163,7 @@ public class Introduction : MonoBehaviour
 
         //string part6 = "Good luck!";
         //allTexts.Add(part6);
-        
+
         string part1 = "Hi " + PlayerPrefs.GetString("name") + " !";
         allTexts.Add(part1);
 
@@ -173,8 +177,8 @@ public class Introduction : MonoBehaviour
         allTexts.Add(part4);
 
         string part5 = "If you answer the questions correctly, you get more stars and level up!";
-        allTexts.Add(part5);   
-        
+        allTexts.Add(part5);
+
         string part7 = "You will go to a total of 3 different years.";
         allTexts.Add(part7);
 
@@ -182,6 +186,7 @@ public class Introduction : MonoBehaviour
         allTexts.Add(part6);
 
     }
+    #endregion
 
     private IEnumerator ClickFading(bool fadeMinus)
     {
@@ -202,4 +207,5 @@ public class Introduction : MonoBehaviour
             }
         }
     }
+    #endregion
 }

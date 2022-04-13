@@ -22,7 +22,6 @@ public class Character : MonoBehaviour
         quizManager.SetActive(true);
         AddQuestionsAndAnswersToCharactersList();
     }
-
     private GameObject FindMyGameObject(string name)
     {
         foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))

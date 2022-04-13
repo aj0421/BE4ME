@@ -62,6 +62,7 @@ public class QuizManager : MonoBehaviour
         }
         return temp;
     }
+
     public void Update()
     {
         if (!currentCharacter.GetComponent<Character>().isCompleted)

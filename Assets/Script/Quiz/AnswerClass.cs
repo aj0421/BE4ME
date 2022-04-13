@@ -14,9 +14,10 @@ public class AnswerClass : MonoBehaviour
 
     public GameObject characterParent;
 
+    private GameObject characterManager;
     private int score;
 
-    GameObject audio;
+    private GameObject audio;
     private float storedScore;
     #endregion
 
@@ -24,7 +25,9 @@ public class AnswerClass : MonoBehaviour
 
     public void Start()
     {
+
         quizManager = GameObject.FindGameObjectWithTag("QuizManager");
+        characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
         storedScore = PlayerPrefs.GetFloat("playerScore");
         audio = GameObject.Find("AudioHandler");
     }
@@ -35,11 +38,15 @@ public class AnswerClass : MonoBehaviour
         return score;
     }
 
+    public void GetAnswer(Text answer)
+    {
+        characterManager.GetComponent<CharacterManager>().answerList.Add(answer.text);
+    }
+
     public void Answer()
     {
         if (isCorrect)
         {
-            Debug.Log("Correct Answer");
             StartCoroutine(VisualTimer(new Color(255, 0, 150, 1), new Color(37, 41, 88, 1)));
             audio.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "correct");
             storedScore += CalculateNewScore(50);
@@ -47,7 +54,6 @@ public class AnswerClass : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wrong Answer");
             StartCoroutine(VisualTimer(new Color(255, 0, 0, 1), new Color(37, 41, 88, 1)));
             audio.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "wrong");
             storedScore += CalculateNewScore(10);
@@ -69,6 +75,5 @@ public class AnswerClass : MonoBehaviour
         quizManager.GetComponent<QuizManager>().Correct();
         gameObject.GetComponent<Image>().color = buttonColorNormal;    //Dark blue
     }
-
     #endregion
 }

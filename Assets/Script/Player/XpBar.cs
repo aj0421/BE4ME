@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class XpBar : MonoBehaviour
 {
+    #region Variables
     public float fillSpeed = 0.5f;
     public Text scoreText;
     public Text levelText;
@@ -20,7 +21,9 @@ public class XpBar : MonoBehaviour
     private float currentTotalXp;
     private int sceneIndex;
     private float updatedScore;
+    #endregion
 
+    #region Methods
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -106,7 +109,7 @@ public class XpBar : MonoBehaviour
     {
         currentScore = currentScore + newScore;
         PlayerPrefs.SetFloat("playerScore", currentScore);
-
         targetXP = slider.value + newScore / 100;
     }
+    #endregion
 }

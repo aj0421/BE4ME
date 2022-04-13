@@ -108,7 +108,7 @@ public class YearUI : MonoBehaviour
                     AddOptionsToDropdown(year[1]);
                     AddOptionsToDropdown(year[2]);
                 }
-                break; 
+                break;
         }
     }
 

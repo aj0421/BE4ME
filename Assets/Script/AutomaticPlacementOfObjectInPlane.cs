@@ -33,10 +33,12 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
 
     private List<GameObject> characters;
 
+    public Transform target;
+    Quaternion lookRotationVar;
     public void Awake()
     {
         //For debug purpose
-        CheckCharacter(new Vector3(0, 0, 0));
+        // CheckCharacter(new Vector3(0, 0, 0));
         ARPlaneManager = GetComponent<ARPlaneManager>();
         ARPlaneManager.planesChanged += PlaneChanged;
     }
@@ -68,6 +70,16 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
                 placedObject = Instantiate(placedPrefab, position, Quaternion.identity);
                 placedObject.transform.SetParent(characterParent.transform, false);
                 placedObject.transform.position += new Vector3(0, -2, 0);
+               // var lookAt = placedObject.GetComponentInChildren<GameObject>();
+                GameObject ChildGameObject1 = placedObject.transform.GetChild(2).gameObject;
+                Debug.Log("NAme of child: " + ChildGameObject1.name);
+
+                ChildGameObject1.transform.LookAt(target);
+                placedObject.transform.rotation = Quaternion.LookRotation(ChildGameObject1.transform.position);
+                //lookAt.transform.LookAt(target);
+                //placedObject.transform.localRotation = lookAt.transform.rotation;
+
+                //placedObject.transform.LookAt(target);
             }
         }
     }

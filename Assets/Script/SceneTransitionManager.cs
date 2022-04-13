@@ -31,7 +31,6 @@ public class SceneTransitionManager : MonoBehaviour
 
     #region Methods
 
-
     public void GoToScene(string sceneName, List<GameObject> objectsToMove)
     {
         StartCoroutine(LoadScene(sceneName, objectsToMove));

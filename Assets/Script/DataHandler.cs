@@ -28,8 +28,6 @@ public class DataHandler : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-
-        //position = new Vector3(0, 0, 0).GetGeoPosition(map.CenterMercator, map.WorldRelativeScale);
     }
     #endregion
 
@@ -40,10 +38,6 @@ public class DataHandler : MonoBehaviour
     {
         position = new Vector3(0, 0, 0).GetGeoPosition(map.CenterMercator, map.WorldRelativeScale);
     }
-    //var lat = prefab.transform.GetGeoPosition(new Vector2d(0, 0), 1);
- 
-   
-
     #endregion
 
 }

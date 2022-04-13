@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class TimeMachine : MonoBehaviour
 {
+    #region Variables
+
+   
     public CameraShake CameraShake;
     public UIManager UIManager;
     public Text countdownText;
@@ -15,25 +18,23 @@ public class TimeMachine : MonoBehaviour
     private float counter;
     private bool isBlackedOut = false;
     private GameObject audioHandler;
+    #endregion
 
+    #region Methods
     public void Start()
     {
         audioHandler = GameObject.Find("AudioHandler");
-      
         counter = 6;
-
         if(CameraShake != null)
         {
             Vibration.Vibrate(3000);
             StartCoroutine(CameraShake.Shake(duration, magnitude));
             audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "timetravel");
         }
-      
     }
 
     public void Update()
     {
-      
         if (counter > 0)
         {
             counter -= Time.deltaTime;
@@ -55,4 +56,5 @@ public class TimeMachine : MonoBehaviour
             SceneManager.LoadScene(1);
         }
     }
+    #endregion
 }
