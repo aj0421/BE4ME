@@ -10,47 +10,78 @@ public class Introduction : MonoBehaviour
     public Text playerName;
     public GameObject guideScore;
     public Image clickIndicator;
-
     private List<string> allTexts;
-    private bool previousWasTouching = false;
     private bool isTouching = false;
     private int index = 1;
     private string language = "";
-
-    private void Awake()
+    GameObject gameManager;
+    private void Start()
     {
-        allTexts = new List<string>();
-        //language = LocalizationSettings.SelectedLocale.ToString();
-        if (language == "Swedish (sv)")
+        gameManager = GameObject.FindGameObjectWithTag("CharacterManager");
+        if (!gameManager.GetComponent<CharacterManager>().readIntroduction)
         {
-            AddTextPartsToListSwedish();
-        }
-        else if (language == "English (en)")
-        {
-            AddTextPartsToListEnglish();
+            allTexts = new List<string>();
+            language = LocalizationSettings.SelectedLocale.ToString();
+            if (language == "Swedish (sv)")
+            {
+                AddTextPartsToListSwedish();
+            }
+            else if (language == "English (en)")
+            {
+                AddTextPartsToListEnglish();
+            }
+            else
+            {
+                AddTextPartsToListEnglish();  //Default
+            }
+
+            introductionText.text = allTexts[0];
         }
         else
         {
-            AddTextPartsToListEnglish();  //Default
-        }
-        if (language == null || language == "")
-        {
-            AddTextPartsToListEnglish();
+            Destroy(this.gameObject);
+            return;
         }
 
-        introductionText.text = allTexts[0];
     }
 
     private void Update()
     {
-        if (this.gameObject.activeInHierarchy)
+        if (index > allTexts.Count - 1)
         {
-            StartCoroutine(ClickFading(true));
-
-            if (Input.touchCount > 0)
+            gameManager.GetComponent<CharacterManager>().readIntroduction = true;
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            if (this.gameObject.activeInHierarchy)
             {
-                Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Ended)
+                StartCoroutine(ClickFading(true));
+
+                if (Input.touchCount > 0)
+                {
+                    Touch touch = Input.GetTouch(0);
+                    if (touch.phase == TouchPhase.Ended)
+                    {
+                        if (index > allTexts.Count - 1)
+                        {
+                            this.gameObject.SetActive(false);
+                        }
+                        else
+                        {
+                            introductionText.text = allTexts[index];
+                            index++;
+                        }
+                    }
+                }
+
+                //Mouse
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isTouching = true;
+                }
+
+                if (isTouching)
                 {
                     if (index > allTexts.Count - 1)
                     {
@@ -60,31 +91,10 @@ public class Introduction : MonoBehaviour
                     {
                         introductionText.text = allTexts[index];
                         index++;
+                        isTouching = false;
                     }
+
                 }
-            }
-
-
-            //Mouse
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                isTouching = true;
-            }
-
-            if (isTouching)
-            {
-                if (index > allTexts.Count - 1)
-                {
-                    this.gameObject.SetActive(false);
-                }
-                else
-                {
-                    introductionText.text = allTexts[index];
-                    index++;
-                    isTouching = false;
-                }
-
             }
         }
     }

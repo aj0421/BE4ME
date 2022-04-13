@@ -14,6 +14,7 @@ public class CharacterManager : MonoBehaviour
     private static CharacterManager instance;
 
     public bool isCompleted;
+    public bool readIntroduction;
     #endregion
 
     #region Method

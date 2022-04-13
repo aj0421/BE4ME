@@ -21,6 +21,7 @@ public class LoadCharacter : MonoBehaviour
 
     private void Start()
     {
+     
         currentCharacter = PlayerPrefs.GetInt("selectedCharacter");
         playerName = PlayerPrefs.GetString("name");
         savedPlaterText.text = playerName;

@@ -100,7 +100,7 @@
                     case "1969":
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-                        instance.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
+                        instance.transform.localPosition = _map.GeoToWorldPosition(_locations[2], true);
                         _spawnedObjects.Add(instance);
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
