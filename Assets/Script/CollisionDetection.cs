@@ -30,7 +30,8 @@ public class CollisionDetection : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Marker"))
         {
-            other.GetComponent<MeshRenderer>().material.color = Color.red;
+            Vibration.Vibrate(1000);
+            other.GetComponent<MeshRenderer>().material.color = Color.yellow;
             button.gameObject.SetActive(true);
         }
         if (other.gameObject.CompareTag("TimeMachine"))
@@ -44,7 +45,7 @@ public class CollisionDetection : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Marker"))
         {
-            other.GetComponent<MeshRenderer>().material.color = Color.blue;
+            other.GetComponent<MeshRenderer>().material.color = Color.gray;
             button.gameObject.SetActive(false);
         }
         if (other.gameObject.CompareTag("TimeMachine"))
