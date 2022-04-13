@@ -14,11 +14,14 @@ public class CollisionDetection : MonoBehaviour
     
     [SerializeField]
     private Dropdown dropDown;
+
+    private GameObject manager;
     #endregion
 
     #region Method
     private void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("CharacterManager");
         if(button == null && timeMachineButton == null)
         {
             button = GameObject.Find("ButtonHandler").GetComponentInChildren<Button>();
@@ -30,9 +33,16 @@ public class CollisionDetection : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Marker"))
         {
-            Vibration.Vibrate(1000);
-            other.GetComponent<MeshRenderer>().material.color = Color.yellow;
-            button.gameObject.SetActive(true);
+            if (manager.GetComponent<CharacterManager>().isCompleted)
+            {
+                return;
+            }
+            else
+            {
+                Vibration.Vibrate(1000);
+                other.GetComponent<MeshRenderer>().material.color = Color.yellow;
+                button.gameObject.SetActive(true);
+            }
         }
         if (other.gameObject.CompareTag("TimeMachine"))
         {

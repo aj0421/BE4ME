@@ -82,6 +82,7 @@
                 switch (storedValue)
                 {
                     case "1880":
+                      
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[0], true);
