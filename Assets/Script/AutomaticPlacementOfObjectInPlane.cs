@@ -47,8 +47,8 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
         {
             ARPlane arPlane = args.added[0];
             //CheckCharacter(arPlane.transform.position);
-            play.gameObject.SetActive(true);
-            pause.gameObject.SetActive(true);
+          //  play.gameObject.SetActive(true); //TODO
+           // pause.gameObject.SetActive(true);
             instruction.gameObject.SetActive(false);
         }
     }

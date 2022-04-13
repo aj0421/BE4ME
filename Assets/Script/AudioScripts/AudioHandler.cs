@@ -50,7 +50,7 @@ public class AudioHandler : MonoBehaviour
         if (aSource.isPlaying == false)
         {
             quizButton.gameObject.SetActive(true);
-            repeatButton.gameObject.SetActive(true);
+           // repeatButton.gameObject.SetActive(true); //TODO
         }
     }
     public void AddSoundEffects(GameObject button, string name)
