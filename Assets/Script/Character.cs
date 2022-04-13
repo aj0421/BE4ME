@@ -42,17 +42,19 @@ public class Character : MonoBehaviour
             if (ID == 0 && !questionHasBeenAdded)
             {
                 questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[0]);
-                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[2]);
+                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[1]);
                 questionHasBeenAdded = true;
             }
             else if (ID == 1 && !questionHasBeenAdded)
             {
-                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[1]);
+                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[2]);
+                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[3]);
                 questionHasBeenAdded = true;
             }  
             else if (ID == 2 && !questionHasBeenAdded)
             {
-                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[3]);
+                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[4]);
+                questionsAndAnswers.Add(quizManager.GetComponent<QuizManager>().questions_Answers[5]);
                 questionHasBeenAdded = true;
             } 
         }

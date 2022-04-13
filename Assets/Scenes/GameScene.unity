@@ -3414,5 +3414,195 @@ PrefabInstance:
       propertyPath: questionText
       value: 
       objectReference: {fileID: 571566300}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[0].question
+      value: "Hur m\xE5nga ben har en spindel?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[1].question
+      value: "Hur mycket v\xE4ger 1 liter vatten?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[2].question
+      value: "Vilket \xE4r det tyngsta djuret i v\xE4rlden?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[3].question
+      value: "Vilket djur t\xE4vlar man i grenen Dressyr?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[4].question
+      value: "Vad betyder ordet \"rolig\" p\xE5 danska?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[5].question
+      value: Vilket djur finns INTE i Sverige?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[0].correctAnswers
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[1].correctAnswers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[2].correctAnswers
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[3].correctAnswers
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[4].correctAnswers
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[5].correctAnswers
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[5].answers.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[0].answers.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[0].answers.Array.data[1]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[0].answers.Array.data[2]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[0].answers.Array.data[3]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[1].answers.Array.data[0]
+      value: 1 kilo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[1].answers.Array.data[1]
+      value: 2 kilo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[1].answers.Array.data[2]
+      value: 10 kilo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[1].answers.Array.data[3]
+      value: 1.5 kilo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[2].answers.Array.data[0]
+      value: Haj
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[2].answers.Array.data[1]
+      value: "Nosh\xF6rning"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[2].answers.Array.data[2]
+      value: "Bl\xE5val"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[2].answers.Array.data[3]
+      value: Giraff
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[3].answers.Array.data[0]
+      value: Hund
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[3].answers.Array.data[1]
+      value: "H\xE4st"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[3].answers.Array.data[2]
+      value: Kanin
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[3].answers.Array.data[3]
+      value: Apa
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[4].answers.Array.data[0]
+      value: Kul
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[4].answers.Array.data[1]
+      value: "H\xE4ftig"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[4].answers.Array.data[2]
+      value: Lugn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[4].answers.Array.data[3]
+      value: Galet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[5].answers.Array.data[0]
+      value: "\xC4lg"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[5].answers.Array.data[1]
+      value: "R\xE4v"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[5].answers.Array.data[2]
+      value: Skunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
+        type: 3}
+      propertyPath: questions_Answers.Array.data[5].answers.Array.data[3]
+      value: "R\xE5tta"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecccac22ce32b614fa725e42078a42de, type: 3}
