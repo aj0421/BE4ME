@@ -43,7 +43,7 @@ public class SwipeRotateCamera : MonoBehaviour
                 rotationY += deltaX * Time.deltaTime * rotationSpeed * rotationDirection;
 
                 rotationX = Mathf.Clamp(rotationX, 50f, 70f);  //THIS IS WERE WE CONTROL HOW MUCH THE USER CAN ROTATE THE CAMERA - TRY OUT DIFFERENT VALUES
-                //rotationY = Mathf.Clamp(rotationY, 20f, -20f);
+               // rotationY = Mathf.Clamp(rotationY, 20f, -20f);
                 camera.transform.localEulerAngles = new Vector3(rotationX, rotationY, 0f);
             }
             else if (touch.phase == TouchPhase.Ended)
