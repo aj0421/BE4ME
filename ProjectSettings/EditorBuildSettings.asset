@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TimemachineScene.unity
     guid: 637a8d7a39602204db7bef2105a60807
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: f5d9035f9c23aa842ac5d78742c6b02b
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

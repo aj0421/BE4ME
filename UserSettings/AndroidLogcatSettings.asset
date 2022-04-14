@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "0e0f6d44",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "0e0f6d44",
+        "name": "com.DefaultCompany.Be4ME",
+        "processId": 10351,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -43,6 +43,18 @@
             "name": "com.DefaultCompany.Be4ME1",
             "processId": 7288,
             "exited": true
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME",
+            "processId": 10348,
+            "exited": false
+        },
+        {
+            "deviceId": "0e0f6d44",
+            "name": "com.DefaultCompany.Be4ME",
+            "processId": 10351,
+            "exited": false
         }
     ],
     "m_Tags": {

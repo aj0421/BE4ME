@@ -25,7 +25,6 @@ public class AnswerClass : MonoBehaviour
 
     public void Start()
     {
-
         quizManager = GameObject.FindGameObjectWithTag("QuizManager");
         characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
         storedScore = PlayerPrefs.GetFloat("playerScore");

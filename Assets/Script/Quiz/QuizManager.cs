@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
@@ -39,6 +40,8 @@ public class QuizManager : MonoBehaviour
         guiPrefab.SetActive(false);
     }
 
+    #region FindObjects
+
     private GameObject FindMyGameObject(string name)
     {
         foreach (GameObject prefabToSpawn in Resources.FindObjectsOfTypeAll(typeof(GameObject)))
@@ -62,6 +65,8 @@ public class QuizManager : MonoBehaviour
         }
         return temp;
     }
+
+    #endregion
 
     public void Update()
     {
@@ -115,8 +120,18 @@ public class QuizManager : MonoBehaviour
 
     public void PressExit()
     {
-        quizPrefab.SetActive(false);
-        guiPrefab.SetActive(true);
+        if (characterManager.GetComponent<CharacterManager>().storedValue == "1969" && currentCharacterQandA.Count <= 0)
+        {
+            var save = GameObject.Find("SaveTheScore");
+            save.GetComponent<SaveScore>().SaveFile();
+            Debug.Log("The game should end here");
+            SceneManager.LoadScene(4);
+        }
+        else
+        {
+            quizPrefab.SetActive(false);
+            guiPrefab.SetActive(true);
+        }
     }
 
     private void GenerateQuestion()

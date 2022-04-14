@@ -9,8 +9,15 @@ public class SaveScore : MonoBehaviour
 {
     #region Methods
     private GameObject characterManager;
+
+    public static SaveScore Instance;
+
     public void Start()
     {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
         characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
     }
 
