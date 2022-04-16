@@ -44,7 +44,6 @@
             _locations = new Vector2d[_locationStrings.Length];
             _timeMachinelocations = new Vector2d[_locationTimeMachine.Length];
             _spawnedObjects = new List<GameObject>();
-
            
             for (int i = 0; i < _locationStrings.Length; i++)
             {
