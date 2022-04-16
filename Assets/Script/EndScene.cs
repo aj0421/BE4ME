@@ -10,8 +10,7 @@ public class EndScene : MonoBehaviour
     public void Start()
     {
         string score = PlayerPrefs.GetFloat("playerScore").ToString();
-        text.text = "Your score: " + score;
-       
+        text.text = "Your score: " + score;      
     }
 
     public void ExitGame()

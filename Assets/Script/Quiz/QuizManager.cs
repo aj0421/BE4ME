@@ -122,9 +122,6 @@ public class QuizManager : MonoBehaviour
     {
         if (characterManager.GetComponent<CharacterManager>().storedValue == "1969" && currentCharacterQandA.Count <= 0)
         {
-            var save = GameObject.Find("SaveTheScore");
-            save.GetComponent<SaveScore>().SaveFile();
-            Debug.Log("The game should end here");
             SceneManager.LoadScene(4);
         }
         else
