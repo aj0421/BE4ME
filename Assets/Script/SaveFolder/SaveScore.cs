@@ -43,7 +43,15 @@ public class SaveScore : MonoBehaviour
         Save save = CreateSave(path); // Create a Save instance with all the data for the current session saved into it  
                                       // Serialize the data and writes it to the phone
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(path + "/n");
+        FileStream file;
+        if (File.Exists(path))
+        {
+            file = File.OpenWrite(path + "/n");
+        }
+        else
+        {
+            file = File.Create(path + "/n");
+        }
         bf.Serialize(file, save);
         file.Close();
         Debug.Log("Save " + file.Name);

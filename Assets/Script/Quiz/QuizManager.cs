@@ -123,6 +123,7 @@ public class QuizManager : MonoBehaviour
         if (characterManager.GetComponent<CharacterManager>().storedValue == "1969" && currentCharacterQandA.Count <= 0)
         {
             SceneManager.LoadScene(4);
+            SaveScore.Instance.SaveFile();
         }
         else
         {
