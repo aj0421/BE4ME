@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
+
 public class Introduction : MonoBehaviour
 {
     #region Variables
@@ -108,16 +109,16 @@ public class Introduction : MonoBehaviour
         //string part1 = "Hej " + PlayerPrefs.GetString("name") + " !";
         //allTexts.Add(part1);
 
-        //string part2 = "Nu ska du f� l�ra dig historien om en k�nd kvinna fr�n helsingborg vid namn <b>Maria Zoegas</b>";
+        //string part2 = "Nu ska du få lära dig historien om en känd kvinna från helsingborg vid namn <b>Maria Zoegas</b>";
         //allTexts.Add(part2);
 
-        //string part3 = "Men spelet kommer inte ber�tta om henne, utan du f�r sj�lv hitta henne.";
+        //string part3 = "Men spelet kommer inte berätta om henne, utan du får själv hitta henne.";
         //allTexts.Add(part3);
 
-        //string part4 = "Hon dog tyv�rr f�r m�nga �r sen, men vi har skapat en tidsmaskin som du kan anv�nda.";
+        //string part4 = "Hon dog tyvärr för många år sen, men vi har skapat en tidsmaskin som du kan använda.";
         //allTexts.Add(part4);
 
-        //string part5 = "Vi har st�lld tidsmaskinen h�r p� lekplatsen. Hittar du den, kan du resa bak i tiden f�r att prata med henne.";
+        //string part5 = "Vi har ställt tidsmaskinen här på lekplatsen. Hittar du den, kan du resa bak i tiden för att prata med henne.";
         //allTexts.Add(part5);
 
         //string part6 = "Lycka till!";
@@ -125,19 +126,19 @@ public class Introduction : MonoBehaviour
         string part1 = "Hej " + PlayerPrefs.GetString("name") + " !";
         allTexts.Add(part1);
 
-        string part2 = "Nu ska du f� resa i tiden och samla stj�rnor!";
+        string part2 = "Nu ska du få resa i tiden och samla stjärnor!";
         allTexts.Add(part2);
 
-        string part3 = "Vi har st�llt en tidsmaskin h�r p� lekplatsen.";
+        string part3 = "Vi har ställt en tidsmaskin här på lekplatsen.";
         allTexts.Add(part3);
 
-        string part4 = "Varje �r du �ker till, finns det en tjej som kommer st�lla lite fr�gor.";
+        string part4 = "Varje år du åker till, finns det en tjej som kommer ställa lite frågor.";
         allTexts.Add(part4);
 
-        string part5 = "Svarar du r�tt p� fr�gorna, f�r du flera stj�rnor och levlar upp!";
+        string part5 = "Svarar du rätt på frågorna, får du flera stjärnor och levlar upp!";
         allTexts.Add(part5);
 
-        string part7 = "Du ska �ka till totalt 3 olika �r.";
+        string part7 = "Du ska åka till totalt 3 olika år.";
         allTexts.Add(part7);
 
         string part6 = "Lycka till!";
