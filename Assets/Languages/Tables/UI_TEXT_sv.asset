@@ -66,5 +66,10 @@ MonoBehaviour:
     m_Localized: Tillbaka
     m_Metadata:
       m_Items: []
+  - m_Id: 5444571955994624
+    m_Localized: "Nu \xE4r du klar med detta \xE5ret, bra Jobbat! G\xE5 tillbaka
+      till tidsmaskinen f\xF6r att \xE5ka till ett annat \xE5r!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

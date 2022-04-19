@@ -66,5 +66,10 @@ MonoBehaviour:
     m_Localized: Back
     m_Metadata:
       m_Items: []
+  - m_Id: 5444571955994624
+    m_Localized: You are now finished with this year, good job! Go back to the timemachine
+      to go to another year!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
