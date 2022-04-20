@@ -3422,37 +3422,37 @@ PrefabInstance:
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[0].question
-      value: "Hur m\xE5nga ben har en spindel?"
+      value: "Maria Zo\xE9gas loved"
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[1].question
-      value: "Hur mycket v\xE4ger 1 liter vatten?"
+      value: 1885 - question missing
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[2].question
-      value: "Vilket \xE4r det tyngsta djuret i v\xE4rlden?"
+      value: "Maria Zo\xE9gas lost all these people in one year"
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[3].question
-      value: "Vilket djur t\xE4vlar man i grenen Dressyr?"
+      value: 1888 - question missing
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[4].question
-      value: "Vad betyder ordet \"rolig\" p\xE5 danska?"
+      value: Maria has many sad experiences in her life, but what helped her succeed?
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[5].question
-      value: Vilket djur finns INTE i Sverige?
+      value: 1900 - question missing
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[0].correctAnswers
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
@@ -3462,7 +3462,7 @@ PrefabInstance:
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[2].correctAnswers
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
@@ -3472,7 +3472,7 @@ PrefabInstance:
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[4].correctAnswers
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
@@ -3487,122 +3487,122 @@ PrefabInstance:
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[0].answers.Array.data[0]
-      value: 4
+      value: Baking
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[0].answers.Array.data[1]
-      value: 8
+      value: Sewing
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[0].answers.Array.data[2]
-      value: 12
+      value: Swimming
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[0].answers.Array.data[3]
-      value: 6
+      value: Photography
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[1].answers.Array.data[0]
-      value: 1 kilo
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[1].answers.Array.data[1]
-      value: 2 kilo
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[1].answers.Array.data[2]
-      value: 10 kilo
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[1].answers.Array.data[3]
-      value: 1.5 kilo
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[2].answers.Array.data[0]
-      value: Haj
+      value: Her husband, her child and her mother-in-law
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[2].answers.Array.data[1]
-      value: "Nosh\xF6rning"
+      value: Her husband, har aunt and her mother
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[2].answers.Array.data[2]
-      value: "Bl\xE5val"
+      value: Her cousin and her friend
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[2].answers.Array.data[3]
-      value: Giraff
+      value: Her sister, her child and her mother
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[3].answers.Array.data[0]
-      value: Hund
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[3].answers.Array.data[1]
-      value: "H\xE4st"
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[3].answers.Array.data[2]
-      value: Kanin
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[3].answers.Array.data[3]
-      value: Apa
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[4].answers.Array.data[0]
-      value: Kul
+      value: Her wealthy friends
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[4].answers.Array.data[1]
-      value: "H\xE4ftig"
+      value: 'Her hard work and determination '
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[4].answers.Array.data[2]
-      value: Lugn
+      value: Luck and good fortune
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[4].answers.Array.data[3]
-      value: Galet
+      value: She found a lot of money
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[5].answers.Array.data[0]
-      value: "\xC4lg"
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[5].answers.Array.data[1]
-      value: "R\xE4v"
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[5].answers.Array.data[2]
-      value: Skunk
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 3378652361288148199, guid: ecccac22ce32b614fa725e42078a42de,
         type: 3}
       propertyPath: questions_Answers.Array.data[5].answers.Array.data[3]
-      value: "R\xE5tta"
+      value: NaN
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecccac22ce32b614fa725e42078a42de, type: 3}
