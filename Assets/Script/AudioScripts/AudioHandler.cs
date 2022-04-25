@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class AudioHandler : MonoBehaviour
@@ -23,6 +24,7 @@ public class AudioHandler : MonoBehaviour
     private Audio audio;
     AudioSource aSource;
     private bool isActive;
+    private string language = "";
     #endregion
 
     #region Method
@@ -65,7 +67,21 @@ public class AudioHandler : MonoBehaviour
                 aSource.Play();
             }
         }
+    } 
+    
+    public void AddAudio(GameObject button, string name)
+    {
+        audio.source = button.GetComponent<AudioSource>();
+        aSource = audio.source;
 
+        foreach (var item in audioList)
+        {
+            if (item.name == name)
+            {
+                aSource.clip = item.clip;
+                aSource.Play();
+            }
+        }
     }
 
     public void Play()
@@ -78,11 +94,43 @@ public class AudioHandler : MonoBehaviour
     {
         parent = GameObject.FindGameObjectWithTag("CharacterParent");
         child = parent.transform.GetChild(0).gameObject;
-        audio.source = child.GetComponent<AudioSource>();
-        aSource = audio.source;
+        language = LocalizationSettings.SelectedLocale.ToString();
+        if (language == "Swedish (sv)")
+        {
+            switch (child.GetComponent<Character>().year)
+            {
+                case "1885":
+                    AddAudio(child, "Maria_Sv_1");
+                    break;    
+                case "1888":
+                    AddAudio(child, "Maria_Sv_2");
+                    break;  
+                case "1900":
+                    AddAudio(child, "Maria_Sv_3");
+                    break;
+            }
+        }
+        else if (language == "English (en)")
+        {
+
+            switch (child.GetComponent<Character>().year)
+            {
+                case "1885":
+                    AddAudio(child, "frenchWoman");
+                    break;
+                case "1888":
+                    AddAudio(child, "frenchWoman");
+                    break;
+                case "1900":
+                    AddAudio(child, "frenchWoman");
+                    break;
+            }
+        }
+      
+       // aSource = audio.source;
         if (aSource != null)
         {
-            aSource.Play();
+           // aSource.Play();
             isActive = true;
         }
     }

@@ -205,6 +205,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   characterName: Maria2
-  year: 1996
+  year: 1888
   questionsAndAnswers: []
   isCompleted: 0

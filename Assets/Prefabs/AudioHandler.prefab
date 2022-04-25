@@ -72,5 +72,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 654f33ce4ee638a42b0b6177b221dce8, type: 3}
     volume: 1
     source: {fileID: 0}
+  - name: Maria_Sv_1
+    clip: {fileID: 8300000, guid: 592751f912532234a80471387d47e40d, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Maria_Sv_2
+    clip: {fileID: 8300000, guid: 7fe76398ad1aee640885ee11b103f019, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Maria_Sv_3
+    clip: {fileID: 8300000, guid: f631c722826038a41a5a8ec5ebf93da6, type: 3}
+    volume: 1
+    source: {fileID: 0}
   quizButton: {fileID: 0}
   repeatButton: {fileID: 0}

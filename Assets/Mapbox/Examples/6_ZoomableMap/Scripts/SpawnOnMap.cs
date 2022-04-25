@@ -80,7 +80,7 @@
             {
                 switch (storedValue)
                 {
-                    case "1880":
+                    case "1885":
                       
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
@@ -89,7 +89,7 @@
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
-                    case "1996":
+                    case "1888":
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
@@ -97,7 +97,7 @@
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
-                    case "1969":
+                    case "1900":
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[2], true);

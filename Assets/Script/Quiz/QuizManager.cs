@@ -120,7 +120,7 @@ public class QuizManager : MonoBehaviour
 
     public void PressExit()
     {
-        if (characterManager.GetComponent<CharacterManager>().storedValue == "1969" && currentCharacterQandA.Count <= 0)
+        if (characterManager.GetComponent<CharacterManager>().storedValue == "1900" && currentCharacterQandA.Count <= 0)
         {
             SceneManager.LoadScene(4);
             SaveScore.Instance.SaveFile();

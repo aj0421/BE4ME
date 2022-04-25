@@ -71,7 +71,7 @@ public class YearUI : MonoBehaviour
             case "2022":
                 AddOptionsToDropdown(year[0]);
                 break;
-            case "1880":
+            case "1885":
                 if (isCompleted)
                 {
                     AddOptionsToDropdown(year[0]);
@@ -82,7 +82,7 @@ public class YearUI : MonoBehaviour
                     AddOptionsToDropdown(year[0]);
                 }
                 break;
-            case "1996":
+            case "1888":
                 if (isCompleted)
                 {
                     AddOptionsToDropdown(year[0]);
@@ -95,7 +95,7 @@ public class YearUI : MonoBehaviour
                     AddOptionsToDropdown(year[1]);
                 }
                 break;
-            case "1969":
+            case "1900":
                 if (isCompleted)
                 {
                     AddOptionsToDropdown(year[0]);
