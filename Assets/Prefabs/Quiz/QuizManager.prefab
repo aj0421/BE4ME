@@ -44,41 +44,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions_Answers:
-  - question: "\xC4r Kaffe Gott?"
+  - question: "Hur m\xE5nga ben har en spindel?"
     answers:
-    - "\xD6RK"
-    - "JA F\xD6R FAN"
-    - "VAD \xC4R KAFFE?"
-    - ERU GO ELLEH?
+    - 4
+    - 8
+    - 12
+    - 6
     correctAnswers: 2
-  - question: "Vilket djur \xE4r b\xE4st? (nej inte subjektivt)"
+  - question: "Hur mycket v\xE4ger 1 liter vatten?"
     answers:
+    - 1 kilo
+    - 2 kilo
+    - 10 kilo
+    - 1.5 kilo
+    correctAnswers: 1
+  - question: "Vilket \xE4r det tyngsta djuret i v\xE4rlden?"
+    answers:
+    - Haj
+    - "Nosh\xF6rning"
+    - "Bl\xE5val"
     - Giraff
-    - Bagge
-    - Get
-    - "Fj\xE4ril"
     correctAnswers: 3
-  - question: "F\xE5r f\xE5r d\xE5r?"
+  - question: "Vilket djur t\xE4vlar man i grenen Dressyr?"
     answers:
-    - Ja
-    - Kanske
-    - Mjau
-    - "F\xE5r f\xE5r lamm"
-    correctAnswers: 4
-  - question: "Vem \xE4r b\xE4st"
+    - Hund
+    - "H\xE4st"
+    - Kanin
+    - Apa
+    correctAnswers: 2
+  - question: "Vad betyder ordet \"rolig\" p\xE5 danska?"
     answers:
-    - Ja
-    - Kanske
-    - Mjau
-    - "F\xE5r f\xE5r lamm"
-    correctAnswers: 4
-  - question: "Vem \xE4r Winnie"
+    - Kul
+    - "H\xE4ftig"
+    - Lugn
+    - Galet
+    correctAnswers: 3
+  - question: Vilket djur finns INTE i Sverige?
     answers:
-    - Ja
-    - Kanske
-    - Mjau
-    - "F\xE5r f\xE5r lamm"
-    correctAnswers: 4
+    - "\xC4lg"
+    - "R\xE4v"
+    - Skunk
+    - "R\xE5tta"
+    correctAnswers: 3
   currentQuestion: 0
   questionText: {fileID: 0}
   exitButton: {fileID: 0}

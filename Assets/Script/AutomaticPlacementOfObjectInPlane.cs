@@ -33,8 +33,9 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
 
     private List<GameObject> characters;
 
-    public Transform target;
     Quaternion lookRotationVar;
+    private GameObject ChildGameObject1;
+    bool isSpawned;
     public void Awake()
     {
         //For debug purpose
@@ -49,12 +50,20 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
         {
             ARPlane arPlane = args.added[0];
             CheckCharacter(arPlane.transform.position);
-          //  play.gameObject.SetActive(true); //TODO
-           // pause.gameObject.SetActive(true);
+            play.gameObject.SetActive(true);
+            pause.gameObject.SetActive(true);
             instruction.gameObject.SetActive(false);
         }
     }
-
+    private void Update()
+    {
+        if (isSpawned)
+        {
+            Quaternion mariaRotation = Quaternion.LookRotation(arCamera.transform.position - placedObject.transform.position, placedObject.transform.up).normalized;
+            placedObject.transform.rotation = Quaternion.Slerp(placedObject.transform.rotation, mariaRotation, 1);
+            isSpawned = false;
+        }
+    }
     private void CheckCharacter(Vector3 position)
     {
         GameObject characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
@@ -69,17 +78,8 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
                 placedPrefab = item;
                 placedObject = Instantiate(placedPrefab, position, Quaternion.identity);
                 placedObject.transform.SetParent(characterParent.transform, false);
-                placedObject.transform.position += new Vector3(0, -2, 0);
-               // var lookAt = placedObject.GetComponentInChildren<GameObject>();
-                GameObject ChildGameObject1 = placedObject.transform.GetChild(2).gameObject;
-                Debug.Log("NAme of child: " + ChildGameObject1.name);
-
-                ChildGameObject1.transform.LookAt(target);
-                placedObject.transform.rotation = Quaternion.LookRotation(ChildGameObject1.transform.position);
-                //lookAt.transform.LookAt(target);
-                //placedObject.transform.localRotation = lookAt.transform.rotation;
-
-                //placedObject.transform.LookAt(target);
+                placedObject.transform.position += new Vector3(0, -2, 1);
+                isSpawned = true;
             }
         }
     }

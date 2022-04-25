@@ -276,8 +276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896584e6e88568c42b14ea81620e74ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterParent: {fileID: 0}
   arCamera: {fileID: 3636355977454439549}
   ARPlaneManager: {fileID: 3636355977830778861}
   play: {fileID: 0}
   pause: {fileID: 0}
   instruction: {fileID: 0}
+  target: {fileID: 3636355977454439545}

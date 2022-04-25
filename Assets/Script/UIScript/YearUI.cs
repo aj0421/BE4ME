@@ -17,8 +17,6 @@ public class YearUI : MonoBehaviour
     private List<string> options;
     private GameObject[] characterArray;
     private GameObject character;
-    private int index = 0;
-
     private bool isCompleted;
     #endregion
 

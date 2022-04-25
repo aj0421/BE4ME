@@ -22,7 +22,7 @@ public class AudioHandler : MonoBehaviour
 
     private int index;
     private Audio audio;
-    AudioSource aSource;
+    private AudioSource aSource;
     private bool isActive;
     private string language = "";
     #endregion
@@ -51,7 +51,7 @@ public class AudioHandler : MonoBehaviour
         if (aSource.isPlaying == false)
         {
             quizButton.gameObject.SetActive(true);
-           // repeatButton.gameObject.SetActive(true); //TODO
+            repeatButton.gameObject.SetActive(true);
         }
     }
     public void AddSoundEffects(GameObject button, string name)
@@ -67,8 +67,7 @@ public class AudioHandler : MonoBehaviour
                 aSource.Play();
             }
         }
-    } 
-    
+    }
     public void AddAudio(GameObject button, string name)
     {
         audio.source = button.GetComponent<AudioSource>();
@@ -80,10 +79,13 @@ public class AudioHandler : MonoBehaviour
             {
                 aSource.clip = item.clip;
                 aSource.Play();
+                if (!aSource.isPlaying)
+                {
+                    isActive = true;
+                }
             }
         }
     }
-
     public void Play()
     {
         CheckCharacter();
@@ -101,10 +103,10 @@ public class AudioHandler : MonoBehaviour
             {
                 case "1885":
                     AddAudio(child, "Maria_Sv_1");
-                    break;    
+                    break;
                 case "1888":
                     AddAudio(child, "Maria_Sv_2");
-                    break;  
+                    break;
                 case "1900":
                     AddAudio(child, "Maria_Sv_3");
                     break;
@@ -126,13 +128,8 @@ public class AudioHandler : MonoBehaviour
                     break;
             }
         }
-      
-       // aSource = audio.source;
-        if (aSource != null)
-        {
-           // aSource.Play();
-            isActive = true;
-        }
+
+       
     }
 
     public void Pause()
@@ -152,7 +149,7 @@ public class AudioHandler : MonoBehaviour
     public void Repeat()
     {
         aSource.time = 0;
-        aSource.Play(); 
+        aSource.Play();
         AddSoundEffects(this.gameObject, "button_tap");
     }
     #endregion
