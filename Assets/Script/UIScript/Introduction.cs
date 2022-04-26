@@ -75,25 +75,25 @@ public class Introduction : MonoBehaviour
                 }
 
                 //Mouse DEBUG PURPOSE
-                //if (Input.GetMouseButtonDown(0))
-                //{
-                //    isTouching = true;
-                //}
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isTouching = true;
+                }
 
-                //if (isTouching)
-                //{
-                //    if (index > allTexts.Count - 1)
-                //    {
-                //        this.gameObject.SetActive(false);
-                //    }
-                //    else
-                //    {
-                //        introductionText.text = allTexts[index];
-                //        index++;
-                //        isTouching = false;
-                //    }
+                if (isTouching)
+                {
+                    if (index > allTexts.Count - 1)
+                    {
+                        this.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        introductionText.text = allTexts[index];
+                        index++;
+                        isTouching = false;
+                    }
 
-                //}
+                }
             }
         }
     }

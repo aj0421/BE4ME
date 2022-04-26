@@ -55,15 +55,7 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
             instruction.gameObject.SetActive(false);
         }
     }
-    private void Update()
-    {
-        if (isSpawned)
-        {
-            Quaternion mariaRotation = Quaternion.LookRotation(arCamera.transform.position - placedObject.transform.position, placedObject.transform.up).normalized;
-            placedObject.transform.rotation = Quaternion.Slerp(placedObject.transform.rotation, mariaRotation, 1);
-            isSpawned = false;
-        }
-    }
+   
     private void CheckCharacter(Vector3 position)
     {
         GameObject characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
@@ -79,7 +71,8 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
                 placedObject = Instantiate(placedPrefab, position, Quaternion.identity);
                 placedObject.transform.SetParent(characterParent.transform, false);
                 placedObject.transform.position += new Vector3(0, -2, 1);
-                isSpawned = true;
+                placedObject.transform.localRotation = Quaternion.Euler(-90, 180, 0);
+              
             }
         }
     }
