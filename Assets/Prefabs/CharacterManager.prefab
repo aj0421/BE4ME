@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterArray:
   - {fileID: 362058353682981572, guid: 4b1cba0cb3350e848bae6c0350642d86, type: 3}
-  - {fileID: 8261135707334887424, guid: 01fe7484b37f5944799116b860af2fe8, type: 3}
-  - {fileID: 9130772668893911645, guid: b22dc982952b4cf4f8c8c612d81cb82e, type: 3}
+  - {fileID: 5217983787640467305, guid: 330117e41d846284c976fbe167e92f01, type: 3}
+  - {fileID: 3301453056093169031, guid: e3ebff29a9b8975489ddf30b6edefba2, type: 3}
   storedValue: 
   yearText: {fileID: 0}
   isCompleted: 0

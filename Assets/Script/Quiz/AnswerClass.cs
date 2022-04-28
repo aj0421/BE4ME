@@ -48,16 +48,16 @@ public class AnswerClass : MonoBehaviour
         {
             StartCoroutine(VisualTimer(new Color(255, 0, 150, 1), new Color(37, 41, 88, 1)));
             audio.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "correct");
-            storedScore += CalculateNewScore(50);
-            PlayerPrefs.SetFloat("updatedScore", storedScore);
+            storedScore += CalculateNewScore(30);
         }
         else
         {
             StartCoroutine(VisualTimer(new Color(255, 0, 0, 1), new Color(37, 41, 88, 1)));
             audio.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "wrong");
             storedScore += CalculateNewScore(10);
-            PlayerPrefs.SetFloat("updatedScore", storedScore);
         }
+
+        PlayerPrefs.SetFloat("updatedScore", storedScore);
     }
 
     public IEnumerator VisualTimer(Color buttonColor, Color buttonColorNormal)
