@@ -105,7 +105,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 07be8372e4adfc142a5d66b7f7d1931c,
         type: 3}
       propertyPath: m_TagString
-      value: Character
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07be8372e4adfc142a5d66b7f7d1931c, type: 3}

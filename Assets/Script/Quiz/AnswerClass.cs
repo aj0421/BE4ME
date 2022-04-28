@@ -19,6 +19,8 @@ public class AnswerClass : MonoBehaviour
 
     private GameObject audio;
     private float storedScore;
+    private float correctAnswer = 30;
+    private float wrongAnswer = 10;
     #endregion
 
     #region Method
@@ -27,15 +29,15 @@ public class AnswerClass : MonoBehaviour
     {
         quizManager = GameObject.FindGameObjectWithTag("QuizManager");
         characterManager = GameObject.FindGameObjectWithTag("CharacterManager");
-        storedScore = PlayerPrefs.GetFloat("playerScore");
+
         audio = GameObject.Find("AudioHandler");
     }
 
-    private int CalculateNewScore(int newScore)
-    {
-        score += newScore;
-        return score;
-    }
+    //private float CalculateNewScore(int newScore)
+    //{
+    //    storedScore  += newScore;
+    //    return storedScore;
+    //}
 
     public void GetAnswer(Text answer)
     {
@@ -44,17 +46,23 @@ public class AnswerClass : MonoBehaviour
 
     public void Answer()
     {
+        storedScore = PlayerPrefs.GetFloat("playerScore");
         if (isCorrect)
         {
             StartCoroutine(VisualTimer(new Color(255, 0, 150, 1), new Color(37, 41, 88, 1)));
             audio.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "correct");
-            storedScore += CalculateNewScore(30);
+          
+            storedScore += correctAnswer;
+            PlayerPrefs.SetFloat("playerScore", storedScore);
+          
         }
         else
         {
             StartCoroutine(VisualTimer(new Color(255, 0, 0, 1), new Color(37, 41, 88, 1)));
             audio.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "wrong");
-            storedScore += CalculateNewScore(10);
+         
+            storedScore += wrongAnswer;
+            PlayerPrefs.SetFloat("playerScore", storedScore);
         }
 
         PlayerPrefs.SetFloat("updatedScore", storedScore);
@@ -64,7 +72,7 @@ public class AnswerClass : MonoBehaviour
     {
         float waitDuration = 1.2f;
         float normalized = 0;
-        while(normalized <= 1f)
+        while (normalized <= 1f)
         {
             gameObject.GetComponent<Image>().color = buttonColor;
             normalized += Time.deltaTime / waitDuration;

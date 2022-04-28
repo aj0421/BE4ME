@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maria3
       objectReference: {fileID: 0}
+    - target: {fileID: 362058353682981572, guid: 4b1cba0cb3350e848bae6c0350642d86,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1030649812024621182, guid: 4b1cba0cb3350e848bae6c0350642d86,
         type: 3}
       propertyPath: m_RootOrder

@@ -44,14 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioList:
-  - name: frenchWoman
-    clip: {fileID: 8300000, guid: 06227e55adab8eb47a32081b38085239, type: 3}
-    volume: 1
-    source: {fileID: 0}
-  - name: englishWoman
-    clip: {fileID: 8300000, guid: 6a127bb26f97903499725f1b1bcfdd8d, type: 3}
-    volume: 1
-    source: {fileID: 0}
   - name: correct
     clip: {fileID: 8300000, guid: 56555578ffc268f4a8b7feb300cca652, type: 3}
     volume: 1
@@ -82,6 +74,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Maria_Sv_3
     clip: {fileID: 8300000, guid: f631c722826038a41a5a8ec5ebf93da6, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Maria_En_1
+    clip: {fileID: 8300000, guid: 5ab1896312e4987418d24c27201dca2a, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Maria_En_2
+    clip: {fileID: 8300000, guid: 8ad9e407132663c4ca3e41174955993a, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Maria_En_3
+    clip: {fileID: 8300000, guid: ffd2fb425615157409b9033855e875a2, type: 3}
     volume: 1
     source: {fileID: 0}
   quizButton: {fileID: 0}
