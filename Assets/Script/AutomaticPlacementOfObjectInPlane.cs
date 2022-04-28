@@ -32,10 +32,6 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
     private string storedValue;
 
     private List<GameObject> characters;
-
-    Quaternion lookRotationVar;
-    private GameObject ChildGameObject1;
-    bool isSpawned;
     public void Awake()
     {
         //For debug purpose
@@ -72,7 +68,6 @@ public class AutomaticPlacementOfObjectInPlane : MonoBehaviour
                 placedObject.transform.SetParent(characterParent.transform, false);
                 placedObject.transform.position += new Vector3(0, -2, 1);
                 placedObject.transform.localRotation = Quaternion.Euler(-90, 180, 0);
-              
             }
         }
     }

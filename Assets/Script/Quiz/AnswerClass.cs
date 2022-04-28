@@ -15,7 +15,6 @@ public class AnswerClass : MonoBehaviour
     public GameObject characterParent;
 
     private GameObject characterManager;
-    private int score;
 
     private GameObject audio;
     private float storedScore;
@@ -32,12 +31,6 @@ public class AnswerClass : MonoBehaviour
 
         audio = GameObject.Find("AudioHandler");
     }
-
-    //private float CalculateNewScore(int newScore)
-    //{
-    //    storedScore  += newScore;
-    //    return storedScore;
-    //}
 
     public void GetAnswer(Text answer)
     {
