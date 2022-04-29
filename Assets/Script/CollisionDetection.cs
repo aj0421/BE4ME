@@ -25,7 +25,7 @@ public class CollisionDetection : MonoBehaviour
         if(button == null && timeMachineButton == null)
         {
             button = GameObject.Find("ButtonHandler").GetComponentInChildren<Button>();
-            timeMachineButton = GameObject.Find("ButtonHandler").GetComponentInChildren<Button>();
+            timeMachineButton = GameObject.Find("TimeMachine_Button").GetComponentInChildren<Button>();
         }
        
     }
