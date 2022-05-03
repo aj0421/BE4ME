@@ -50,7 +50,7 @@
                 string locationString = _locationStrings[i];
                 _locations[i] = Conversions.StringToLatLon(locationString);
             }
-            StartCoroutine(LateStart(1f));
+            StartCoroutine(LateStart(2f));
             CheckYear();
         }
         IEnumerator LateStart(float waitTime)
