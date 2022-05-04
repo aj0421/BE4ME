@@ -61,26 +61,7 @@ public class Introduction : MonoBehaviour
             {
                 StartCoroutine(ClickFading(true));
 
-                if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-                {
-                    if (index > allTexts.Count - 1)
-                    {
-                        this.gameObject.SetActive(false);
-                    }
-                    else
-                    {
-                        introductionText.text = allTexts[index];
-                        index++;
-                    }
-                }
-
-                //Mouse DEBUG PURPOSE
-                //if (Input.GetMouseButtonDown(0))
-                //{
-                //    isTouching = true;
-                //}
-
-                //if (isTouching)
+                //if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
                 //{
                 //    if (index > allTexts.Count - 1)
                 //    {
@@ -90,10 +71,29 @@ public class Introduction : MonoBehaviour
                 //    {
                 //        introductionText.text = allTexts[index];
                 //        index++;
-                //        isTouching = false;
                 //    }
-
                 //}
+
+                //Mouse DEBUG PURPOSE
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isTouching = true;
+                }
+
+                if (isTouching)
+                {
+                    if (index > allTexts.Count - 1)
+                    {
+                        this.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        introductionText.text = allTexts[index];
+                        index++;
+                        isTouching = false;
+                    }
+
+                }
             }
         }
     }

@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public class QuizManager : MonoBehaviour
 {
     #region Variable
+    //public List<QandA> questions_Answers;
+    
     public List<QandA> questions_Answers;
+
     public int currentQuestion = 0;
     public Text questionText;
     public Button exitButton;
@@ -21,6 +24,7 @@ public class QuizManager : MonoBehaviour
     public GameObject scorePrefab;
     public GameObject quizPanel;
     private GameObject characterManager;
+    
     #endregion
 
     #region Method 
@@ -32,6 +36,16 @@ public class QuizManager : MonoBehaviour
         questionExist = false;
         currentCharacter = FindMyGameObject("Character");
         answerOptions = FindList("AnswerButton");
+        //SetQandAs();
+    }
+
+    private void SetQandAs()
+    {
+        QuestionHolder QuestionHolder = new QuestionHolder();
+        questions_Answers = new List<QandA>();
+        questions_Answers.Add(QuestionHolder.Q1());
+        questions_Answers.Add(QuestionHolder.Q2());
+        Debug.Log("Q and A: " + questions_Answers[0].question + " + " + questions_Answers[1].question);
     }
 
     public void ActivateQuiz()

@@ -44,47 +44,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions_Answers:
-  - question: "Hur m\xE5nga ben har en spindel?"
+  - question: "What did Maria Zoeg\xE1 Like to do?"
     answers:
-    - 4
-    - 8
-    - 12
-    - 6
-    correctAnswers: 2
-  - question: "Hur mycket v\xE4ger 1 liter vatten?"
+    - Ride horses
+    - Paint
+    - Swim
+    - Take photographs
+    correctAnswers: 4
+  - question: What kind of shop did Carlos and Maria have?
     answers:
-    - 1 kilo
-    - 2 kilo
-    - 10 kilo
-    - 1.5 kilo
+    - Coffee shop
+    - Candy shop
+    - Tailor shop
+    - Photograph shop
     correctAnswers: 1
-  - question: "Vilket \xE4r det tyngsta djuret i v\xE4rlden?"
+  - question: Maria tragically lost many people in the same year. Who?
     answers:
-    - Haj
-    - "Nosh\xF6rning"
-    - "Bl\xE5val"
-    - Giraff
-    correctAnswers: 3
-  - question: "Vilket djur t\xE4vlar man i grenen Dressyr?"
+    - Her husband, her son and her mother-in-law
+    - her husband, her aunt and her mother
+    - Her cousin and her friend
+    - Her husband and both of their childrenn
+    correctAnswers: 1
+  - question: What year was the battle of Helsingborg?
     answers:
-    - Hund
-    - "H\xE4st"
-    - Kanin
-    - Apa
+    - 1888
+    - 1710
+    - 2015
+    - 1300
     correctAnswers: 2
-  - question: "Vad betyder ordet \"rolig\" p\xE5 danska?"
+  - question: Maria had many sad experiences, but what do you think helped her to
+      succeed in her life?
     answers:
-    - Kul
-    - "H\xE4ftig"
-    - Lugn
-    - Galet
-    correctAnswers: 3
-  - question: Vilket djur finns INTE i Sverige?
+    - Her rich friends
+    - Her hard work and determination
+    - Happiness and luck
+    - Her husband died
+    correctAnswers: 2
+  - question: What street in Helsingborg did Maria move her company to?
     answers:
-    - "\xC4lg"
-    - "R\xE4v"
-    - Skunk
-    - "R\xE5tta"
+    - Eric Dahlbergsgatan
+    - Norra stenbocksgatan
+    - Drottninggatan
+    - "Johan Ban\xE9rs gatan"
     correctAnswers: 3
   currentQuestion: 0
   questionText: {fileID: 0}

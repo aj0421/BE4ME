@@ -17,6 +17,9 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private Button repeatButton;
 
+    [SerializeField]
+    private Button playButton;
+
     private GameObject parent;
     private GameObject child;
 
@@ -79,7 +82,7 @@ public class AudioHandler : MonoBehaviour
             {
                 aSource.clip = item.clip;
                 aSource.Play();
-                
+
                 if (aSource.isPlaying)
                 {
                     isActive = true;
@@ -93,8 +96,16 @@ public class AudioHandler : MonoBehaviour
     }
     public void Play()
     {
-        AddSoundEffects(this.gameObject, "button_tap");
         CheckCharacter();
+        if (playButton != null && aSource != null)
+        {
+            if (aSource.isPlaying)
+            {
+                playButton.gameObject.SetActive(false);
+            }
+        }
+
+        AddSoundEffects(this.gameObject, "button_tap");
     }
 
     private void CheckCharacter()
@@ -138,6 +149,7 @@ public class AudioHandler : MonoBehaviour
     {
         if (aSource != null && isActive)
         {
+            playButton.gameObject.SetActive(true);
             aSource.Pause();
             AddSoundEffects(this.gameObject, "button_tap");
             isActive = false;
