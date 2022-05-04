@@ -51,13 +51,14 @@
                 _locations[i] = Conversions.StringToLatLon(locationString);
             }
             StartCoroutine(LateStart(2f));
-            CheckYear();
         }
         IEnumerator LateStart(float waitTime)
         {
             yield return new WaitForSeconds(waitTime);
             Initialize();
-        }
+            CheckYear();
+        }   
+    
         private void Initialize()
         {
             _timeMachinelocations[0] = Conversions.StringToLatLon(_locationTimeMachine);
@@ -84,7 +85,7 @@
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[0], true);
-                        _spawnedObjects.Add(instance);
+                        //_spawnedObjects.Add(instance);
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
@@ -92,7 +93,7 @@
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
-                        _spawnedObjects.Add(instance);
+                       // _spawnedObjects.Add(instance);
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
@@ -100,7 +101,7 @@
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[2], true);
-                        _spawnedObjects.Add(instance);
+                      //  _spawnedObjects.Add(instance);
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
@@ -110,14 +111,14 @@
 
         private void Update()
         {
-            int count = _spawnedObjects.Count;
-            for (int i = 0; i < count; i++)
-            {
-                GameObject spawnedObject = _spawnedObjects[i];
-                Vector2d location = _locations[i];
-                spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
-                spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-            }
+            //int count = _spawnedObjects.Count;
+            //for (int i = 0; i < count; i++)
+            //{
+            //    GameObject spawnedObject = _spawnedObjects[i];
+            //    Vector2d location = _locations[i];
+            //    spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
+            //    spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+            //}
         }
     }
 }
