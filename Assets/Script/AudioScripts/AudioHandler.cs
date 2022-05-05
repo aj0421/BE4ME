@@ -60,14 +60,14 @@ public class AudioHandler : MonoBehaviour
     public void AddSoundEffects(GameObject button, string name)
     {
         audio.source = button.GetComponent<AudioSource>();
-        aSource = audio.source;
+        var effectSource = audio.source;
 
         foreach (var item in audioList)
         {
             if (item.name == name)
             {
-                aSource.clip = item.clip;
-                aSource.Play();
+                effectSource.clip = item.clip;
+                effectSource.Play();
             }
         }
     }
