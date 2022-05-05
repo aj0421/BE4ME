@@ -17,7 +17,9 @@ public class Introduction : MonoBehaviour
     private int index = 1;
     private string language = "";
     GameObject gameManager;
-
+    #endregion
+   
+    #region Methods
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("CharacterManager");
@@ -61,26 +63,7 @@ public class Introduction : MonoBehaviour
             {
                 StartCoroutine(ClickFading(true));
 
-                //if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-                //{
-                //    if (index > allTexts.Count - 1)
-                //    {
-                //        this.gameObject.SetActive(false);
-                //    }
-                //    else
-                //    {
-                //        introductionText.text = allTexts[index];
-                //        index++;
-                //    }
-                //}
-
-                //Mouse DEBUG PURPOSE
-                if (Input.GetMouseButtonDown(0))
-                {
-                    isTouching = true;
-                }
-
-                if (isTouching)
+                if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
                 {
                     if (index > allTexts.Count - 1)
                     {
@@ -90,10 +73,29 @@ public class Introduction : MonoBehaviour
                     {
                         introductionText.text = allTexts[index];
                         index++;
-                        isTouching = false;
                     }
-
                 }
+
+                //Mouse DEBUG PURPOSE
+                //if (Input.GetMouseButtonDown(0))
+                //{
+                //    isTouching = true;
+                //}
+
+                //if (isTouching)
+                //{
+                //    if (index > allTexts.Count - 1)
+                //    {
+                //        this.gameObject.SetActive(false);
+                //    }
+                //    else
+                //    {
+                //        introductionText.text = allTexts[index];
+                //        index++;
+                //        isTouching = false;
+                //    }
+
+                //}
             }
         }
     }
@@ -101,6 +103,9 @@ public class Introduction : MonoBehaviour
     #region IntroductionText
     private void AddTextPartsToListSwedish()
     {
+        string part0 = "Tryck på skärmen för att påbörja";
+        allTexts.Add(part0);
+
         string part1 = "Hej " + PlayerPrefs.GetString("name") + " !";
         allTexts.Add(part1);
 
@@ -125,6 +130,9 @@ public class Introduction : MonoBehaviour
 
     private void AddTextPartsToListEnglish()
     {
+        string part0 = "Tap on the screen to begin.";
+        allTexts.Add(part0);
+
         string part1 = "Hi " + PlayerPrefs.GetString("name") + " !";
         allTexts.Add(part1);
 
