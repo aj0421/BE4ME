@@ -76,7 +76,7 @@ public class Introduction : MonoBehaviour
                     }
                 }
 
-                //Mouse DEBUG PURPOSE
+                ////Mouse DEBUG PURPOSE
                 //if (Input.GetMouseButtonDown(0))
                 //{
                 //    isTouching = true;

@@ -143,6 +143,7 @@ public class QuizManager : MonoBehaviour
         {
             quizPrefab.SetActive(false);
             guiPrefab.SetActive(true);
+            ExitFromQuizToMap();
         }
     }
 
