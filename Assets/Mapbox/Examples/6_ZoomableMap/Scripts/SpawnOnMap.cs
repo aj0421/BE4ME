@@ -35,15 +35,12 @@
         [SerializeField]
         GameObject _timeMachinePrefab;
 
-        List<GameObject> _spawnedObjects;
-
         bool hasSpawned;
 
         void Start()
         {
             _locations = new Vector2d[_locationStrings.Length];
             _timeMachinelocations = new Vector2d[_locationTimeMachine.Length];
-            _spawnedObjects = new List<GameObject>();
            
             for (int i = 0; i < _locationStrings.Length; i++)
             {
@@ -86,7 +83,6 @@
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[0], true);
                         instance.transform.position += new Vector3(0, 70, 0);
-                        //_spawnedObjects.Add(instance);
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
@@ -95,7 +91,6 @@
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
                         instance.transform.position += new Vector3(0, 70, 0);
-                        // _spawnedObjects.Add(instance);
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
@@ -104,25 +99,11 @@
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[2], true);
                         instance.transform.position += new Vector3(0, 70, 0);
-
-                        //  _spawnedObjects.Add(instance);
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
                 }
             }
-        }
-
-        private void Update()
-        {
-            //int count = _spawnedObjects.Count;
-            //for (int i = 0; i < count; i++)
-            //{
-            //    GameObject spawnedObject = _spawnedObjects[i];
-            //    Vector2d location = _locations[i];
-            //    spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
-            //    spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-            //}
         }
     }
 }
