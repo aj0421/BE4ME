@@ -9,11 +9,11 @@ E:\Unity\2020.3.27f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker0
+AssetImportWorker5
 -projectPath
 E:/Work/CharacterCreator/BE4ME
 -logFile
-Logs/AssetImportWorker0.log
+Logs/AssetImportWorker5.log
 -srvPort
 56618
 Successfully changed project path to: E:/Work/CharacterCreator/BE4ME

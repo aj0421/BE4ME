@@ -146,6 +146,11 @@ public class QuizManager : MonoBehaviour
         }
     }
 
+    public void ExitFromQuizToMap()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     private void GenerateQuestion()
     {
         if (currentCharacterQandA.Count <= 0)

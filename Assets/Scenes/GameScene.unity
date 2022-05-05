@@ -2409,10 +2409,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2124069461, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2124069465, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 101748661}
+    - target: {fileID: 2124069465, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitFromQuizToMap
+      objectReference: {fileID: 0}
     - target: {fileID: 2504242512326328005, guid: 7117ca1850e3d4b4b83900dcd086e17f,
         type: 3}
       propertyPath: quizManager
@@ -2562,6 +2570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CanvasQuiz
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882960352362773959, guid: 7117ca1850e3d4b4b83900dcd086e17f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7117ca1850e3d4b4b83900dcd086e17f, type: 3}

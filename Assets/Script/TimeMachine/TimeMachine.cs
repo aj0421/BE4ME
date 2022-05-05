@@ -27,7 +27,7 @@ public class TimeMachine : MonoBehaviour
         counter = 6;
         if(CameraShake != null)
         {
-            Vibration.Vibrate(3000);
+            Vibration.Vibrate(5000);
             StartCoroutine(CameraShake.Shake(duration, magnitude));
             audioHandler.GetComponent<AudioHandler>().AddSoundEffects(this.gameObject, "timetravel");
         }
