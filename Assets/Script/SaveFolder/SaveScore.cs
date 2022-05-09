@@ -34,6 +34,10 @@ public class SaveScore : MonoBehaviour
             save.allSavedData.Add(temp[i]);
         }
         File.WriteAllLines(path, save.allSavedData);
+
+        //To display on the endscene screen. 
+        string saveDataString = string.Join(",", save.allSavedData);
+        PlayerPrefs.SetString("SavedResult", saveDataString);
         return save;
     }
 
