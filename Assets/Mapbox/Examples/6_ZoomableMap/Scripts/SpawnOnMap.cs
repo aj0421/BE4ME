@@ -61,7 +61,7 @@
             _timeMachinelocations[0] = Conversions.StringToLatLon(_locationTimeMachine);
             GameObject timeMachine = Instantiate(_timeMachinePrefab);
             timeMachine.transform.position = _map.GeoToWorldPosition(_timeMachinelocations[0], true);
-            timeMachine.transform.position += new Vector3(0, 75, 0); 
+            timeMachine.transform.position += new Vector3(0, 65, 0); 
         }
 
         private void CheckYear()
@@ -82,7 +82,7 @@
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[0], true);
-                        instance.transform.position += new Vector3(0, 70, 0);
+                        instance.transform.position += new Vector3(0, 30, 0);
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
@@ -90,7 +90,7 @@
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[1], true);
-                        instance.transform.position += new Vector3(0, 70, 0);
+                        instance.transform.position += new Vector3(0, 30, 0);
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;
@@ -98,7 +98,7 @@
                         instance = Instantiate(_markerPrefab[0]);
                         instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
                         instance.transform.localPosition = _map.GeoToWorldPosition(_locations[2], true);
-                        instance.transform.position += new Vector3(0, 70, 0);
+                        instance.transform.position += new Vector3(0, 30, 0);
                         hasSpawned = true;
                         characterManager.GetComponent<CharacterManager>().ChangeYearUI();
                         break;

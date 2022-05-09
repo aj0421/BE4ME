@@ -6,13 +6,15 @@ public class SwipeRotateCamera : MonoBehaviour
 {
     #region variables
     public Camera camera;
-    public float rotationSpeed = 0.1f;
+    public float rotationSpeed = 10f;
     public float rotationDirection = -1;  //Negative direction
 
     private Touch first_touch = new Touch();
     private float rotationX = 0f;
     private float rotationY = 0f;
     private Vector3 originRotation;
+    private Vector3 coordinate;
+    public GameObject playerPosition;
 
     #endregion
 
@@ -23,6 +25,8 @@ public class SwipeRotateCamera : MonoBehaviour
         originRotation = camera.transform.localEulerAngles;
         rotationX = originRotation.x;
         rotationY = originRotation.y;
+        coordinate = playerPosition.transform.position;
+        camera.transform.LookAt(coordinate);
     }
 
     void FixedUpdate()
@@ -35,16 +39,18 @@ public class SwipeRotateCamera : MonoBehaviour
             }
             else if (touch.phase == TouchPhase.Moved)   //If we have moved fingers on the screen
             {
-                //Calculate the position where the touch comes from depending on the touch-position on the screen.
-                float deltaX = first_touch.position.x - touch.position.x;
-                float deltaY = first_touch.position.y - touch.position.y;
+                camera.transform.RotateAround(coordinate, new Vector3(0, 1, 0), 10 * Time.deltaTime * rotationSpeed);
 
-                rotationX -= deltaY * Time.deltaTime * rotationSpeed * rotationDirection;
-                rotationY += deltaX * Time.deltaTime * rotationSpeed * rotationDirection;
+               // //Calculate the position where the touch comes from depending on the touch-position on the screen.
+               // float deltaX = first_touch.position.x - touch.position.x;
+               // float deltaY = first_touch.position.y - touch.position.y;
 
-                rotationX = Mathf.Clamp(rotationX, 50f, 70f);  //THIS IS WERE WE CONTROL HOW MUCH THE USER CAN ROTATE THE CAMERA - TRY OUT DIFFERENT VALUES
-               // rotationY = Mathf.Clamp(rotationY, 20f, -20f);
-                camera.transform.localEulerAngles = new Vector3(rotationX, rotationY, 0f);
+               // rotationX -= deltaY * Time.deltaTime * rotationSpeed * rotationDirection;
+               // rotationY += deltaX * Time.deltaTime * rotationSpeed * rotationDirection;
+
+               // rotationX = Mathf.Clamp(rotationX, 0f, 70f);  //THIS IS WERE WE CONTROL HOW MUCH THE USER CAN ROTATE THE CAMERA - TRY OUT DIFFERENT VALUES
+               //// rotationY = Mathf.Clamp(rotationY, 20f, -20f);
+               // camera.transform.localEulerAngles = new Vector3(rotationX, 0f, 0f);
             }
             else if (touch.phase == TouchPhase.Ended)
             {
