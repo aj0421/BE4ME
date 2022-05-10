@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2052322299, guid: 81a8beb84a4af4147b1f4db90b3eb1b6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4729113886515477176, guid: 81a8beb84a4af4147b1f4db90b3eb1b6,
         type: 3}
@@ -1308,10 +1308,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 1212898472}
   _locationStrings:
-  - 55.5987842155396, 12.998583905288447
-  - 55.59878548983947, 12.998336932430282
-  - 55.59930667502834, 12.998387680279388
-  _locationTimeMachine: 55.59906010050039, 12.99842715082596
+  - 56.047833937640654, 12.699737549945601
+  - 56.04764644874083, 12.700725682718499
+  - 56.047586600397324, 12.699798241401902
+  _locationTimeMachine: 56.04780427844033, 12.700178511307785
   _spawnScale: 10
   _markerPrefab:
   - {fileID: 829228347043980017, guid: 31305b0ed8447264182b471de7a4d25a, type: 3}
