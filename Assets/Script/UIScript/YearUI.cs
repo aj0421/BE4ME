@@ -45,6 +45,10 @@ public class YearUI : MonoBehaviour
         {
             string yearFromCharacter = item.GetComponent<Character>().year;
             year.Add(yearFromCharacter.ToString());
+            //for (int i = 0; i < options.Count; i++)
+            //{
+            //    year.Remove(options[i -1]);
+            //}
         }
         Select();
     }
@@ -72,8 +76,8 @@ public class YearUI : MonoBehaviour
             case "1885":
                 if (isCompleted)
                 {
-                    AddOptionsToDropdown(year[0]);
-                    AddOptionsToDropdown(year[1]);
+                    //AddOptionsToDropdown(year[0]);
+                   AddOptionsToDropdown(year[1]);
                 }
                 else
                 {
@@ -83,27 +87,29 @@ public class YearUI : MonoBehaviour
             case "1888":
                 if (isCompleted)
                 {
-                    AddOptionsToDropdown(year[0]);
-                    AddOptionsToDropdown(year[1]);
+                    //AddOptionsToDropdown(year[0]);
+                    //AddOptionsToDropdown(year[1]);
                     AddOptionsToDropdown(year[2]);
                 }
                 else
                 {
                     AddOptionsToDropdown(year[0]);
                     AddOptionsToDropdown(year[1]);
+                    
                 }
                 break;
             case "1900":
                 if (isCompleted)
                 {
-                    AddOptionsToDropdown(year[0]);
-                    AddOptionsToDropdown(year[1]);
                     AddOptionsToDropdown(year[2]);
+                    //AddOptionsToDropdown(year[0]);
+                    //AddOptionsToDropdown(year[1]);
+                    //AddOptionsToDropdown(year[2]);
                 }
                 else
                 {
-                    AddOptionsToDropdown(year[0]);
-                    AddOptionsToDropdown(year[1]);
+                    //AddOptionsToDropdown(year[0]);
+                    //AddOptionsToDropdown(year[1]);
                     AddOptionsToDropdown(year[2]);
                 }
                 break;

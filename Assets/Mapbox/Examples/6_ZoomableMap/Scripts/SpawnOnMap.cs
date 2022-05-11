@@ -47,7 +47,7 @@
                 string locationString = _locationStrings[i];
                 _locations[i] = Conversions.StringToLatLon(locationString);
             }
-            StartCoroutine(LateStart(2f));
+            StartCoroutine(LateStart(2.5f));
         }
         IEnumerator LateStart(float waitTime)
         {

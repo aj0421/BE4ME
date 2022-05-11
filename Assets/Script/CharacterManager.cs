@@ -16,6 +16,7 @@ public class CharacterManager : MonoBehaviour
     public bool isCompleted;
     public bool readIntroduction;
     public List<string> answerList = new List<string>();
+
     #endregion
 
     #region Method
@@ -58,6 +59,7 @@ public class CharacterManager : MonoBehaviour
         else
         {
             yearText.text = storedValue;
+      
         }
     }
     #endregion

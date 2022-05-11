@@ -10,6 +10,7 @@ public class SwipeRotateCamera : MonoBehaviour
 
     private Touch first_touch = new Touch();
     private Vector3 coordinate;
+    private Vector3 initialCameraPosition;
     public GameObject playerPosition;
     #endregion
 
@@ -17,15 +18,22 @@ public class SwipeRotateCamera : MonoBehaviour
 
     void Start()
     {
+        initialCameraPosition = camera.transform.position;
         coordinate = playerPosition.transform.position;
         camera.transform.LookAt(coordinate);
+    }
+
+    public void ResetCamera()
+    {
+        camera.transform.position = initialCameraPosition;
+        camera.transform.LookAt(playerPosition.transform.position);
     }
 
     void FixedUpdate()
     {
         foreach (Touch touch in Input.touches)
         {
-            if (touch.phase == TouchPhase.Began)        //First touch we do on the screen
+            if (touch.phase == TouchPhase.Began)  //First touch we do on the screen
             {
                 first_touch = touch;
             }
@@ -34,6 +42,10 @@ public class SwipeRotateCamera : MonoBehaviour
                 camera.transform.RotateAround(coordinate, new Vector3(0, 1, 0), 10 * Time.deltaTime * rotationSpeed);
 
                 camera.transform.LookAt(coordinate);
+                if (!playerPosition.GetComponent<Renderer>().isVisible)
+                {
+                    camera.transform.LookAt(coordinate);
+                }
 
             }
             else if (touch.phase == TouchPhase.Ended)
