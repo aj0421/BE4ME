@@ -39,12 +39,12 @@ public class SwipeRotateCamera : MonoBehaviour
             }
             else if (touch.phase == TouchPhase.Moved)   //If we have moved fingers on the screen
             {
-                camera.transform.RotateAround(coordinate, new Vector3(0, 1, 0), 10 * Time.deltaTime * rotationSpeed);
+                camera.transform.RotateAround(playerPosition.transform.position, new Vector3(0, 1, 0), 10 * Time.deltaTime * rotationSpeed);
 
-                camera.transform.LookAt(coordinate);
+                camera.transform.LookAt(playerPosition.transform.position);
                 if (!playerPosition.GetComponent<Renderer>().isVisible)
                 {
-                    camera.transform.LookAt(coordinate);
+                    camera.transform.LookAt(playerPosition.transform.position);
                 }
 
             }
